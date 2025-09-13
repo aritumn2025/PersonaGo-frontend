@@ -5,3 +5,4 @@ npx shadcn@latest init
 npm install react-icons
 npx shadcn@latest add button
 npx shadcn@latest add input
+npx shadcn@latest add label
