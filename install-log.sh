@@ -8,3 +8,4 @@ npx shadcn@latest add input
 npx shadcn@latest add label
 npx shadcn@latest add card
 npx shadcn@latest add dialog
+npx shadcn@latest add drawer
