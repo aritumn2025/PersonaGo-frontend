@@ -10,3 +10,4 @@ npx shadcn@latest add card
 npx shadcn@latest add dialog
 npx shadcn@latest add drawer
 npx shadcn@latest add skeleton
+npm install qrcode.react
