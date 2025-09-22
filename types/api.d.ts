@@ -1,6 +1,7 @@
 /* OpenAPIで定義されているJSONスキーマに基づく型定義 */
 import type {
   AttractionId,
+  DateTime,
   GameId,
   GamePlayId,
   GameScore,
@@ -49,7 +50,7 @@ type GetUserHistoryResponse = {
     attraction: AttractionId;
     personality: PersonalityId;
     staffName: StaffName;
-    visitedAt: string;
+    visitedAt: DateTime;
   }[];
 };
 
@@ -73,7 +74,7 @@ type GetEntryAttractionResponse = {
     id: UserId;
     name: UserName;
     personality: PersonalityId;
-    visitedAt: string;
+    visitedAt: DateTime;
   }[];
 };
 
@@ -138,7 +139,7 @@ type GetGamesResultPlayerResponse = {
     slot: GameSlot;
     score: GameScore;
     ranking: number;
-    playedAt: string;
+    playedAt: DateTime;
     PlayersCount: number;
   }[];
 };
