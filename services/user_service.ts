@@ -51,7 +51,7 @@ async function createUser(
  */
 async function updateUser(
   id: UserId,
-  user: Partial<User>,
+  user: Partial<Omit<User, "attractions">>,
 ): Promise<UpdateUserResponse> {
   const data: UpdateUserRequest = toNullable(user);
   return fetcher<UpdateUserResponse>(apiEndpoint(`/api/user/${id}`), {
