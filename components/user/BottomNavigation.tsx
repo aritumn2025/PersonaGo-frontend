@@ -34,7 +34,7 @@ const navs: readonly NavItem[] = [
     isCenter: false,
   },
   {
-    href: "/user/diagnosis?tutorial=0",
+    href: "/user/diagnosis?tutorial=none",
     icon: <FaSearch className="text-2xl" />,
     label: "診断",
     pageKey: "diagnosis",
