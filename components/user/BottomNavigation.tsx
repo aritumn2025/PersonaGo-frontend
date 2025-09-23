@@ -72,9 +72,7 @@ function NavLink({ href, icon, label, isActive, isCenter }: NavLinkProps) {
   return (
     <Link href={href} className={baseClass}>
       {icon}
-      <span className="overflow-visible text-xs whitespace-nowrap">
-        {label}
-      </span>
+      <span className="text-xs whitespace-nowrap">{label}</span>
     </Link>
   );
 }
