@@ -29,7 +29,7 @@ const ATTRACTION_IDS: Readonly<AttractionId[]> = [
 ];
 
 // アトラクションID一覧（MBTI診断除く）
-const ATTRACTION_IDS_WHITHOUT_MBTI: Readonly<AttractionId[]> = [
+const ATTRACTION_IDS_WITHOUT_MBTI: Readonly<AttractionId[]> = [
   "picture",
   "games",
   "battle",
@@ -106,4 +106,4 @@ const ATTRACTIONS_INFO: Readonly<Record<AttractionId, AttractionInfoEntry>> = {
   },
 };
 
-export { ATTRACTION_IDS, ATTRACTION_IDS_WHITHOUT_MBTI, ATTRACTIONS_INFO };
+export { ATTRACTION_IDS, ATTRACTION_IDS_WITHOUT_MBTI, ATTRACTIONS_INFO };
