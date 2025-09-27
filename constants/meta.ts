@@ -5,7 +5,7 @@ type MetaConfig = Readonly<{
   name: string;
   title: string;
   description: string;
-  twitterHandle: string;
+  twitterHandle?: string;
   locale: string;
   ogp: string;
   favicon: string;
@@ -22,7 +22,7 @@ const META_CONFIG: MetaConfig = {
   title: "あなたの性格で変わる、新しい体験型イベント",
   description:
     "Persona-Goは、あなたの性格を発見してアトラクションで連携して楽しめる新しい体験型イベントです。",
-  twitterHandle: "@ありたむ2025",
+  twitterHandle: undefined,
   locale: "ja_JP",
   ogp: "/meta/ogp_default.png",
   favicon: "/meta/favicon.ico",
