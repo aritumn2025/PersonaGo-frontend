@@ -4,8 +4,8 @@ import { PersonalityId } from "@/types/common";
 type PersonalityInfoEntry = Readonly<{
   name: string;
   description: string;
-  imageUrl: string;
   link: string;
+  imageUrl: string;
   color: {
     readonly primary: string;
     readonly secondary: string;
@@ -24,8 +24,8 @@ const PERSONALITY_INFO: Readonly<Record<PersonalityId, PersonalityInfoEntry>> =
     "0": {
       name: "INTJ",
       description: "深く考えることが好きで、独自の視点を持つ",
-      imageUrl: "",
       link: "",
+      imageUrl: "",
       color: {
         primary: "#83379C",
         secondary: "#E1D8E5",
@@ -34,8 +34,8 @@ const PERSONALITY_INFO: Readonly<Record<PersonalityId, PersonalityInfoEntry>> =
     "1": {
       name: "ENFJ",
       description: "人とのつながりを大切にし、他者をサポートする",
-      imageUrl: "",
       link: "",
+      imageUrl: "",
       color: {
         primary: "#35AF78",
         secondary: "#D5EBE1",
@@ -44,8 +44,8 @@ const PERSONALITY_INFO: Readonly<Record<PersonalityId, PersonalityInfoEntry>> =
     "2": {
       name: "ESFJ",
       description: "社交的で、周囲の人々を喜ばせることが得意",
-      imageUrl: "",
       link: "",
+      imageUrl: "",
       color: {
         primary: "#B6A739",
         secondary: "#F6E9D4",
@@ -54,8 +54,8 @@ const PERSONALITY_INFO: Readonly<Record<PersonalityId, PersonalityInfoEntry>> =
     "3": {
       name: "ISFJ",
       description: "思いやりがあり、他者のニーズに敏感",
-      imageUrl: "",
       link: "",
+      imageUrl: "",
       color: {
         primary: "#8A9FCD",
         secondary: "#DBEBEB",

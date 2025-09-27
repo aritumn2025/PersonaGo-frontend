@@ -42,8 +42,8 @@ const ATTRACTIONS_INFO: Readonly<Record<AttractionId, AttractionInfoEntry>> = {
     name: "MBTI診断",
     description: "まだ知らないあなた自身、のぞいてみませんか？",
     place: "スマホ",
-    image: "/attraction/mbti_01.png",
     link: "/user/info/attraction/mbti",
+    image: "/attraction/mbti_01.png",
     color: {
       // 紫系統
       // MBTIは基本的に色を使用しないが一応
@@ -56,8 +56,8 @@ const ATTRACTIONS_INFO: Readonly<Record<AttractionId, AttractionInfoEntry>> = {
     name: "AI似顔絵プリクラ",
     description: "キミだけの特性プリクラをゲットしよう！",
     place: "3I教室",
-    image: "/attraction/picture_01.png",
     link: "/user/info/attraction/picture",
+    image: "/attraction/picture_01.png",
     color: {
       // 赤系統
       primary: "#FF7F94",
@@ -69,8 +69,8 @@ const ATTRACTIONS_INFO: Readonly<Record<AttractionId, AttractionInfoEntry>> = {
     name: "みんなでゲーム",
     description: "大画面でみんなと協力or対戦してハイスコアを目指せ！",
     place: "3I教室",
-    image: "/attraction/games_01.png",
     link: "/user/info/attraction/games",
+    image: "/attraction/games_01.png",
     color: {
       // 緑系統
       primary: "#68CC3D",
@@ -82,8 +82,8 @@ const ATTRACTIONS_INFO: Readonly<Record<AttractionId, AttractionInfoEntry>> = {
     name: "サバゲー",
     description: "教室が戦場に変わる。君は生き残れるか？",
     place: "4I教室・5I教室",
-    image: "/attraction/battle_01.png",
     link: "/user/info/attraction/battle",
+    image: "/attraction/battle_01.png",
     color: {
       // 青系統
       primary: "#7F83FF",
@@ -95,8 +95,8 @@ const ATTRACTIONS_INFO: Readonly<Record<AttractionId, AttractionInfoEntry>> = {
     name: "景品受取",
     description: "3つのアトラクションを体験して、素敵な景品をゲットしよう！",
     place: "情報棟入口",
-    image: "/attraction/prize_01.png",
     link: "/user/info/attraction/prize",
+    image: "/attraction/prize_01.png",
     color: {
       // 黄系統
       primary: "#FFC447",
