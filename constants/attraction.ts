@@ -19,6 +19,23 @@ type AttractionInfoEntry = Readonly<{
   };
 }>;
 
+// アトラクションID一覧（MBTI診断含む）
+const ATTRACTION_IDS: Readonly<AttractionId[]> = [
+  "mbti",
+  "picture",
+  "games",
+  "battle",
+  "prize",
+];
+
+// アトラクションID一覧（MBTI診断除く）
+const ATTRACTION_IDS_WHITHOUT_MBTI: Readonly<AttractionId[]> = [
+  "picture",
+  "games",
+  "battle",
+  "prize",
+];
+
 // アトラクションの基本情報
 const ATTRACTIONS_INFO: Readonly<Record<AttractionId, AttractionInfoEntry>> = {
   mbti: {
@@ -89,4 +106,4 @@ const ATTRACTIONS_INFO: Readonly<Record<AttractionId, AttractionInfoEntry>> = {
   },
 };
 
-export { ATTRACTIONS_INFO };
+export { ATTRACTION_IDS, ATTRACTION_IDS_WHITHOUT_MBTI, ATTRACTIONS_INFO };

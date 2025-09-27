@@ -16,6 +16,9 @@ type PersonalityInfoEntry = Readonly<{
 // 暫定的に仮の性格(MBTIから適当に4種)を設定
 // TODO: 性格診断と併せて正式な性格を設定
 
+// 性格ID一覧
+const PERSONALITY_IDS: Readonly<PersonalityId[]> = ["0", "1", "2", "3"];
+
 // 性格の基本情報
 const PERSONALITY_INFO: Readonly<Record<PersonalityId, PersonalityInfoEntry>> =
   {
@@ -65,4 +68,4 @@ const PERSONALITY_INFO: Readonly<Record<PersonalityId, PersonalityInfoEntry>> =
     },
   };
 
-export { PERSONALITY_INFO };
+export { PERSONALITY_IDS, PERSONALITY_INFO };
