@@ -5,7 +5,7 @@ type PersonalityInfoEntry = Readonly<{
   name: string;
   description: string;
   link: string;
-  imageUrl: string;
+  image: string;
   color: {
     readonly primary: string;
     readonly secondary: string;
@@ -25,7 +25,7 @@ const PERSONALITY_INFO: Readonly<Record<PersonalityId, PersonalityInfoEntry>> =
       name: "INTJ",
       description: "深く考えることが好きで、独自の視点を持つ",
       link: "",
-      imageUrl: "",
+      image: "",
       color: {
         primary: "#83379C",
         secondary: "#E1D8E5",
@@ -35,7 +35,7 @@ const PERSONALITY_INFO: Readonly<Record<PersonalityId, PersonalityInfoEntry>> =
       name: "ENFJ",
       description: "人とのつながりを大切にし、他者をサポートする",
       link: "",
-      imageUrl: "",
+      image: "",
       color: {
         primary: "#35AF78",
         secondary: "#D5EBE1",
@@ -45,7 +45,7 @@ const PERSONALITY_INFO: Readonly<Record<PersonalityId, PersonalityInfoEntry>> =
       name: "ESFJ",
       description: "社交的で、周囲の人々を喜ばせることが得意",
       link: "",
-      imageUrl: "",
+      image: "",
       color: {
         primary: "#B6A739",
         secondary: "#F6E9D4",
@@ -55,7 +55,7 @@ const PERSONALITY_INFO: Readonly<Record<PersonalityId, PersonalityInfoEntry>> =
       name: "ISFJ",
       description: "思いやりがあり、他者のニーズに敏感",
       link: "",
-      imageUrl: "",
+      image: "",
       color: {
         primary: "#8A9FCD",
         secondary: "#DBEBEB",
