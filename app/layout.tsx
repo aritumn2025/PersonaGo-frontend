@@ -1,12 +1,12 @@
-import type { Metadata } from "next";
 import { Noto_Sans_JP } from "next/font/google";
+
+import { META_CONFIG } from "@/constants/meta";
+
+import { createMetadata } from "@/utils/metadata";
 
 import "./globals.css";
 
-export const metadata: Metadata = {
-  title: "Persona Go",
-  description: "Aritumn 2025", // 説明は変更する予定
-};
+export const metadata = createMetadata(META_CONFIG);
 
 const notoSans = Noto_Sans_JP({
   subsets: ["latin"],
