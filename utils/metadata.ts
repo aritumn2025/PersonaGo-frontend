@@ -18,7 +18,7 @@ type MetaConfig = Readonly<{
 }>;
 
 // ページで上書き可能なメタデータのプロパティ
-type PageMetadataOverrides = Pick<MetaConfig, "title" | "description" | "ogp">;
+type PageMetaConfig = Pick<MetaConfig, "title" | "description" | "ogp">;
 
 /**
  * ページ固有のメタデータを生成する
@@ -41,7 +41,7 @@ type PageMetadataOverrides = Pick<MetaConfig, "title" | "description" | "ogp">;
  */
 function createMetadata(
   metadata: MetaConfig,
-  overrides?: Partial<PageMetadataOverrides>,
+  overrides?: Partial<PageMetaConfig>,
 ): Metadata {
   const mergedMetadata = { ...metadata, ...overrides };
   // Next.js用のメタデータ設定
@@ -96,4 +96,4 @@ function createMetadata(
   return nextMetadata;
 }
 
-export { type MetaConfig, createMetadata };
+export { type MetaConfig, type PageMetaConfig, createMetadata };
