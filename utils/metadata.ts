@@ -3,12 +3,22 @@
  */
 import type { Metadata } from "next";
 
-import type { MetaConfig } from "@/constants/meta";
-
 const isDevelopment = process.env.NODE_ENV === "development";
 
+type MetaConfig = Readonly<{
+  url: string;
+  title: string;
+  description: string;
+  twitterHandle?: string;
+  locale: string;
+  ogp: string;
+  favicon: string;
+  creator: string;
+  keywords?: string[];
+}>;
+
 // ページで上書き可能なメタデータのプロパティ
-type PageMetadataOverrides = Pick<MetaConfig, "title" | "description" | "ogp">;
+type PageMetaConfig = Pick<MetaConfig, "description" | "ogp">;
 
 /**
  * ページ固有のメタデータを生成する
@@ -19,8 +29,7 @@ type PageMetadataOverrides = Pick<MetaConfig, "title" | "description" | "ogp">;
  *
  * @example
  * // ページ固有のカスタマイズ
- * export const metadata = createMetadata(METADATA, {
- *   title: "MBTI診断",
+ * export const metadata = createMetadata(META_DATA, {
  *   description: "あなたの性格を診断します",
  *   ogp: "/attraction/mbti-ogp.png"
  * });
@@ -31,17 +40,15 @@ type PageMetadataOverrides = Pick<MetaConfig, "title" | "description" | "ogp">;
  */
 function createMetadata(
   metadata: MetaConfig,
-  overrides?: Partial<PageMetadataOverrides>,
+  overrides?: Partial<PageMetaConfig>,
 ): Metadata {
   const mergedMetadata = { ...metadata, ...overrides };
   // Next.js用のメタデータ設定
   const nextMetadata: Metadata = {
-    title: {
-      default: isDevelopment
-        ? `[DEV] ${mergedMetadata.name}`
-        : mergedMetadata.name,
-      template: `%s | ${isDevelopment ? `[DEV] ${mergedMetadata.name}` : mergedMetadata.name}`,
-    },
+    metadataBase: new URL(mergedMetadata.url),
+    title: isDevelopment
+      ? `[DEV] ${mergedMetadata.title}`
+      : mergedMetadata.title,
     description: mergedMetadata.description,
     keywords: mergedMetadata.keywords,
     openGraph: {
@@ -50,7 +57,7 @@ function createMetadata(
       url: mergedMetadata.url,
       title: mergedMetadata.title,
       description: mergedMetadata.description,
-      siteName: mergedMetadata.name,
+      siteName: mergedMetadata.title,
       images: [
         {
           url: mergedMetadata.ogp,
@@ -85,4 +92,4 @@ function createMetadata(
   return nextMetadata;
 }
 
-export { createMetadata };
+export { type MetaConfig, type PageMetaConfig, createMetadata };
