@@ -36,6 +36,7 @@ function createMetadata(
   const mergedMetadata = { ...metadata, ...overrides };
   // Next.js用のメタデータ設定
   const nextMetadata: Metadata = {
+    metadataBase: new URL(mergedMetadata.url),
     title: {
       default: isDevelopment
         ? `[DEV] ${mergedMetadata.name}`
