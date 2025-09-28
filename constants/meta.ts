@@ -1,16 +1,5 @@
 /* メタデータの設定情報を定めた定数ファイル */
-
-type MetaConfig = Readonly<{
-  url: string;
-  title: string;
-  description: string;
-  twitterHandle?: string;
-  locale: string;
-  ogp: string;
-  favicon: string;
-  creator: string;
-  keywords?: string[];
-}>;
+import type { MetaConfig } from "@/utils/metadata";
 
 // メタデータ
 // TODO: 内容が決まり次第更新する

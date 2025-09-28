@@ -3,9 +3,19 @@
  */
 import type { Metadata } from "next";
 
-import type { MetaConfig } from "@/constants/meta";
-
 const isDevelopment = process.env.NODE_ENV === "development";
+
+type MetaConfig = Readonly<{
+  url: string;
+  title: string;
+  description: string;
+  twitterHandle?: string;
+  locale: string;
+  ogp: string;
+  favicon: string;
+  creator: string;
+  keywords?: string[];
+}>;
 
 // ページで上書き可能なメタデータのプロパティ
 type PageMetadataOverrides = Pick<MetaConfig, "title" | "description" | "ogp">;
@@ -86,4 +96,4 @@ function createMetadata(
   return nextMetadata;
 }
 
-export { createMetadata };
+export { type MetaConfig, createMetadata };
