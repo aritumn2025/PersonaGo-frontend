@@ -39,9 +39,9 @@ function createMetadata(
     metadataBase: new URL(mergedMetadata.url),
     title: {
       default: isDevelopment
-        ? `[DEV] ${mergedMetadata.name}`
-        : mergedMetadata.name,
-      template: `%s | ${isDevelopment ? `[DEV] ${mergedMetadata.name}` : mergedMetadata.name}`,
+        ? `[DEV] ${mergedMetadata.title}`
+        : mergedMetadata.title,
+      template: `%s | ${isDevelopment ? `[DEV] ${mergedMetadata.title}` : mergedMetadata.title}`,
     },
     description: mergedMetadata.description,
     keywords: mergedMetadata.keywords,
@@ -51,7 +51,7 @@ function createMetadata(
       url: mergedMetadata.url,
       title: mergedMetadata.title,
       description: mergedMetadata.description,
-      siteName: mergedMetadata.name,
+      siteName: mergedMetadata.title,
       images: [
         {
           url: mergedMetadata.ogp,

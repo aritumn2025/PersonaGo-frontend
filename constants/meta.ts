@@ -2,7 +2,6 @@
 
 type MetaConfig = Readonly<{
   url: string;
-  name: string;
   title: string;
   description: string;
   twitterHandle?: string;
@@ -18,8 +17,7 @@ type MetaConfig = Readonly<{
 // TODO: 画像 ogp_default.png と favicon.icoを用意する
 const META_CONFIG: MetaConfig = {
   url: process.env.NEXT_PUBLIC_BASE_URL || "https://persona-go.example.com",
-  name: "Persona-Go",
-  title: "あなたの性格で変わる、新しい体験型イベント",
+  title: "Persona-Go",
   description:
     "Persona-Goは、あなたの性格を発見してアトラクションで連携して楽しめる新しい体験型イベントです。",
   twitterHandle: undefined,
