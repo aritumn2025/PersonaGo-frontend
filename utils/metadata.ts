@@ -18,7 +18,7 @@ type MetaConfig = Readonly<{
 }>;
 
 // ページで上書き可能なメタデータのプロパティ
-type PageMetaConfig = Pick<MetaConfig, "title" | "description" | "ogp">;
+type PageMetaConfig = Pick<MetaConfig, "description" | "ogp">;
 
 /**
  * ページ固有のメタデータを生成する
@@ -30,7 +30,6 @@ type PageMetaConfig = Pick<MetaConfig, "title" | "description" | "ogp">;
  * @example
  * // ページ固有のカスタマイズ
  * export const metadata = createMetadata(METADATA, {
- *   title: "MBTI診断",
  *   description: "あなたの性格を診断します",
  *   ogp: "/attraction/mbti-ogp.png"
  * });
@@ -47,12 +46,9 @@ function createMetadata(
   // Next.js用のメタデータ設定
   const nextMetadata: Metadata = {
     metadataBase: new URL(mergedMetadata.url),
-    title: {
-      default: isDevelopment
-        ? `[DEV] ${mergedMetadata.title}`
-        : mergedMetadata.title,
-      template: `%s | ${isDevelopment ? `[DEV] ${mergedMetadata.title}` : mergedMetadata.title}`,
-    },
+    title: isDevelopment
+      ? `[DEV] ${mergedMetadata.title}`
+      : mergedMetadata.title,
     description: mergedMetadata.description,
     keywords: mergedMetadata.keywords,
     openGraph: {
