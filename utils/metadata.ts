@@ -29,7 +29,7 @@ type PageMetaConfig = Pick<MetaConfig, "description" | "ogp">;
  *
  * @example
  * // ページ固有のカスタマイズ
- * export const metadata = createMetadata(METADATA, {
+ * export const metadata = createMetadata(META_DATA, {
  *   description: "あなたの性格を診断します",
  *   ogp: "/attraction/mbti-ogp.png"
  * });
