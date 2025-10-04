@@ -79,7 +79,7 @@ class Diagnose<K extends string> {
    * 回答の進捗の取得
    * @return 回答の進捗
    */
-  progress(): { current: number; total: number; percent: number } {
+  getProgress(): { current: number; total: number; percent: number } {
     const current = this._answer.filter((a) => a !== null).length;
     const total = this._questions.length;
     return { current, total, percent: (current / total) * 100 };
@@ -91,13 +91,28 @@ class Diagnose<K extends string> {
    * @return 質問と選択肢
    * @throws 質問のインデックスが範囲外の場合
    */
-  question(qIndex: number): Question {
+  getQuestion(qIndex: number): Question {
     // 質問のインデックスが範囲外の場合のエラー処理
     if (qIndex < 0 || this._questions.length <= qIndex) {
       throw new Error("Question index out of range");
     }
 
     return this._questionCache[qIndex];
+  }
+
+  /**
+   * 回答を取得する
+   * @param qIndex 質問のインデックス
+   * @return 回答のインデックス(無回答の場合はnull)
+   * @throws 質問のインデックスが範囲外の場合
+   */
+  getAnswer(qIndex: number): number | null {
+    // 質問のインデックスが範囲外の場合のエラー処理
+    if (qIndex < 0 || this._questions.length <= qIndex) {
+      throw new Error("Question index out of range");
+    }
+
+    return this._answer[qIndex];
   }
 
   /**
@@ -135,7 +150,7 @@ class Diagnose<K extends string> {
    * @param debug デバッグ用か(完答していなくてもnullを返さなくなる)
    * @returns 診断結果(質問に完答していない場合はnull)
    */
-  result(debug: boolean = false): Result | null {
+  getResult(debug: boolean = false): Result | null {
     if (!debug && this._answer.includes(null)) {
       return null;
     }
