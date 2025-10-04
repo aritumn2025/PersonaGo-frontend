@@ -132,10 +132,11 @@ class Diagnose<K extends string> {
 
   /**
    * 診断結果の取得
+   * @param debug デバッグ用か(完答していなくてもnullを返さなくなる)
    * @returns 診断結果(質問に完答していない場合はnull)
    */
-  result(): Result | null {
-    if (this._answer.includes(null)) {
+  result(debug: boolean = false): Result | null {
+    if (!debug && this._answer.includes(null)) {
       return null;
     }
 
