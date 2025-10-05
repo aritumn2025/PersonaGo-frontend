@@ -28,7 +28,7 @@ type DiscreteQuestionConfig<K extends string> = {
   text: string;
   options: {
     text: string;
-    scores: Partial<Score>;
+    score: Partial<Score>;
   }[];
 };
 

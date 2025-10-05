@@ -31,7 +31,7 @@ class Diagnose<K extends string> {
   private _questionCache: Question[]; // question() 用のキャッシュデータ
 
   private _answer: (number | null)[];
-  private _scores: Score<K>;
+  private _score: Score<K>;
 
   /**
    * コンストラクタ
@@ -73,7 +73,7 @@ class Diagnose<K extends string> {
 
     // 実際の初期化は this.reset() で行う。未初期化エラー回避のためダミーの代入を行う。
     this._answer = [];
-    this._scores = {} as Score<K>;
+    this._score = {} as Score<K>;
     this.reset();
   }
 
@@ -163,8 +163,8 @@ class Diagnose<K extends string> {
         description: label.description,
         positive: label.positive,
         negative: label.negative,
-        score: this._scores[label.id],
-        result: this._scores[label.id] >= 0 ? "positive" : "negative",
+        score: this._score[label.id],
+        result: this._score[label.id] >= 0 ? "positive" : "negative",
       };
     });
 
@@ -172,7 +172,7 @@ class Diagnose<K extends string> {
     // postive/negativeの境界は0(0はpositiveとなる)
     let key = 0;
     this._labels.forEach((label, idx, labels) => {
-      if (this._scores[label.id] >= 0) {
+      if (this._score[label.id] >= 0) {
         key += 1 << (labels.length - idx - 1);
       }
     });
@@ -189,7 +189,7 @@ class Diagnose<K extends string> {
    */
   reset(): void {
     this._answer = Array(this._questions.length).fill(null);
-    this._scores = this._labels.reduce((acc, label) => {
+    this._score = this._labels.reduce((acc, label) => {
       acc[label.id] = label.bias;
       return acc;
     }, {} as Score<K>);
@@ -221,7 +221,7 @@ class Diagnose<K extends string> {
       const count = question.options.count;
 
       const out = {} as Score<K>;
-      for (const key in this._scores) {
+      for (const key in this._score) {
         out[key] = lerp(0, left[key] ?? 0, count - 1, right[key] ?? 0, answer);
       }
       return out;
@@ -233,8 +233,8 @@ class Diagnose<K extends string> {
 
       // 設定から取得
       const out = {} as Score<K>;
-      for (const key in this._scores) {
-        out[key] = question.options[answer].scores[key] ?? 0;
+      for (const key in this._score) {
+        out[key] = question.options[answer].score[key] ?? 0;
       }
       return out;
     }
@@ -247,7 +247,7 @@ class Diagnose<K extends string> {
    * @returns スコア
    */
   getScore(): Score<K> {
-    return { ...this._scores };
+    return { ...this._score };
   }
 
   /**
@@ -266,8 +266,8 @@ class Diagnose<K extends string> {
    * @param score
    */
   private addScore(score: Score<K>): void {
-    for (const key in this._scores) {
-      this._scores[key] += score[key] ?? 0;
+    for (const key in this._score) {
+      this._score[key] += score[key] ?? 0;
     }
   }
 
@@ -276,8 +276,8 @@ class Diagnose<K extends string> {
    * @param score
    */
   private subScore(score: Score<K>): void {
-    for (const key in this._scores) {
-      this._scores[key] -= score[key] ?? 0;
+    for (const key in this._score) {
+      this._score[key] -= score[key] ?? 0;
     }
   }
 }

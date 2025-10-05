@@ -111,11 +111,11 @@ const DIAGNOSE_CONFIG_MBTI = createDiagnoseConfig({
       options: [
         {
           text: "現実的で、今ある情報を重視する",
-          scores: { SN: 1 }, // 感覚寄り
+          score: { SN: 1 }, // 感覚寄り
         },
         {
           text: "未来の可能性やアイデアを重視する",
-          scores: { SN: -1 }, // 直観寄り
+          score: { SN: -1 }, // 直観寄り
         },
       ],
     },
@@ -126,11 +126,11 @@ const DIAGNOSE_CONFIG_MBTI = createDiagnoseConfig({
       options: [
         {
           text: "はい",
-          scores: { TF: 1, JP: 1 }, // 思考(T) と 判断(J) 両方にスコア
+          score: { TF: 1, JP: 1 }, // 思考(T) と 判断(J) 両方にスコア
         },
         {
           text: "いいえ",
-          scores: { TF: -1, JP: -1 }, // 感情(F) と 知覚(P) にスコア
+          score: { TF: -1, JP: -1 }, // 感情(F) と 知覚(P) にスコア
         },
       ],
     },
