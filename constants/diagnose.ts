@@ -43,8 +43,8 @@ const DIAGNOSE_CONFIG = createDiagnoseConfig({
       text: "初対面の人ともすぐに打ち解けられるほうだ",
       options: {
         count: COUNT,
-        left: { text: "あてはまらない", score: { EI: -1 } },
-        right: { text: "あてはまる", score: { EI: 1 } },
+        left: { text: "あてはまる", score: { EI: 1 } },
+        right: { text: "あてはまらない", score: { EI: -1 } },
       },
     },
     {
@@ -52,8 +52,8 @@ const DIAGNOSE_CONFIG = createDiagnoseConfig({
       text: "細かい計画を立てて行動するのが好きだ",
       options: {
         count: COUNT,
-        left: { text: "あてはまらない", score: { JP: -1 } },
-        right: { text: "あてはまる", score: { JP: 1 } },
+        left: { text: "あてはまる", score: { JP: 1 } },
+        right: { text: "あてはまらない", score: { JP: -1 } },
       },
     },
     {
@@ -61,8 +61,8 @@ const DIAGNOSE_CONFIG = createDiagnoseConfig({
       text: "論理よりも気持ちを重視して判断することが多い",
       options: {
         count: COUNT,
-        left: { text: "あてはまらない", score: { TF: 1 } },
-        right: { text: "あてはまる", score: { TF: -1 } },
+        left: { text: "あてはまる", score: { TF: -1 } },
+        right: { text: "あてはまらない", score: { TF: 1 } },
       },
     },
     {
@@ -70,8 +70,8 @@ const DIAGNOSE_CONFIG = createDiagnoseConfig({
       text: "新しいアイデアや未来の可能性について考えるのが好きだ",
       options: {
         count: COUNT,
-        left: { text: "あてはまらない", score: { SN: 1 } },
-        right: { text: "あてはまる", score: { SN: -1 } },
+        left: { text: "あてはまる", score: { SN: -1 } },
+        right: { text: "あてはまらない", score: { SN: 1 } },
       },
     },
     {
@@ -79,8 +79,8 @@ const DIAGNOSE_CONFIG = createDiagnoseConfig({
       text: "一人で過ごす時間より、人と一緒に過ごす時間の方が好きだ",
       options: {
         count: COUNT,
-        left: { text: "あてはまらない", score: { EI: -1 } },
-        right: { text: "あてはまる", score: { EI: 1 } },
+        left: { text: "あてはまる", score: { EI: 1 } },
+        right: { text: "あてはまらない", score: { EI: -1 } },
       },
     },
     {
@@ -88,8 +88,8 @@ const DIAGNOSE_CONFIG = createDiagnoseConfig({
       text: "物事はまずデータや事実に基づいて考える",
       options: {
         count: COUNT,
-        left: { text: "あてはまらない", score: { SN: -1 } },
-        right: { text: "あてはまる", score: { SN: 1 } },
+        left: { text: "あてはまる", score: { SN: 1 } },
+        right: { text: "あてはまらない", score: { SN: -1 } },
       },
     },
     {
@@ -97,8 +97,8 @@ const DIAGNOSE_CONFIG = createDiagnoseConfig({
       text: "感情を表に出す方だ",
       options: {
         count: COUNT,
-        left: { text: "あてはまらない", score: { TF: 1 } },
-        right: { text: "あてはまる", score: { TF: -1 } },
+        left: { text: "あてはまる", score: { TF: -1 } },
+        right: { text: "あてはまらない", score: { TF: 1 } },
       },
     },
     {
@@ -106,8 +106,8 @@ const DIAGNOSE_CONFIG = createDiagnoseConfig({
       text: "臨機応変に対応することが得意だ",
       options: {
         count: COUNT,
-        left: { text: "あてはまらない", score: { JP: 1 } },
-        right: { text: "あてはまる", score: { JP: -1 } },
+        left: { text: "あてはまる", score: { JP: -1 } },
+        right: { text: "あてはまらない", score: { JP: 1 } },
       },
     },
     {
