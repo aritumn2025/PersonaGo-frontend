@@ -74,7 +74,7 @@ type DiscreteQuestion = {
 };
 
 // 質問の型(連続的 or 離散的)
-type Question = ContinuousQuestion | DiscreteQuestion;
+type Question = (ContinuousQuestion | DiscreteQuestion) & { index: number };
 
 // 診断結果の型
 type Result = {

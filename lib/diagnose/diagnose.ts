@@ -46,9 +46,10 @@ class Diagnose<K extends string> {
     this._labels = config.labels;
     this._questions = config.questions;
     this._result = config.result;
-    this._questionCache = this._questions.map((question) => {
+    this._questionCache = this._questions.map((question, index) => {
       if (question.kind === "continuous") {
         return {
+          index,
           kind: "continuous",
           text: question.text,
           options: {
@@ -59,6 +60,7 @@ class Diagnose<K extends string> {
         };
       } else {
         return {
+          index,
           kind: "discrete",
           text: question.text,
           options: question.options.map((option, index) => ({
