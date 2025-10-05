@@ -185,7 +185,7 @@ class Diagnose<K extends string> {
   }
 
   /**
-  診断の初期化(スコアを初期化)
+   * 診断の初期化(スコアを初期化)
    */
   reset(): void {
     this._answer = Array(this._questions.length).fill(null);
