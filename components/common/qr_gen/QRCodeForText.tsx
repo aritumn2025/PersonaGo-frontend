@@ -1,5 +1,3 @@
-"use client";
-
 import { QRCodeSVG } from "qrcode.react";
 
 import type { QRCodeCanvasProps } from "./qr_canvas";
