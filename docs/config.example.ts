@@ -1,7 +1,7 @@
 import { createDiagnoseConfig } from "@/lib/diagnose";
 
 // MBTI風の診断設定サンプル
-const DIAGNOSE_CONFIG_MBTI = createDiagnoseConfig({
+const DIAGNOSE_CONFIG = createDiagnoseConfig({
   // ==============================
   // ラベル設定
   // ==============================
@@ -12,12 +12,10 @@ const DIAGNOSE_CONFIG_MBTI = createDiagnoseConfig({
       text: "外向性 vs 内向性", // 表示用の名前
       description: "人と関わることを好むか、一人でいることを好むか", // 説明
       positive: {
-        // 軸の正方向
         text: "外向性 (E)",
         description: "人と関わることでエネルギーを得る",
       },
       negative: {
-        // 軸の負方向
         text: "内向性 (I)",
         description: "一人で過ごすことでエネルギーを得る",
       },
@@ -79,28 +77,12 @@ const DIAGNOSE_CONFIG_MBTI = createDiagnoseConfig({
       options: {
         count: 7, // 7段階評価 (0〜6)
         left: {
-          text: "はい",
+          text: "あてはまる",
           score: { EI: 1 }, // 外向性にスコア加算
         },
         right: {
-          text: "いいえ",
+          text: "あてはまらない",
           score: { EI: -1 }, // 内向性にスコア加算
-        },
-      },
-    },
-    // 連続的な質問の別例
-    {
-      kind: "continuous",
-      text: "新しいアイデアや概念に興味がある",
-      options: {
-        count: 6,
-        left: {
-          text: "非常にある",
-          score: { SN: 1 },
-        },
-        right: {
-          text: "あまりない",
-          score: { SN: -1 },
         },
       },
     },
@@ -125,11 +107,11 @@ const DIAGNOSE_CONFIG_MBTI = createDiagnoseConfig({
       text: "論理的に説明しつつ、計画的に進めることが得意だ",
       options: [
         {
-          text: "はい",
+          text: "あてはまる",
           score: { TF: 1, JP: 1 }, // 思考(T) と 判断(J) 両方にスコア
         },
         {
-          text: "いいえ",
+          text: "あてはまらない",
           score: { TF: -1, JP: -1 }, // 感情(F) と 知覚(P) にスコア
         },
       ],
@@ -161,4 +143,4 @@ const DIAGNOSE_CONFIG_MBTI = createDiagnoseConfig({
   ],
 });
 
-export { DIAGNOSE_CONFIG_MBTI };
+export { DIAGNOSE_CONFIG };
