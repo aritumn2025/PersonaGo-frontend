@@ -171,9 +171,9 @@ class Diagnose<K extends string> {
     // 各項目をpostive/negativeで判定し、2^[項目数]通りの結果から選ぶ
     // postive/negativeの境界は0(0はpositiveとなる)
     let key = 0;
-    this._labels.forEach((label, idx) => {
+    this._labels.forEach((label, idx, labels) => {
       if (this._scores[label.id] >= 0) {
-        key += 1 << idx;
+        key += 1 << (labels.length - idx - 1);
       }
     });
     const idResult = this._result[key];
