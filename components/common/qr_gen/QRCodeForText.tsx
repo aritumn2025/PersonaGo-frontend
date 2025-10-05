@@ -1,6 +1,6 @@
 "use client";
 
-import { QRCodeCanvas } from "qrcode.react";
+import { QRCodeSVG } from "qrcode.react";
 
 import type { QRCodeCanvasProps } from "./qr_canvas";
 
@@ -16,22 +16,14 @@ function QRCodeForText({
   level,
 }: QRCodeForTextProps) {
   return (
-    <QRCodeCanvas
+    <QRCodeSVG
       value={content}
+      // デフォルト値は変わらないがこちらでも明示
       size={size || 128}
       bgColor={bgColor || "#FFFFFF"}
       fgColor={fgColor || "#000000"}
       level={level || "L"}
       marginSize={0}
-
-      // imageSettings={{
-      //   src: "/favicon.ico",
-      //   x: undefined,
-      //   y: undefined,
-      //   height: 24,
-      //   width: 24,
-      //   excavate: true,
-      // }}
     />
   );
 }
