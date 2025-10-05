@@ -72,18 +72,35 @@ const DIAGNOSE_CONFIG_MBTI = createDiagnoseConfig({
   // ==============================
   questions: [
     // 連続的な質問（スライダー形式）
+    // 一貫性確保のため、leftには肯定的、rightには否定的な意味合いの文言を設定する
     {
       kind: "continuous",
       text: "大人数でのパーティーに参加するのが好きだ",
       options: {
-        count: 5, // 5段階評価 (0〜4)
+        count: 7, // 7段階評価 (0〜6)
         left: {
-          text: "あてはまらない",
-          score: { EI: -1 }, // 内向性にスコア加算
+          text: "はい",
+          score: { EI: 1 }, // 外向性にスコア加算
         },
         right: {
-          text: "あてはまる",
-          score: { EI: 1 }, // 外向性にスコア加算
+          text: "いいえ",
+          score: { EI: -1 }, // 内向性にスコア加算
+        },
+      },
+    },
+    // 連続的な質問の別例
+    {
+      kind: "continuous",
+      text: "新しいアイデアや概念に興味がある",
+      options: {
+        count: 6,
+        left: {
+          text: "非常にある",
+          score: { SN: 1 },
+        },
+        right: {
+          text: "あまりない",
+          score: { SN: -1 },
         },
       },
     },
