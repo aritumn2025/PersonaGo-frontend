@@ -8,7 +8,14 @@ import Cookies from "js-cookie";
 const COOKIE_KEY: string = "user_id"; // Cookie のキー
 const COOKIE_EXPIRES_DAYS: number = 30; // Cookie の有効期限（日数）
 
-function useUserId() {
+interface UseUserIdReturn {
+  userId: string | null;
+  isLoggedIn: boolean;
+  saveUserId: (id: string) => void;
+  clearUserId: () => void;
+}
+
+function useUserId(): UseUserIdReturn {
   const [userId, setUserId] = useState<string | null>(null);
   const isLoggedIn = userId !== null;
 
