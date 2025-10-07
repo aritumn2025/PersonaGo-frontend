@@ -13,3 +13,4 @@ npx shadcn@latest add skeleton
 npm install qrcode.react
 npx shadcn@latest add progress
 npm install js-cookie
+npm i --save-dev @types/js-cookie
