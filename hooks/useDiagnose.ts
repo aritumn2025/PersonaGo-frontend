@@ -16,7 +16,7 @@ function useDiagnose<K extends string>(config: DiagnoseConfig<K>) {
   // メソッドのラップ
   const reset = () => {
     diagnose.reset();
-    setVersion((v) => v + 1);
+    setVersion(0);
   };
 
   const answer = (qIndex: number, value: number | null) => {
