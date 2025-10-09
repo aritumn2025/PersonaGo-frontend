@@ -1,49 +1,36 @@
 /**
  * Diagnose クラスをhooksでラップする
  */
-import { useCallback, useMemo, useState } from "react";
+import { useState } from "react";
 
 import { Diagnose, type DiagnoseConfig } from "@/lib/diagnose";
 
 function useDiagnose<K extends string>(config: DiagnoseConfig<K>) {
-  // インスタンスのメモ化
-  const diagnose = useMemo(() => new Diagnose(config), [config]);
+  /* React19ではメモ化に関する処理は不要 */
+
+  // インスタンスの作成
+  const diagnose = new Diagnose(config);
   // バージョン管理（状態管理用）
   const [version, setVersion] = useState(0);
 
   // メソッドのラップ
-  const reset = useCallback(() => {
+  const reset = () => {
     diagnose.reset();
     setVersion((v) => v + 1);
-  }, [diagnose]);
+  };
 
-  const answer = useCallback(
-    (qIndex: number, value: number | null) => {
-      diagnose.answer(qIndex, value);
-      setVersion((v) => v + 1);
-    },
-    [diagnose],
-  );
+  const answer = (qIndex: number, value: number | null) => {
+    diagnose.answer(qIndex, value);
+    setVersion((v) => v + 1);
+  };
 
-  const getQuestion = useCallback(
-    (qIndex: number) => diagnose.getQuestion(qIndex),
-    [diagnose],
-  );
-  const getAnswer = useCallback(
-    (qIndex: number) => diagnose.getAnswer(qIndex),
-    [diagnose],
-  );
+  const getQuestion = (qIndex: number) => diagnose.getQuestion(qIndex);
+  const getAnswer = (qIndex: number) => diagnose.getAnswer(qIndex);
 
-  const progress = useCallback(
-    () => diagnose.getProgress(),
-    [diagnose, version],
-  );
-  const result = useCallback(
-    (debug: boolean) => diagnose.getResult(debug),
-    [diagnose, version],
-  );
-  const score = useCallback(() => diagnose.getScore(), [diagnose, version]);
-  const bias = useCallback(() => diagnose.getBias(), [diagnose, version]);
+  const progress = () => diagnose.getProgress();
+  const result = (debug: boolean) => diagnose.getResult(debug);
+  const score = () => diagnose.getScore();
+  const bias = () => diagnose.getBias();
 
   return {
     reset,
