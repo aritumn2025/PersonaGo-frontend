@@ -6,7 +6,9 @@ import { useCallback, useMemo, useState } from "react";
 import { Diagnose, type DiagnoseConfig } from "@/lib/diagnose";
 
 function useDiagnose<K extends string>(config: DiagnoseConfig<K>) {
-  // インスタンスのメモ化
+  /* React19ではメモ化に関する処理は不要 */
+
+  // インスタンスの作成
   const diagnose = useMemo(() => new Diagnose(config), [config]);
   // バージョン管理（状態管理用）
   const [version, setVersion] = useState(0);
@@ -14,7 +16,7 @@ function useDiagnose<K extends string>(config: DiagnoseConfig<K>) {
   // メソッドのラップ
   const reset = useCallback(() => {
     diagnose.reset();
-    setVersion((v) => v + 1);
+    setVersion(0);
   }, [diagnose]);
 
   const answer = useCallback(
