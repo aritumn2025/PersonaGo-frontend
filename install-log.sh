@@ -12,3 +12,4 @@ npx shadcn@latest add drawer
 npx shadcn@latest add skeleton
 npm install qrcode.react
 npx shadcn@latest add progress
+npm install motion
