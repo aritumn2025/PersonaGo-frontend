@@ -1,3 +1,6 @@
+"use client";
+
+import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -11,32 +14,47 @@ import { Marker } from "@/components/common/Marker";
 import { Footer } from "./Footer";
 
 const markerColor = "var(--color-pink-300)";
+const fadeInUp = {
+  hidden: { opacity: 0, y: 30 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.8 } },
+};
+
 function TitleContainer() {
   return (
     <>
       <main className="flex w-full flex-col items-center text-center">
         {/* ===== タイトルセクション ===== */}
         <section className="relative w-full bg-gradient-to-br from-pink-400 via-rose-400 to-orange-300 py-16 text-white">
-          <h1 className="sr-only">Persona Go（ペルソナ・ゴー）</h1>
-          <div className="mb-8 flex justify-center">
-            <Image
-              src="/images/title/title.png"
-              alt="Persona Go タイトル画像"
-              width={480}
-              height={160}
-              priority
-            />
-          </div>
-          <p className="text-lg font-medium md:text-xl">
-            あなたの性格が、
-            <br />
-            文化祭をもっと楽しくする！
-          </p>
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            variants={fadeInUp}
+          >
+            <h1 className="sr-only">Persona Go（ペルソナ・ゴー）</h1>
+            <div className="mb-8 flex justify-center">
+              <Image
+                src="/images/title/title.png"
+                alt="Persona Go タイトル画像"
+                width={480}
+                height={160}
+                priority
+              />
+            </div>
+            <p className="text-lg font-medium md:text-xl">
+              あなたの性格が、
+              <br />
+              文化祭をもっと楽しくする！
+            </p>
+          </motion.div>
         </section>
 
         {/* ===== アプリ概要セクション ===== */}
         <section className="w-full bg-white px-4 py-12 text-gray-800 md:px-8">
-          <div className="mx-auto max-w-3xl space-y-6">
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            variants={fadeInUp}
+          >
             <h2 className="mb-4 text-3xl font-bold text-pink-500">
               Persona Goとは？
             </h2>
@@ -55,7 +73,7 @@ function TitleContainer() {
               にも参加できます。
             </p>
             {/* TODO: ここに一部の性格のイラスト表示。 */}
-          </div>
+          </motion.div>
         </section>
 
         <BorderRoundedWave01
@@ -64,11 +82,14 @@ function TitleContainer() {
         />
         {/* ===== 使い方セクション ===== */}
         <section className="w-full border-none bg-yellow-400 px-4 py-8 md:px-8">
-          <div className="mx-auto max-w-4xl">
-            <h2 className="mb-8 text-3xl font-bold text-white">使い方</h2>
-
-            <div className="grid gap-8 text-left md:grid-cols-2"></div>
-          </div>
+          <motion.h2
+            initial="hidden"
+            whileInView="visible"
+            variants={fadeInUp}
+            className="mb-8 text-3xl font-bold text-white"
+          >
+            使い方
+          </motion.h2>
         </section>
 
         <BorderAngularWave02
@@ -78,15 +99,26 @@ function TitleContainer() {
 
         {/* ===== 開始ボタンセクション ===== */}
         <section className="w-full bg-green-400 px-4 py-16 md:px-8">
-          <h2 className="mb-15 text-2xl font-bold text-white">
-            さあ、文化祭を楽しもう！
-          </h2>
-          <Link
-            href="/user/start"
-            className="rounded-lg border-2 border-green-500 bg-white px-8 py-3 text-2xl font-bold text-green-500 shadow-lg transition hover:bg-gray-100"
+          <motion.h2
+            initial="hidden"
+            whileInView="visible"
+            variants={fadeInUp}
+            className="mb-15 text-2xl font-bold text-white"
           >
-            始める
-          </Link>
+            さあ、文化祭を楽しもう！
+          </motion.h2>
+          <motion.div
+            initial={{ opacity: 0, scale: 0.8 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.6, delay: 0.2, type: "spring" }}
+          >
+            <Link
+              href="/user/start"
+              className="rounded-lg border-2 border-green-500 bg-white px-8 py-3 text-2xl font-bold text-green-500 shadow-lg transition hover:bg-gray-100"
+            >
+              始める
+            </Link>
+          </motion.div>
         </section>
       </main>
       <BorderLiner02
