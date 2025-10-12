@@ -10,8 +10,45 @@ import { Marker } from "@/components/common/Marker";
 import { FadeIn } from "./FadeIn";
 import { Footer } from "./Footer";
 import { StartButton } from "./StartButton";
+import { Step } from "./Step";
 
 const markerColor = "var(--color-pink-300)";
+
+const steps: {
+  title: string;
+  description: string;
+  image?: { src: string; alt: string; width: number; height: number };
+}[] = [
+  {
+    title: "性格診断を受けよう",
+    description:
+      "はじめに、簡単な質問に答えて自分の性格タイプを診断！結果に応じて、あなたのマイページが作成されます。",
+    image: undefined,
+  },
+  {
+    title: "入場時にQRコードを提示",
+    description:
+      "出し物に入場する際にマイページのQRコードを受付でスキャンしてもらうことで、アプリにあなたの来場情報が記録されます。",
+    image: undefined,
+  },
+  {
+    title: "出し物を楽しもう！",
+    description:
+      "出し物によっては、性格タイプごとにちょっと違う体験ができるかも？",
+    image: undefined,
+  },
+  {
+    title: "マイページで振り返ろう",
+    description:
+      "あなたが体験した出し物や、ゲームのスコアを確認できます。文化祭の思い出をアプリの中で残そう！",
+    image: undefined,
+  },
+  {
+    title: "3つ体験したら抽選チャンス！",
+    description: "出し物を3つ以上体験すると、抽選にチャレンジ可能！",
+    image: undefined,
+  },
+];
 
 function TitleContainer() {
   return (
@@ -69,8 +106,20 @@ function TitleContainer() {
         {/* ===== 使い方セクション ===== */}
         <section className="w-full border-none bg-yellow-400 px-4 py-8 md:px-8">
           <FadeIn>
-            <h2 className="text-3xl font-bold text-white">使い方</h2>
+            <h2 className="text-3xl font-bold text-gray-800">使い方</h2>
           </FadeIn>
+          <div className="mt-8 flex flex-col gap-6">
+            {steps.map((step, index) => (
+              <FadeIn key={index}>
+                <Step
+                  num={index + 1}
+                  title={step.title}
+                  description={step.description}
+                  image={step.image}
+                />
+              </FadeIn>
+            ))}
+          </div>
         </section>
 
         <BorderAngularWave02
