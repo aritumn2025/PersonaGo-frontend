@@ -1,8 +1,4 @@
-"use client";
-
-import { motion } from "framer-motion";
 import Image from "next/image";
-import Link from "next/link";
 
 import {
   BorderAngularWave02,
@@ -11,13 +7,11 @@ import {
 } from "@/components/common/Borders";
 import { Marker } from "@/components/common/Marker";
 
+import { FadeIn } from "./FadeIn";
 import { Footer } from "./Footer";
+import { StartButton } from "./StartButton";
 
 const markerColor = "var(--color-pink-300)";
-const fadeInUp = {
-  hidden: { opacity: 0, y: 30 },
-  visible: { opacity: 1, y: 0, transition: { duration: 0.8 } },
-};
 
 function TitleContainer() {
   return (
@@ -25,11 +19,7 @@ function TitleContainer() {
       <main className="flex w-full flex-col items-center text-center">
         {/* ===== タイトルセクション ===== */}
         <section className="relative w-full bg-gradient-to-br from-pink-400 via-rose-400 to-orange-300 py-16 text-white">
-          <motion.div
-            initial="hidden"
-            whileInView="visible"
-            variants={fadeInUp}
-          >
+          <FadeIn>
             <h1 className="sr-only">Persona Go（ペルソナ・ゴー）</h1>
             <div className="mb-8 flex justify-center">
               <Image
@@ -45,16 +35,12 @@ function TitleContainer() {
               <br />
               文化祭をもっと楽しくする！
             </p>
-          </motion.div>
+          </FadeIn>
         </section>
 
         {/* ===== アプリ概要セクション ===== */}
         <section className="w-full bg-white px-4 py-12 text-gray-800 md:px-8">
-          <motion.div
-            initial="hidden"
-            whileInView="visible"
-            variants={fadeInUp}
-          >
+          <FadeIn>
             <h2 className="mb-4 text-3xl font-bold text-pink-500">
               Persona Goとは？
             </h2>
@@ -73,7 +59,7 @@ function TitleContainer() {
               にも参加できます。
             </p>
             {/* TODO: ここに一部の性格のイラスト表示。 */}
-          </motion.div>
+          </FadeIn>
         </section>
 
         <BorderRoundedWave01
@@ -82,14 +68,9 @@ function TitleContainer() {
         />
         {/* ===== 使い方セクション ===== */}
         <section className="w-full border-none bg-yellow-400 px-4 py-8 md:px-8">
-          <motion.h2
-            initial="hidden"
-            whileInView="visible"
-            variants={fadeInUp}
-            className="mb-8 text-3xl font-bold text-white"
-          >
-            使い方
-          </motion.h2>
+          <FadeIn>
+            <h2 className="text-3xl font-bold text-white">使い方</h2>
+          </FadeIn>
         </section>
 
         <BorderAngularWave02
@@ -99,41 +80,12 @@ function TitleContainer() {
 
         {/* ===== 開始ボタンセクション ===== */}
         <section className="w-full bg-green-400 px-4 py-16 md:px-8">
-          <motion.h2
-            initial="hidden"
-            whileInView="visible"
-            variants={fadeInUp}
-            className="mb-15 text-2xl font-bold text-white"
-          >
-            さあ、文化祭を楽しもう！
-          </motion.h2>
-          <motion.div
-            initial={{ opacity: 0, scale: 0.8 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.6, delay: 0.2, type: "spring" }}
-          >
-            <Link href="/user/start">
-              <motion.button
-                animate={{
-                  scale: [1, 1.05, 1],
-                  boxShadow: [
-                    "0 0 0 rgba(0,0,0,0)",
-                    "0 0 20px rgba(255,255,255,0.6)",
-                    "0 0 0 rgba(0,0,0,0)",
-                  ],
-                }}
-                transition={{
-                  duration: 2.5,
-                  repeat: Infinity,
-                  ease: "easeInOut",
-                }}
-                whileHover={{ scale: 1.1 }}
-                className="h-12 w-40 rounded-2xl bg-white px-10 py-2 text-2xl font-semibold text-green-500 shadow-xl"
-              >
-                始める
-              </motion.button>
-            </Link>
-          </motion.div>
+          <FadeIn>
+            <h2 className="mb-15 text-2xl font-bold text-white">
+              さあ、文化祭を楽しもう！
+            </h2>
+          </FadeIn>
+          <StartButton href="/user/start">始める</StartButton>
         </section>
       </main>
       <BorderLiner02
