@@ -11,7 +11,6 @@ import {
 } from "@/components/common/Borders";
 import { Marker } from "@/components/common/Marker";
 
-import { Button } from "../ui/button";
 import { Footer } from "./Footer";
 
 const markerColor = "var(--color-pink-300)";
@@ -114,13 +113,25 @@ function TitleContainer() {
             transition={{ duration: 0.6, delay: 0.2, type: "spring" }}
           >
             <Link href="/user/start">
-              <Button
-                size="lg"
-                type="button"
-                className="group rounded-2xl bg-white px-10 py-6 text-2xl font-semibold text-green-500 shadow-xl transition-transform duration-300 hover:scale-115 hover:bg-white"
+              <motion.button
+                animate={{
+                  scale: [1, 1.05, 1],
+                  boxShadow: [
+                    "0 0 0 rgba(0,0,0,0)",
+                    "0 0 20px rgba(255,255,255,0.6)",
+                    "0 0 0 rgba(0,0,0,0)",
+                  ],
+                }}
+                transition={{
+                  duration: 2.5,
+                  repeat: Infinity,
+                  ease: "easeInOut",
+                }}
+                whileHover={{ scale: 1.1 }}
+                className="h-12 w-40 rounded-2xl bg-white px-10 py-2 text-2xl font-semibold text-green-500 shadow-xl"
               >
                 始める
-              </Button>
+              </motion.button>
             </Link>
           </motion.div>
         </section>
