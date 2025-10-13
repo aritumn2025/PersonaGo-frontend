@@ -13,3 +13,4 @@ npx shadcn@latest add skeleton
 npm install qrcode.react
 npx shadcn@latest add progress
 npm install motion
+npm install swiper
