@@ -16,8 +16,7 @@ interface StepProps {
 
 // TODO: step_xx.svgを用意する
 function Step({ num, title, description, image }: StepProps) {
-  // const numImg = `/images/title/usage/step_${num.toString().padStart(2, "0")}.svg`;
-  const numImg = `/images/title/usage/step_01.png`; // Temporarily use step_01.png for all steps
+  const numImg = `/images/title/usage/step_${num.toString().padStart(2, "0")}.svg`;
   return (
     <div className="flex flex-col text-gray-800">
       <div className="flex items-center">
