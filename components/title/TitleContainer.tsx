@@ -58,7 +58,7 @@ function TitleContainer() {
         <section className="relative w-full bg-gradient-to-br from-pink-400 via-rose-400 to-orange-300 py-16 text-white">
           <FadeIn>
             <h1 className="sr-only">Persona Go（ペルソナ・ゴー）</h1>
-            <div className="mb-8 flex justify-center">
+            <div className="my-20 flex justify-center px-10">
               <Image
                 src="/images/title/title.png"
                 alt="Persona Go タイトル画像"
@@ -108,7 +108,7 @@ function TitleContainer() {
           <FadeIn>
             <h2 className="text-3xl font-bold text-gray-800">使い方</h2>
           </FadeIn>
-          <div className="mt-8 flex flex-col gap-6">
+          <div className="mt-8 flex flex-col">
             {steps.map((step, index) => (
               <FadeIn key={index}>
                 <Step
@@ -136,12 +136,12 @@ function TitleContainer() {
           </FadeIn>
           <StartButton href="/user/start">始める</StartButton>
         </section>
+        <BorderLiner02
+          top="var(--color-green-400)"
+          bottom="var(--color-blue-300)"
+        />
+        <Footer />
       </main>
-      <BorderLiner02
-        top="var(--color-green-400)"
-        bottom="var(--color-blue-300)"
-      />
-      <Footer />
     </>
   );
 }
