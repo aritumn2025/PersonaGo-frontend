@@ -5,14 +5,6 @@
 // ID型定義
 type PersonalityTypeId = "Passionate" | "Active" | "Calm" | "Thinker";
 
-// ID一覧
-const PERSONALITY_TYPE_IDS: ReadonlyArray<string> = [
-  "Passionate",
-  "Active",
-  "Calm",
-  "Thinker",
-];
-
 // 基本情報
 type PersonalityTypeInfoEntry = Readonly<{
   name: string;
@@ -61,6 +53,11 @@ const PERSONALITY_TYPE_INFO: Readonly<
   },
 };
 
+// ID一覧
+const PERSONALITY_TYPE_IDS = Object.keys(
+  PERSONALITY_TYPE_INFO,
+) as ReadonlyArray<PersonalityTypeId>;
+
 // 性格(下位16分類)
 
 // ID型定義(API用のPersonalityIdとは別に)
@@ -81,26 +78,6 @@ type PersonalityId =
   | "ITSM"
   | "ITPA"
   | "ITPM";
-
-// ID一覧
-const PERSONALITY_IDS: Readonly<PersonalityId[]> = [
-  "EFSA",
-  "EFSM",
-  "EFPA",
-  "EFPM",
-  "ETSA",
-  "ETSM",
-  "ETPA",
-  "ETPM",
-  "IFSA",
-  "IFSM",
-  "IFPA",
-  "IFPM",
-  "ITSA",
-  "ITSM",
-  "ITPA",
-  "ITPM",
-];
 
 // 基本情報
 type PersonalityInfoEntry = Readonly<{
@@ -281,6 +258,11 @@ const PERSONALITY_INFO: Readonly<Record<PersonalityId, PersonalityInfoEntry>> =
       },
     },
   };
+
+// ID一覧
+const PERSONALITY_IDS = Object.keys(
+  PERSONALITY_INFO,
+) as ReadonlyArray<PersonalityId>;
 
 export type { PersonalityId, PersonalityTypeId };
 export {
