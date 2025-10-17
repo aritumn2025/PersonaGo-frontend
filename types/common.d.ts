@@ -4,7 +4,23 @@
 // 入出場管理システム
 type UserId = string; // ユーザーID (8桁のランダムな英数字(0-9, a-z, o,lは除く)の文字列を2ブロック、ハイフンで区切った形式 xxxx-xxxx)
 type UserName = string; // ユーザー名(重複可)
-type PersonalityId = string; // 性格ID
+type PersonalityId =
+  | "0"
+  | "1"
+  | "2"
+  | "3"
+  | "4"
+  | "5"
+  | "6"
+  | "7"
+  | "8"
+  | "9"
+  | "10"
+  | "11"
+  | "12"
+  | "13"
+  | "14"
+  | "15"; // 性格タイプID
 type AttractionId = "mbti" | "picture" | "games" | "battle" | "prize"; // アトラクションID
 type StaffName = string; // スタッフ名
 type DateTime = string; // ISO 8601 拡張形式 (YYYY-MM-DDTHH:mm:ss.sssZ)
