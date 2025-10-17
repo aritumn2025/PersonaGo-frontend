@@ -1,4 +1,5 @@
 /* 性格の基本情報を定めた定数ファイル */
+import type { PersonalityId } from "@/types/common";
 
 // 性格タイプ(上位4分類)
 
@@ -60,8 +61,8 @@ const PERSONALITY_TYPE_IDS = Object.keys(
 
 // 性格(下位16分類)
 
-// ID型定義(API用のPersonalityIdとは別に)
-type PersonalityId =
+// 内部名称型の定義
+type PersonalityCode =
   | "EFSA"
   | "EFSM"
   | "EFPA"
@@ -81,6 +82,8 @@ type PersonalityId =
 
 // 基本情報
 type PersonalityInfoEntry = Readonly<{
+  id: PersonalityId;
+  code: PersonalityCode;
   name: string;
   description: string;
   type: PersonalityTypeId;
@@ -91,7 +94,9 @@ type PersonalityInfoEntry = Readonly<{
 const PERSONALITY_INFO: Readonly<Record<PersonalityId, PersonalityInfoEntry>> =
   {
     // Passionate
-    EFSA: {
+    "0": {
+      id: "0",
+      code: "EFSA",
       name: "キャプテン",
       description: "勝利を掴むために動く実践家",
       type: "Passionate",
@@ -101,7 +106,9 @@ const PERSONALITY_INFO: Readonly<Record<PersonalityId, PersonalityInfoEntry>> =
         return PERSONALITY_TYPE_INFO[this.type];
       },
     },
-    EFSM: {
+    "1": {
+      id: "1",
+      code: "EFSM",
       name: "インフルエンサー",
       description: "影響力で人を動かす発信者",
       type: "Passionate",
@@ -111,7 +118,9 @@ const PERSONALITY_INFO: Readonly<Record<PersonalityId, PersonalityInfoEntry>> =
         return PERSONALITY_TYPE_INFO[this.type];
       },
     },
-    EFPA: {
+    "2": {
+      id: "2",
+      code: "EFPA",
       name: "ムードメーカー",
       description: "その場を明るくする太陽",
       type: "Passionate",
@@ -121,7 +130,9 @@ const PERSONALITY_INFO: Readonly<Record<PersonalityId, PersonalityInfoEntry>> =
         return PERSONALITY_TYPE_INFO[this.type];
       },
     },
-    EFPM: {
+    "3": {
+      id: "3",
+      code: "EFPM",
       name: "ドリーマー",
       description: "想いを夢に変える自由人",
       type: "Passionate",
@@ -133,7 +144,9 @@ const PERSONALITY_INFO: Readonly<Record<PersonalityId, PersonalityInfoEntry>> =
     },
 
     // Active
-    ETSA: {
+    "4": {
+      id: "4",
+      code: "ETSA",
       name: "リーダー",
       description: "みんなを導く情熱の旗手",
       type: "Active",
@@ -143,7 +156,9 @@ const PERSONALITY_INFO: Readonly<Record<PersonalityId, PersonalityInfoEntry>> =
         return PERSONALITY_TYPE_INFO[this.type];
       },
     },
-    ETSM: {
+    "5": {
+      id: "5",
+      code: "ETSM",
       name: "チャレンジャー",
       description: "常識を打ち破る行動の革命者",
       type: "Active",
@@ -153,7 +168,9 @@ const PERSONALITY_INFO: Readonly<Record<PersonalityId, PersonalityInfoEntry>> =
         return PERSONALITY_TYPE_INFO[this.type];
       },
     },
-    ETPA: {
+    "6": {
+      id: "6",
+      code: "ETPA",
       name: "ハンター",
       description: "機を逃さない俊敏な挑戦者",
       type: "Active",
@@ -163,7 +180,9 @@ const PERSONALITY_INFO: Readonly<Record<PersonalityId, PersonalityInfoEntry>> =
         return PERSONALITY_TYPE_INFO[this.type];
       },
     },
-    ETPM: {
+    "7": {
+      id: "7",
+      code: "ETPM",
       name: "エンターテイナー",
       description: "驚きと笑顔を生み出す達人",
       type: "Active",
@@ -175,7 +194,9 @@ const PERSONALITY_INFO: Readonly<Record<PersonalityId, PersonalityInfoEntry>> =
     },
 
     // Calm
-    IFSA: {
+    "8": {
+      id: "8",
+      code: "IFSA",
       name: "サポーター",
       description: "支えることで輝く優しさ",
       type: "Calm",
@@ -185,7 +206,9 @@ const PERSONALITY_INFO: Readonly<Record<PersonalityId, PersonalityInfoEntry>> =
         return PERSONALITY_TYPE_INFO[this.type];
       },
     },
-    IFSM: {
+    "9": {
+      id: "9",
+      code: "IFSM",
       name: "ナレーター",
       description: "静かな声で物語を紡ぐ",
       type: "Calm",
@@ -195,7 +218,9 @@ const PERSONALITY_INFO: Readonly<Record<PersonalityId, PersonalityInfoEntry>> =
         return PERSONALITY_TYPE_INFO[this.type];
       },
     },
-    IFPA: {
+    "10": {
+      id: "10",
+      code: "IFPA",
       name: "ヒーラー",
       description: "癒しの空気を届ける人",
       type: "Calm",
@@ -205,7 +230,9 @@ const PERSONALITY_INFO: Readonly<Record<PersonalityId, PersonalityInfoEntry>> =
         return PERSONALITY_TYPE_INFO[this.type];
       },
     },
-    IFPM: {
+    "11": {
+      id: "11",
+      code: "IFPM",
       name: "ミュージシャン",
       description: "感性で世界を癒す奏者",
       type: "Calm",
@@ -217,7 +244,9 @@ const PERSONALITY_INFO: Readonly<Record<PersonalityId, PersonalityInfoEntry>> =
     },
 
     // Thinker
-    ITSA: {
+    "12": {
+      id: "12",
+      code: "ITSA",
       name: "エンジニア",
       description: "精密な思考で問題を解く理論派",
       type: "Thinker",
@@ -227,7 +256,9 @@ const PERSONALITY_INFO: Readonly<Record<PersonalityId, PersonalityInfoEntry>> =
         return PERSONALITY_TYPE_INFO[this.type];
       },
     },
-    ITSM: {
+    "13": {
+      id: "13",
+      code: "ITSM",
       name: "プランナー",
       description: "戦略を練り、未来を描く構想家",
       type: "Thinker",
@@ -237,7 +268,9 @@ const PERSONALITY_INFO: Readonly<Record<PersonalityId, PersonalityInfoEntry>> =
         return PERSONALITY_TYPE_INFO[this.type];
       },
     },
-    ITPA: {
+    "14": {
+      id: "14",
+      code: "ITPA",
       name: "アナリスト",
       description: "現実を読み解く冷静な観察者",
       type: "Thinker",
@@ -247,7 +280,9 @@ const PERSONALITY_INFO: Readonly<Record<PersonalityId, PersonalityInfoEntry>> =
         return PERSONALITY_TYPE_INFO[this.type];
       },
     },
-    ITPM: {
+    "15": {
+      id: "15",
+      code: "ITPM",
       name: "イノベーター",
       description: "革新を生み出す創造的発想家",
       type: "Thinker",
@@ -264,10 +299,18 @@ const PERSONALITY_IDS = Object.keys(
   PERSONALITY_INFO,
 ) as ReadonlyArray<PersonalityId>;
 
-export type { PersonalityId, PersonalityTypeId };
+// code→idの変換マップ
+const PERSONALITY_CODE_TO_ID_MAP: Readonly<
+  Record<PersonalityCode, PersonalityId>
+> = Object.fromEntries(
+  Object.values(PERSONALITY_INFO).map((p) => [p.code, p.id]),
+) as Readonly<Record<PersonalityCode, PersonalityId>>;
+
+export type { PersonalityTypeId, PersonalityCode };
 export {
   PERSONALITY_TYPE_IDS,
   PERSONALITY_TYPE_INFO,
   PERSONALITY_IDS,
   PERSONALITY_INFO,
+  PERSONALITY_CODE_TO_ID_MAP,
 };
