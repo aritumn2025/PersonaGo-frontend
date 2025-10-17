@@ -14,13 +14,33 @@ import {
 | **AM** | 現実型 ↔ 創造型（**Analytic ↔ Imaginative**）      | 現実的・実証主義 ↔ 創造的・空想的 | 情報やアイデアの捉え方。論理的・現実的か、直感的・創造的か。         |
 */
 
+const RESULT_CODES = [
+  "IFPM",
+  "IFPA",
+  "IFSM",
+  "IFSA",
+  "ITPM",
+  "ITPA",
+  "ITSM",
+  "ITSA",
+  "EFPM",
+  "EFPA",
+  "EFSM",
+  "EFSA",
+  "ETPM",
+  "ETPA",
+  "ETSM",
+  "ETSA",
+] as const satisfies readonly PersonalityCode[];
+
 const COUNT = 7;
+
 const DIAGNOSE_CONFIG = createDiagnoseConfig({
   labels: [
     {
       id: "EI",
       text: "外向性 vs 内向性",
-      description: "外交性やエネルギーの向きを示す。社交的か、内省的か。",
+      description: "外向性やエネルギーの向きを示す。社交的か、内省的か。",
       positive: { text: "外向性 (E)", description: "他人と関わる" },
       negative: { text: "内向性 (I)", description: "一人で思考する" },
       bias: 0,
@@ -190,24 +210,9 @@ const DIAGNOSE_CONFIG = createDiagnoseConfig({
     },
   ],
 
-  result: [
-    "IFPM",
-    "IFPA",
-    "IFSM",
-    "IFSA",
-    "ITPM",
-    "ITPA",
-    "ITSM",
-    "ITSA",
-    "EFPM",
-    "EFPA",
-    "EFSM",
-    "EFSA",
-    "ETPM",
-    "ETPA",
-    "ETSM",
-    "ETSA",
-  ].map((code) => PERSONALITY_CODE_TO_ID_MAP[code as PersonalityCode]),
+  result: RESULT_CODES.map(
+    (code) => PERSONALITY_CODE_TO_ID_MAP[code as PersonalityCode],
+  ),
 });
 
 export { DIAGNOSE_CONFIG };
