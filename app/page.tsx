@@ -1,7 +1,9 @@
+import { TitleContainer } from "@/components/title/TitleContainer";
+
 export default function Page() {
   return (
     <main>
-      <h1 className="text-3xl font-bold">Persona Go</h1>
+      <TitleContainer />
     </main>
   );
 }
