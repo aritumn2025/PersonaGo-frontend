@@ -130,7 +130,7 @@ function TitleContainer() {
         {/* ===== 開始ボタンセクション ===== */}
         <section className="w-full bg-green-400 px-4 py-16 md:px-8">
           <FadeIn>
-            <h2 className="mb-15 text-2xl font-bold text-white">
+            <h2 className="mb-16 text-2xl font-bold text-white">
               さあ、文化祭を楽しもう！
             </h2>
           </FadeIn>
