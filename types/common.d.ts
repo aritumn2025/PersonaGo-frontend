@@ -38,7 +38,6 @@ type User = {
   name: UserName;
   originalPersonality: PersonalityId;
   currentPersonality: PersonalityId;
-  attractions: Record<AttractionId, number>;
 };
 
 // 入場者情報
