@@ -24,7 +24,7 @@ const PERSONALITY_TYPE_INFO: Readonly<
       "人とのつながりや共感にエネルギーを感じるタイプ。感受性が強く、明るく社交的。イベント企画や表現活動などに向く。",
     color: {
       primary: "var(--color-pink-500)",
-      secondary: "var(--color-pink-300)",
+      secondary: "var(--color-pink-50)",
     },
   },
   Active: {
@@ -34,7 +34,7 @@ const PERSONALITY_TYPE_INFO: Readonly<
       "考えるよりまず行動するタイプ。リーダーシップがあり、挑戦や競争に強い。スポーツ・営業・起業などに多い。",
     color: {
       primary: "var(--color-yellow-400)",
-      secondary: "var(--color-yellow-200)",
+      secondary: "var(--color-yellow-50)",
     },
   },
   Calm: {
@@ -44,7 +44,7 @@ const PERSONALITY_TYPE_INFO: Readonly<
       "人に寄り添い、穏やかな関係を築くタイプ。思慮深く、落ち着いた性格で、教育・医療・心理などに適性がある。",
     color: {
       primary: "var(--color-green-400)",
-      secondary: "var(--color-green-200)",
+      secondary: "var(--color-green-50)",
     },
   },
   Thinker: {
@@ -54,7 +54,7 @@ const PERSONALITY_TYPE_INFO: Readonly<
       "分析と探究を好む冷静な思考家タイプ。物事を体系的に理解し、研究・開発・プログラミングなどに向いている。",
     color: {
       primary: "var(--color-blue-400)",
-      secondary: "var(--color-blue-200)",
+      secondary: "var(--color-blue-50)",
     },
   },
 };
