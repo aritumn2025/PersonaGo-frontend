@@ -17,26 +17,21 @@ const USER_NAME_EXPIRE_DAYS = 2; // ページ遷移用の一時メモリ
  */
 function useCookie() {
   // --- Getter ---
-  const getUserId = useCallback(() => Cookies.get(USER_ID_KEY) ?? null, []);
-  const getUserName = useCallback(() => Cookies.get(USER_NAME_KEY) ?? null, []);
+  const getUserId = () => Cookies.get(USER_ID_KEY) ?? null;
+  const getUserName = () => Cookies.get(USER_NAME_KEY) ?? null;
 
   // --- Setter ---
-  const setUserId = useCallback((id: string) => {
+  const setUserId = (id: string) => {
     Cookies.set(USER_ID_KEY, id, { expires: USER_ID_EXPIRE_DAYS });
-  }, []);
+  };
 
-  const setUserName = useCallback((name: string) => {
+  const setUserName = (name: string) =>
     Cookies.set(USER_NAME_KEY, name, { expires: USER_NAME_EXPIRE_DAYS });
-  }, []);
 
   // --- Remover ---
-  const removeUserId = useCallback(() => {
-    Cookies.remove(USER_ID_KEY);
-  }, []);
+  const removeUserId = () => Cookies.remove(USER_ID_KEY);
 
-  const removeUserName = useCallback(() => {
-    Cookies.remove(USER_NAME_KEY);
-  }, []);
+  const removeUserName = () => Cookies.remove(USER_NAME_KEY);
 
   return {
     // getter
