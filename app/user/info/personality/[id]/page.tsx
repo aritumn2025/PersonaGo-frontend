@@ -11,7 +11,7 @@ interface PageProps {
 }
 
 export default async function Page({ params }: PageProps) {
-  const resolvedParams = await Promise.resolve(params); // 一応旧バージョンの互換性を保つために Promise を解決
+  const resolvedParams = await Promise.resolve(params); // Resolve Promise for backward compatibility with older versions that may pass a Promise
   const { id } = resolvedParams;
 
   if (!(id in PERSONALITY_ARTICLE_INFO_MAP)) {
