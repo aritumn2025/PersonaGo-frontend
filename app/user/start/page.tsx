@@ -18,9 +18,9 @@ export default function Page() {
     if (id) {
       router.replace(`/user/dashboard`);
     } else {
-      router.replace("/user/diagnose/question");
+      router.replace("/user/diagnose/");
     }
-  }, [router]);
+  }, [router, getUserId]);
 
   return (
     <main>
