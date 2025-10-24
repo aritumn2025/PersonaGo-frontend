@@ -14,3 +14,5 @@ npm install qrcode.react
 npx shadcn@latest add progress
 npm install motion
 npm install swiper
+npm install js-cookie
+npm install --save-dev @types/js-cookie
