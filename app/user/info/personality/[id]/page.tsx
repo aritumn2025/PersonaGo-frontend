@@ -4,7 +4,7 @@ import type { PersonalityCode } from "@/constants/personality";
 import { PERSONALITY_ARTICLE_INFO_MAP } from "@/constants/personality_article";
 
 import { BottomNavigation } from "@/components/user/BottomNavigation";
-import { PersonalityArticle } from "@/components/user/info/PersonalityArticle";
+import { PersonalityArticle } from "@/components/user/info/";
 
 interface PageProps {
   params: { id: PersonalityCode } | Promise<{ id: PersonalityCode }>;
