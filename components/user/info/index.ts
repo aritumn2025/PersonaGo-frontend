@@ -1,3 +1,4 @@
-import { PersonalityArticle } from "./PersonalityArticle";
+import { PersonalityArticle } from "./personality/PersonalityArticle";
+import { PersonalityLink } from "./personality/PersonalityLink";
 
-export { PersonalityArticle };
+export { PersonalityArticle, PersonalityLink };
