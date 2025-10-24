@@ -1,6 +1,6 @@
 import React from "react";
 
-import { PersonalityLink } from "@/components/user/info/PersonalityLink";
+import { PersonalityLink } from "@/components/user/info/";
 
 import type { PersonalityCode } from "./personality";
 
