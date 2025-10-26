@@ -1,5 +1,5 @@
 /**
- * デバッグ用コンポーネント郡
+ * デバッグ用コンポーネント群
  */
 import { PERSONALITY_INFO } from "@/constants/personality";
 

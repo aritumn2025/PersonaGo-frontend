@@ -1,5 +1,5 @@
 /**
- * 質問リストコンポーネント郡
+ * 質問リストコンポーネント群
  */
 import type {
   ContinuousQuestion,
