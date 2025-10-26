@@ -1,7 +1,5 @@
 "use client";
 
-import { useCallback } from "react";
-
 import Cookies from "js-cookie";
 
 // cookieキー定義
