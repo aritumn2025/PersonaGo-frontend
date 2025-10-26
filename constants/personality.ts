@@ -1,6 +1,26 @@
 /* 性格の基本情報を定めた定数ファイル */
 import type { PersonalityId } from "@/types/common";
 
+import { lightColor } from "@/utils/color";
+
+// 色定義
+const COLORS = {
+  red: "#FF669F",
+  yellow: "#FFD434",
+  green: "#1BD045",
+  blue: "#458BE8",
+  purple: "#AF00F1",
+} as const;
+
+const LIGHT_DEFAULT_RATIO = 0.9;
+const LIGHT_COLORS = {
+  red: lightColor(COLORS.red, LIGHT_DEFAULT_RATIO),
+  yellow: lightColor(COLORS.yellow, LIGHT_DEFAULT_RATIO),
+  green: lightColor(COLORS.green, LIGHT_DEFAULT_RATIO),
+  blue: lightColor(COLORS.blue, LIGHT_DEFAULT_RATIO),
+  purple: lightColor(COLORS.purple, LIGHT_DEFAULT_RATIO),
+} as const;
+
 // 性格タイプ(上位4分類)
 
 // ID型定義
@@ -11,7 +31,13 @@ type PersonalityTypeInfoEntry = Readonly<{
   id: PersonalityTypeId;
   name: string;
   description: string;
-  color: { readonly primary: string; readonly secondary: string };
+  color: {
+    readonly main: string;
+    readonly mainLight: string;
+    readonly sub: string;
+    readonly assort: string;
+    readonly accent: string;
+  };
 }>;
 
 const PERSONALITY_TYPE_INFO: Readonly<
@@ -23,8 +49,11 @@ const PERSONALITY_TYPE_INFO: Readonly<
     description:
       "人とのつながりや共感にエネルギーを感じるタイプ。感受性が強く、明るく社交的。イベント企画や表現活動などに向く。",
     color: {
-      primary: "var(--color-pink-500)",
-      secondary: "var(--color-pink-50)",
+      main: COLORS.red,
+      mainLight: LIGHT_COLORS.red,
+      sub: COLORS.purple,
+      assort: COLORS.yellow,
+      accent: COLORS.green,
     },
   },
   Active: {
@@ -33,8 +62,11 @@ const PERSONALITY_TYPE_INFO: Readonly<
     description:
       "考えるよりまず行動するタイプ。リーダーシップがあり、挑戦や競争に強い。スポーツ・営業・起業などに多い。",
     color: {
-      primary: "var(--color-yellow-400)",
-      secondary: "var(--color-yellow-50)",
+      main: COLORS.yellow,
+      mainLight: LIGHT_COLORS.yellow,
+      sub: COLORS.red,
+      accent: COLORS.green,
+      assort: COLORS.blue,
     },
   },
   Calm: {
@@ -43,8 +75,11 @@ const PERSONALITY_TYPE_INFO: Readonly<
     description:
       "人に寄り添い、穏やかな関係を築くタイプ。思慮深く、落ち着いた性格で、教育・医療・心理などに適性がある。",
     color: {
-      primary: "var(--color-green-400)",
-      secondary: "var(--color-green-50)",
+      main: COLORS.green,
+      mainLight: LIGHT_COLORS.green,
+      sub: COLORS.blue,
+      accent: COLORS.yellow,
+      assort: COLORS.purple,
     },
   },
   Thinker: {
@@ -53,8 +88,11 @@ const PERSONALITY_TYPE_INFO: Readonly<
     description:
       "分析と探究を好む冷静な思考家タイプ。物事を体系的に理解し、研究・開発・プログラミングなどに向いている。",
     color: {
-      primary: "var(--color-blue-400)",
-      secondary: "var(--color-blue-50)",
+      main: COLORS.blue,
+      mainLight: LIGHT_COLORS.blue,
+      sub: COLORS.purple,
+      accent: COLORS.green,
+      assort: COLORS.yellow,
     },
   },
 };
@@ -92,7 +130,10 @@ type PersonalityInfoEntry = Readonly<{
   type: PersonalityTypeInfoEntry;
   name: string;
   description: string;
-  link: string;
+  link: {
+    info: string;
+    result: string;
+  };
   image: string;
 }>;
 const PERSONALITY_INFO: Readonly<Record<PersonalityId, PersonalityInfoEntry>> =
@@ -104,7 +145,10 @@ const PERSONALITY_INFO: Readonly<Record<PersonalityId, PersonalityInfoEntry>> =
       type: PERSONALITY_TYPE_INFO.Passionate,
       name: "キャプテン",
       description: "勝利を掴むために動く実践家",
-      link: "/user/info/personality/EFSA",
+      link: {
+        info: "/user/info/personality/EFSA",
+        result: "/user/diagnose/result/EFSA",
+      },
       image: "/images/personality/EFSA.png",
     },
     "1": {
@@ -113,7 +157,10 @@ const PERSONALITY_INFO: Readonly<Record<PersonalityId, PersonalityInfoEntry>> =
       type: PERSONALITY_TYPE_INFO.Passionate,
       name: "インフルエンサー",
       description: "影響力で人を動かす発信者",
-      link: "/user/info/personality/EFSM",
+      link: {
+        info: "/user/info/personality/EFSM",
+        result: "/user/diagnose/result/EFSM",
+      },
       image: "/images/personality/EFSM.png",
     },
     "2": {
@@ -122,7 +169,10 @@ const PERSONALITY_INFO: Readonly<Record<PersonalityId, PersonalityInfoEntry>> =
       type: PERSONALITY_TYPE_INFO.Passionate,
       name: "ムードメーカー",
       description: "その場を明るくする太陽",
-      link: "/user/info/personality/EFPA",
+      link: {
+        info: "/user/info/personality/EFPA",
+        result: "/user/diagnose/result/EFPA",
+      },
       image: "/images/personality/EFPA.png",
     },
     "3": {
@@ -131,7 +181,10 @@ const PERSONALITY_INFO: Readonly<Record<PersonalityId, PersonalityInfoEntry>> =
       type: PERSONALITY_TYPE_INFO.Passionate,
       name: "ドリーマー",
       description: "想いを夢に変える自由人",
-      link: "/user/info/personality/EFPM",
+      link: {
+        info: "/user/info/personality/EFPM",
+        result: "/user/diagnose/result/EFPM",
+      },
       image: "/images/personality/EFPM.png",
     },
 
@@ -142,7 +195,10 @@ const PERSONALITY_INFO: Readonly<Record<PersonalityId, PersonalityInfoEntry>> =
       type: PERSONALITY_TYPE_INFO.Active,
       name: "リーダー",
       description: "みんなを導く情熱の旗手",
-      link: "/user/info/personality/ETSA",
+      link: {
+        info: "/user/info/personality/ETSA",
+        result: "/user/diagnose/result/ETSA",
+      },
       image: "/images/personality/ETSA.png",
     },
     "5": {
@@ -151,7 +207,10 @@ const PERSONALITY_INFO: Readonly<Record<PersonalityId, PersonalityInfoEntry>> =
       type: PERSONALITY_TYPE_INFO.Active,
       name: "チャレンジャー",
       description: "常識を打ち破る行動の革命者",
-      link: "/user/info/personality/ETSM",
+      link: {
+        info: "/user/info/personality/ETSM",
+        result: "/user/diagnose/result/ETSM",
+      },
       image: "/images/personality/ETSM.png",
     },
     "6": {
@@ -160,7 +219,10 @@ const PERSONALITY_INFO: Readonly<Record<PersonalityId, PersonalityInfoEntry>> =
       type: PERSONALITY_TYPE_INFO.Active,
       name: "ハンター",
       description: "機を逃さない俊敏な挑戦者",
-      link: "/user/info/personality/ETPA",
+      link: {
+        info: "/user/info/personality/ETPA",
+        result: "/user/diagnose/result/ETPA",
+      },
       image: "/images/personality/ETPA.png",
     },
     "7": {
@@ -169,7 +231,10 @@ const PERSONALITY_INFO: Readonly<Record<PersonalityId, PersonalityInfoEntry>> =
       type: PERSONALITY_TYPE_INFO.Active,
       name: "エンターテイナー",
       description: "驚きと笑顔を生み出す達人",
-      link: "/user/info/personality/ETPM",
+      link: {
+        info: "/user/info/personality/ETPM",
+        result: "/user/diagnose/result/ETPM",
+      },
       image: "/images/personality/ETPM.png",
     },
 
@@ -180,7 +245,10 @@ const PERSONALITY_INFO: Readonly<Record<PersonalityId, PersonalityInfoEntry>> =
       type: PERSONALITY_TYPE_INFO.Calm,
       name: "サポーター",
       description: "支えることで輝く優しさ",
-      link: "/user/info/personality/IFSA",
+      link: {
+        info: "/user/info/personality/IFSA",
+        result: "/user/diagnose/result/IFSA",
+      },
       image: "/images/personality/IFSA.png",
     },
     "9": {
@@ -189,7 +257,10 @@ const PERSONALITY_INFO: Readonly<Record<PersonalityId, PersonalityInfoEntry>> =
       type: PERSONALITY_TYPE_INFO.Calm,
       name: "ナレーター",
       description: "静かな声で物語を紡ぐ",
-      link: "/user/info/personality/IFSM",
+      link: {
+        info: "/user/info/personality/IFSM",
+        result: "/user/diagnose/result/IFSM",
+      },
       image: "/images/personality/IFSM.png",
     },
     "10": {
@@ -198,7 +269,10 @@ const PERSONALITY_INFO: Readonly<Record<PersonalityId, PersonalityInfoEntry>> =
       type: PERSONALITY_TYPE_INFO.Calm,
       name: "ヒーラー",
       description: "癒しの空気を届ける人",
-      link: "/user/info/personality/IFPA",
+      link: {
+        info: "/user/info/personality/IFPA",
+        result: "/user/diagnose/result/IFPA",
+      },
       image: "/images/personality/IFPA.png",
     },
     "11": {
@@ -207,7 +281,10 @@ const PERSONALITY_INFO: Readonly<Record<PersonalityId, PersonalityInfoEntry>> =
       type: PERSONALITY_TYPE_INFO.Calm,
       name: "ミュージシャン",
       description: "感性で世界を癒す奏者",
-      link: "/user/info/personality/IFPM",
+      link: {
+        info: "/user/info/personality/IFPM",
+        result: "/user/diagnose/result/IFPM",
+      },
       image: "/images/personality/IFPM.png",
     },
 
@@ -218,7 +295,10 @@ const PERSONALITY_INFO: Readonly<Record<PersonalityId, PersonalityInfoEntry>> =
       type: PERSONALITY_TYPE_INFO.Thinker,
       name: "エンジニア",
       description: "精密な思考で問題を解く理論派",
-      link: "/user/info/personality/ITSA",
+      link: {
+        info: "/user/info/personality/ITSA",
+        result: "/user/diagnose/result/ITSA",
+      },
       image: "/images/personality/ITSA.png",
     },
     "13": {
@@ -227,7 +307,10 @@ const PERSONALITY_INFO: Readonly<Record<PersonalityId, PersonalityInfoEntry>> =
       type: PERSONALITY_TYPE_INFO.Thinker,
       name: "プランナー",
       description: "戦略を練り、未来を描く構想家",
-      link: "/user/info/personality/ITSM",
+      link: {
+        info: "/user/info/personality/ITSM",
+        result: "/user/diagnose/result/ITSM",
+      },
       image: "/images/personality/ITSM.png",
     },
     "14": {
@@ -236,7 +319,10 @@ const PERSONALITY_INFO: Readonly<Record<PersonalityId, PersonalityInfoEntry>> =
       type: PERSONALITY_TYPE_INFO.Thinker,
       name: "アナリスト",
       description: "現実を読み解く冷静な観察者",
-      link: "/user/info/personality/ITPA",
+      link: {
+        info: "/user/info/personality/ITPA",
+        result: "/user/diagnose/result/ITPA",
+      },
       image: "/images/personality/ITPA.png",
     },
     "15": {
@@ -245,7 +331,10 @@ const PERSONALITY_INFO: Readonly<Record<PersonalityId, PersonalityInfoEntry>> =
       type: PERSONALITY_TYPE_INFO.Thinker,
       name: "イノベーター",
       description: "革新を生み出す創造的発想家",
-      link: "/user/info/personality/ITPM",
+      link: {
+        info: "/user/info/personality/ITPM",
+        result: "/user/diagnose/result/ITPM",
+      },
       image: "/images/personality/ITPM.png",
     },
   };

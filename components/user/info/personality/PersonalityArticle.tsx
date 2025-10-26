@@ -40,7 +40,7 @@ function PersonalityArticle({ personalityCode }: PersonalityArticleProps) {
       <div
         className="flex flex-col items-center px-4 pt-16 pb-1 text-center"
         style={{
-          backgroundColor: personality.type.color.primary,
+          backgroundColor: personality.type.color.main,
         }}
       >
         <h1 className="mb-4 text-4xl font-extrabold text-white">
@@ -57,7 +57,7 @@ function PersonalityArticle({ personalityCode }: PersonalityArticleProps) {
         />
       </div>
       <BorderComponent
-        top={personality.type.color.primary}
+        top={personality.type.color.main}
         bottom="var(--color-white)"
       />
 
@@ -70,7 +70,7 @@ function PersonalityArticle({ personalityCode }: PersonalityArticleProps) {
               {isEven ? (
                 <BorderComponent
                   top="var(--color-white)"
-                  bottom={personality.type.color.secondary}
+                  bottom={personality.type.color.mainLight}
                 />
               ) : null}
 
@@ -78,13 +78,13 @@ function PersonalityArticle({ personalityCode }: PersonalityArticleProps) {
                 className="pt-8"
                 style={{
                   backgroundColor: isEven
-                    ? personality.type.color.secondary
+                    ? personality.type.color.mainLight
                     : "var(--color-white)",
                 }}
               >
                 <h2
                   className="mx-5 border-x-4 text-center text-2xl font-bold text-gray-800"
-                  style={{ borderColor: personality.type.color.primary }}
+                  style={{ borderColor: personality.type.color.main }}
                 >
                   {title}
                 </h2>
@@ -96,7 +96,7 @@ function PersonalityArticle({ personalityCode }: PersonalityArticleProps) {
               {/* ボーダー(2つめのみ) */}
               {isEven ? (
                 <BorderComponent
-                  top={personality.type.color.secondary}
+                  top={personality.type.color.mainLight}
                   bottom="var(--color-white)"
                 />
               ) : null}
