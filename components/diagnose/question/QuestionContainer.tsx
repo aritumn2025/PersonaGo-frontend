@@ -9,7 +9,7 @@ import { usePagination } from "@/hooks/usePagination";
 
 import { Button } from "@/components/ui/button";
 
-import { Calculating } from "./Calclating";
+import { Calculating } from "./Calculating";
 import { DebugScore } from "./Debug";
 import { ProgressBar } from "./ProgressBar";
 import { QuestionList } from "./QuestionList";
