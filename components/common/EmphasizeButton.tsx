@@ -2,13 +2,15 @@
 
 import { motion } from "framer-motion";
 import Link from "next/link";
+import { twMerge } from "tailwind-merge";
 
-interface StartButtonProps {
+interface EmphasizeButtonProps {
   href: string;
+  className?: string;
   children: React.ReactNode;
 }
 
-function StartButton({ href, children }: StartButtonProps) {
+function EmphasizeButton({ href, className, children }: EmphasizeButtonProps) {
   return (
     <motion.div
       initial={{ opacity: 0, scale: 0.8 }}
@@ -31,7 +33,7 @@ function StartButton({ href, children }: StartButtonProps) {
             ease: "easeInOut",
           }}
           whileHover={{ scale: 1.1 }}
-          className="h-12 w-40 rounded-2xl bg-white px-10 py-2 text-2xl font-semibold text-green-500 shadow-xl"
+          className={twMerge("rounded-2xl px-4 py-2 shadow-xl", className)}
         >
           {children}
         </motion.button>
@@ -39,4 +41,4 @@ function StartButton({ href, children }: StartButtonProps) {
     </motion.div>
   );
 }
-export { StartButton };
+export { EmphasizeButton };

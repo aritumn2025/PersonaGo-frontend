@@ -1,8 +1,11 @@
 import React from "react";
 
+import type { PersonalityId } from "@/types/common";
+
 import { PersonalityLink } from "@/components/user/info/";
 
 import type { PersonalityCode } from "./personality";
+import { PERSONALITY_INFO } from "./personality";
 
 // 性格の記事データに関しては、PersonalityCode をキーにして管理する
 
@@ -13,7 +16,9 @@ import type { PersonalityCode } from "./personality";
  */
 type PersonalityArticleSection = {
   title: string;
-  content: React.ReactNode;
+  Content: React.FC<{
+    link: keyof (typeof PERSONALITY_INFO)[PersonalityId]["link"];
+  }>;
 };
 
 /**
@@ -39,7 +44,7 @@ const PERSONALITY_ARTICLE_INFO: Readonly<
     sections: [
       {
         title: SECTION_01_TITLE,
-        content: (
+        Content: () => (
           <>
             キャプテンは、「情熱タイプ」の中でも特に実行力と責任感に優れたリーダー的存在です。
             人と関わることでエネルギーを得ながらも、目標を達成するためには現実的な手段を選ぶ“行動の人”でもあります。
@@ -52,7 +57,7 @@ const PERSONALITY_ARTICLE_INFO: Readonly<
       },
       {
         title: SECTION_02_TITLE,
-        content: (
+        Content: () => (
           <>
             キャプテンの最大の強みは、実現力とリーダーシップです。自分だけでなく周囲をも鼓舞し、チームを勝利へと導く力を持っています。
             現実的な判断力とスピーディな行動が、多くの人から信頼を集める理由です。
@@ -67,21 +72,21 @@ const PERSONALITY_ARTICLE_INFO: Readonly<
       },
       {
         title: SECTION_03_TITLE,
-        content: (
+        Content: ({ link }) => (
           <>
             キャプテンにとって最も相性が良いのは、穏やかで支え上手なタイプです。
             たとえば
-            <PersonalityLink personalityCode="IFPA" />
+            <PersonalityLink personalityCode="IFPA" link={link} />
             は、あなたの情熱をやさしく包み込み、チーム全体に調和をもたらしてくれます。
             また、
-            <PersonalityLink personalityCode="ITSA" />
+            <PersonalityLink personalityCode="ITSA" link={link} />
             のような論理的で堅実なタイプは、あなたの実行力を堅固な戦略で支える最高のパートナーになるでしょう。
             <br />
             <br />
             一方で、自由奔放な
-            <PersonalityLink personalityCode="ETPM" />
+            <PersonalityLink personalityCode="ETPM" link={link} />
             や、感性豊かでマイペースな
-            <PersonalityLink personalityCode="IFPM" />
+            <PersonalityLink personalityCode="IFPM" link={link} />
             とは、価値観の違いから衝突することもあります。しかし、彼らの存在はあなたに「柔軟さ」や「感情の豊かさ」を思い出させてくれる貴重な刺激です。
             <br />
             正反対だからこそ、学び合える関係――それがキャプテンにとっての理想的な人間関係なのです。
@@ -93,172 +98,211 @@ const PERSONALITY_ARTICLE_INFO: Readonly<
   },
   EFSM: {
     sections: [
-      { title: SECTION_01_TITLE, content: <> インフルエンサーの説明文</> },
+      { title: "どんな人？", Content: () => <> インフルエンサーの説明文</> },
       {
-        title: SECTION_02_TITLE,
-        content: <> インフルエンサーの長所と短所</>,
+        title: "長所・短所とアドバイス",
+        Content: () => <> インフルエンサーの長所と短所</>,
       },
       {
-        title: SECTION_03_TITLE,
-        content: <> インフルエンサーの相性の良い性格</>,
+        title: "相性と関係性",
+        Content: ({ link }) => <> インフルエンサーの相性の良い性格</>,
       },
     ],
     relations: [],
   },
   EFPA: {
     sections: [
-      { title: SECTION_01_TITLE, content: <> ムードメーカーの説明文</> },
+      { title: "どんな人？", Content: () => <> ムードメーカーの説明文</> },
       {
-        title: SECTION_02_TITLE,
-        content: <> ムードメーカーの長所と短所</>,
+        title: "長所・短所とアドバイス",
+        Content: () => <> ムードメーカーの長所と短所</>,
       },
       {
-        title: SECTION_03_TITLE,
-        content: <> ムードメーカーの相性の良い性格</>,
+        title: "相性と関係性",
+        Content: ({ link }) => <> ムードメーカーの相性の良い性格</>,
       },
     ],
     relations: [],
   },
   EFPM: {
     sections: [
-      { title: SECTION_01_TITLE, content: <> ドリーマーの説明文</> },
+      { title: "どんな人？", Content: () => <> ドリーマーの説明文</> },
       {
-        title: SECTION_02_TITLE,
-        content: <> ドリーマーの長所と短所</>,
+        title: "長所・短所とアドバイス",
+        Content: () => <> ドリーマーの長所と短所</>,
       },
-      { title: SECTION_03_TITLE, content: <> ドリーマーの相性の良い性格</> },
+      {
+        title: "相性と関係性",
+        Content: ({ link }) => <> ドリーマーの相性の良い性格</>,
+      },
     ],
     relations: [],
   },
   ETSA: {
     sections: [
-      { title: SECTION_01_TITLE, content: <> リーダーの説明文</> },
-      { title: SECTION_02_TITLE, content: <> リーダーの長所と短所</> },
-      { title: SECTION_03_TITLE, content: <> リーダーの相性の良い性格</> },
+      { title: "どんな人？", Content: () => <> リーダーの説明文</> },
+      {
+        title: "長所・短所とアドバイス",
+        Content: () => <> リーダーの長所と短所</>,
+      },
+      {
+        title: "相性と関係性",
+        Content: ({ link }) => <> リーダーの相性の良い性格</>,
+      },
     ],
     relations: [],
   },
   ETSM: {
     sections: [
-      { title: SECTION_01_TITLE, content: <> チャレンジャーの説明文</> },
+      { title: "どんな人？", Content: () => <> チャレンジャーの説明文</> },
       {
-        title: SECTION_02_TITLE,
-        content: <> チャレンジャーの長所と短所</>,
+        title: "長所・短所とアドバイス",
+        Content: () => <> チャレンジャーの長所と短所</>,
       },
       {
-        title: SECTION_03_TITLE,
-        content: <> チャレンジャーの相性の良い性格</>,
+        title: "相性と関係性",
+        Content: ({ link }) => <> チャレンジャーの相性の良い性格</>,
       },
     ],
     relations: [],
   },
   ETPA: {
     sections: [
-      { title: SECTION_01_TITLE, content: <> ハンターの説明文</> },
-      { title: SECTION_02_TITLE, content: <> ハンターの長所と短所</> },
-      { title: SECTION_03_TITLE, content: <> ハンターの相性の良い性格</> },
+      { title: "どんな人？", Content: () => <> ハンターの説明文</> },
+      {
+        title: "長所・短所とアドバイス",
+        Content: () => <> ハンターの長所と短所</>,
+      },
+      {
+        title: "相性と関係性",
+        Content: ({ link }) => <> ハンターの相性の良い性格</>,
+      },
     ],
     relations: [],
   },
   ETPM: {
     sections: [
-      { title: SECTION_01_TITLE, content: <> エンターテイナーの説明文</> },
+      { title: "どんな人？", Content: () => <> エンターテイナーの説明文</> },
       {
-        title: SECTION_02_TITLE,
-        content: <> エンターテイナーの長所と短所</>,
+        title: "長所・短所とアドバイス",
+        Content: () => <> エンターテイナーの長所と短所</>,
       },
       {
-        title: SECTION_03_TITLE,
-        content: <> エンターテイナーの相性の良い性格</>,
+        title: "相性と関係性",
+        Content: ({ link }) => <> エンターテイナーの相性の良い性格</>,
       },
     ],
     relations: [],
   },
   IFSA: {
     sections: [
-      { title: SECTION_01_TITLE, content: <> サポーターの説明文</> },
+      { title: "どんな人？", Content: () => <> サポーターの説明文</> },
       {
-        title: SECTION_02_TITLE,
-        content: <> サポーターの長所と短所</>,
+        title: "長所・短所とアドバイス",
+        Content: () => <> サポーターの長所と短所</>,
       },
-      { title: SECTION_03_TITLE, content: <> サポーターの相性の良い性格</> },
+      {
+        title: "相性と関係性",
+        Content: ({ link }) => <> サポーターの相性の良い性格</>,
+      },
     ],
     relations: [],
   },
   IFSM: {
     sections: [
-      { title: SECTION_01_TITLE, content: <> ナレーターの説明文</> },
+      { title: "どんな人？", Content: () => <> ナレーターの説明文</> },
       {
-        title: SECTION_02_TITLE,
-        content: <> ナレーターの長所と短所</>,
+        title: "長所・短所とアドバイス",
+        Content: () => <> ナレーターの長所と短所</>,
       },
-      { title: SECTION_03_TITLE, content: <> ナレーターの相性の良い性格</> },
+      {
+        title: "相性と関係性",
+        Content: ({ link }) => <> ナレーターの相性の良い性格</>,
+      },
     ],
     relations: [],
   },
   IFPA: {
     sections: [
-      { title: SECTION_01_TITLE, content: <> ヒーラーの説明文</> },
-      { title: SECTION_02_TITLE, content: <> ヒーラーの長所と短所</> },
-      { title: SECTION_03_TITLE, content: <> ヒーラーの相性の良い性格</> },
+      { title: "どんな人？", Content: () => <> ヒーラーの説明文</> },
+      {
+        title: "長所・短所とアドバイス",
+        Content: () => <> ヒーラーの長所と短所</>,
+      },
+      {
+        title: "相性と関係性",
+        Content: ({ link }) => <> ヒーラーの相性の良い性格</>,
+      },
     ],
     relations: [],
   },
   IFPM: {
     sections: [
-      { title: SECTION_01_TITLE, content: <> ミュージシャンの説明文</> },
+      { title: "どんな人？", Content: () => <> ミュージシャンの説明文</> },
       {
-        title: SECTION_02_TITLE,
-        content: <> ミュージシャンの長所と短所</>,
+        title: "長所・短所とアドバイス",
+        Content: () => <> ミュージシャンの長所と短所</>,
       },
       {
-        title: SECTION_03_TITLE,
-        content: <> ミュージシャンの相性の良い性格</>,
+        title: "相性と関係性",
+        Content: ({ link }) => <> ミュージシャンの相性の良い性格</>,
       },
     ],
     relations: [],
   },
   ITSA: {
     sections: [
-      { title: SECTION_01_TITLE, content: <> エンジニアの説明文</> },
+      { title: "どんな人？", Content: () => <> エンジニアの説明文</> },
       {
-        title: SECTION_02_TITLE,
-        content: <> エンジニアの長所と短所</>,
+        title: "長所・短所とアドバイス",
+        Content: () => <> エンジニアの長所と短所</>,
       },
-      { title: SECTION_03_TITLE, content: <> エンジニアの相性の良い性格</> },
+      {
+        title: "相性と関係性",
+        Content: ({ link }) => <> エンジニアの相性の良い性格</>,
+      },
     ],
     relations: [],
   },
   ITSM: {
     sections: [
-      { title: SECTION_01_TITLE, content: <> プランナーの説明文</> },
+      { title: "どんな人？", Content: () => <> プランナーの説明文</> },
       {
-        title: SECTION_02_TITLE,
-        content: <> プランナーの長所と短所</>,
+        title: "長所・短所とアドバイス",
+        Content: () => <> プランナーの長所と短所</>,
       },
-      { title: SECTION_03_TITLE, content: <> プランナーの相性の良い性格</> },
+      {
+        title: "相性と関係性",
+        Content: ({ link }) => <> プランナーの相性の良い性格</>,
+      },
     ],
     relations: [],
   },
   ITPA: {
     sections: [
-      { title: SECTION_01_TITLE, content: <> アナリストの説明文</> },
+      { title: "どんな人？", Content: () => <> アナリストの説明文</> },
       {
-        title: SECTION_02_TITLE,
-        content: <> アナリストの長所と短所</>,
+        title: "長所・短所とアドバイス",
+        Content: () => <> アナリストの長所と短所</>,
       },
-      { title: SECTION_03_TITLE, content: <> アナリストの相性の良い性格</> },
+      {
+        title: "相性と関係性",
+        Content: ({ link }) => <> アナリストの相性の良い性格</>,
+      },
     ],
     relations: [],
   },
   ITPM: {
     sections: [
-      { title: SECTION_01_TITLE, content: <> イノベーターの説明文</> },
+      { title: "どんな人？", Content: () => <> イノベーターの説明文</> },
       {
-        title: SECTION_02_TITLE,
-        content: <> イノベーターの長所と短所</>,
+        title: "長所・短所とアドバイス",
+        Content: () => <> イノベーターの長所と短所</>,
       },
-      { title: SECTION_03_TITLE, content: <> イノベーターの相性の良い性格</> },
+      {
+        title: "相性と関係性",
+        Content: ({ link }) => <> イノベーターの相性の良い性格</>,
+      },
     ],
     relations: [],
   },

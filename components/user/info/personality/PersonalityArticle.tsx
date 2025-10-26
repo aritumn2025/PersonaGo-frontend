@@ -25,18 +25,25 @@ const PERSONALITY_BORDER_MAP: Record<
 
 interface PersonalityArticleProps {
   personalityCode: PersonalityCode;
+  result?: boolean;
 }
 
-function PersonalityArticle({ personalityCode }: PersonalityArticleProps) {
+function PersonalityArticle({
+  personalityCode,
+  result = false,
+}: PersonalityArticleProps) {
   const personality =
     PERSONALITY_INFO[PERSONALITY_CODE_TO_ID_MAP[personalityCode]];
   const details = PERSONALITY_ARTICLE_INFO[personalityCode];
   const BorderComponent = PERSONALITY_BORDER_MAP[personality.type.id];
   return (
-    <article className="mb-24 w-full">
-      <div className="fixed top-4 left-4 z-1000">
-        <BackButton href="/user/info" />
-      </div>
+    <article className="w-full">
+      {/* 戻るボタン -> infoページのみ */}
+      {!result && (
+        <div className="fixed top-4 left-4 z-1000">
+          <BackButton href="/user/info" />
+        </div>
+      )}
       <div
         className="flex flex-col items-center px-4 pt-16 pb-1 text-center"
         style={{
@@ -62,7 +69,7 @@ function PersonalityArticle({ personalityCode }: PersonalityArticleProps) {
       />
 
       <div className="flex flex-col gap-5 pt-10">
-        {details.sections.map(({ title, content }, index) => {
+        {details.sections.map(({ title, Content }, index) => {
           const isEven = index % 2 === 1; // 0始まりなので注意(2つめが偶数)
           return (
             <div key={index}>
@@ -89,7 +96,7 @@ function PersonalityArticle({ personalityCode }: PersonalityArticleProps) {
                   {title}
                 </h2>
                 <p className="p-4 whitespace-pre-wrap text-gray-700">
-                  {content}
+                  <Content link={result ? "result" : "info"} />
                 </p>
               </section>
 
@@ -109,7 +116,10 @@ function PersonalityArticle({ personalityCode }: PersonalityArticleProps) {
           <ul className="grid grid-cols-2 gap-4 p-4">
             {details.relations.map((related, index) => (
               <li key={index}>
-                <PersonalityIcon personalityCode={related} />
+                <PersonalityIcon
+                  personalityCode={related}
+                  link={result ? "result" : "info"}
+                />
               </li>
             ))}
           </ul>

@@ -3,8 +3,7 @@ import { notFound } from "next/navigation";
 import type { PersonalityCode } from "@/constants/personality";
 import { PERSONALITY_ARTICLE_INFO } from "@/constants/personality_article";
 
-import { BottomNavigation } from "@/components/user/BottomNavigation";
-import { PersonalityArticle } from "@/components/user/info/";
+import { ResultContainer } from "@/components/diagnose/result/ResultContainer";
 
 interface PageProps {
   params: { id: PersonalityCode } | Promise<{ id: PersonalityCode }>;
@@ -19,9 +18,8 @@ export default async function Page({ params }: PageProps) {
   }
 
   return (
-    <main className="pb-24">
-      <PersonalityArticle personalityCode={id} result={false} />
-      <BottomNavigation currentPage="info" />
+    <main>
+      <ResultContainer personalityCode={id} />
     </main>
   );
 }
