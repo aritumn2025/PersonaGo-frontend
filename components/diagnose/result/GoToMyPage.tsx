@@ -1,5 +1,6 @@
-import Link from "next/link";
 import { twMerge } from "tailwind-merge";
+
+import { EmphasizeButton } from "@/components/common/EmphasizeButton";
 
 interface GoToMyPageProps {
   className?: string;
@@ -7,15 +8,15 @@ interface GoToMyPageProps {
 
 function GoToMyPage({ className }: GoToMyPageProps) {
   return (
-    <Link
+    <EmphasizeButton
       href="/user/dashboard"
       className={twMerge(
-        "bg-primary text-primary-foreground hover:bg-primary/90 rounded-full px-4 py-2 text-xl",
+        "bg-primary text-primary-foreground hover:bg-primary/90 px-4 py-2 text-lg font-bold",
         className,
       )}
     >
-      マイページへ行こう！
-    </Link>
+      マイページに行こう！
+    </EmphasizeButton>
   );
 }
 
