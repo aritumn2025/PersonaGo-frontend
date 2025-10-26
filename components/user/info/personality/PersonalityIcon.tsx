@@ -22,7 +22,7 @@ function PersonalityIcon({ personalityCode }: PersonalityIconProps) {
       <div
         className="flex h-20 w-20 items-center justify-center overflow-hidden rounded-full border-2"
         style={{
-          borderColor: personality.type.color.primary,
+          borderColor: personality.type.color.main,
         }}
       >
         <Image
@@ -32,7 +32,7 @@ function PersonalityIcon({ personalityCode }: PersonalityIconProps) {
           height={70}
         />
       </div>
-      <p className="text-sm" style={{ color: personality.type.color.primary }}>
+      <p className="text-sm" style={{ color: personality.type.color.main }}>
         {personality.name}
       </p>
     </Link>

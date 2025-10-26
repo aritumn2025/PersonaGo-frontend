@@ -1,6 +1,26 @@
 /* 性格の基本情報を定めた定数ファイル */
 import type { PersonalityId } from "@/types/common";
 
+import { lightColor } from "@/utils/color";
+
+// 色定義
+const COLORS = {
+  red: "#FF669F",
+  yellow: "#FFD434",
+  green: "#1BD045",
+  blue: "#458BE8",
+  purple: "#AF00F1",
+} as const;
+
+const LIGHT_DEFAULT_RATIO = 0.9;
+const LIGHT_COLORS = {
+  red: lightColor(COLORS.red, LIGHT_DEFAULT_RATIO),
+  yellow: lightColor(COLORS.yellow, LIGHT_DEFAULT_RATIO),
+  green: lightColor(COLORS.green, LIGHT_DEFAULT_RATIO),
+  blue: lightColor(COLORS.blue, LIGHT_DEFAULT_RATIO),
+  purple: lightColor(COLORS.purple, LIGHT_DEFAULT_RATIO),
+} as const;
+
 // 性格タイプ(上位4分類)
 
 // ID型定義
@@ -11,7 +31,13 @@ type PersonalityTypeInfoEntry = Readonly<{
   id: PersonalityTypeId;
   name: string;
   description: string;
-  color: { readonly primary: string; readonly secondary: string };
+  color: {
+    readonly main: string;
+    readonly mainLight: string;
+    readonly sub: string;
+    readonly assort: string;
+    readonly accent: string;
+  };
 }>;
 
 const PERSONALITY_TYPE_INFO: Readonly<
@@ -23,8 +49,11 @@ const PERSONALITY_TYPE_INFO: Readonly<
     description:
       "人とのつながりや共感にエネルギーを感じるタイプ。感受性が強く、明るく社交的。イベント企画や表現活動などに向く。",
     color: {
-      primary: "var(--color-pink-500)",
-      secondary: "var(--color-pink-50)",
+      main: COLORS.red,
+      mainLight: LIGHT_COLORS.red,
+      sub: COLORS.purple,
+      assort: COLORS.yellow,
+      accent: COLORS.green,
     },
   },
   Active: {
@@ -33,8 +62,11 @@ const PERSONALITY_TYPE_INFO: Readonly<
     description:
       "考えるよりまず行動するタイプ。リーダーシップがあり、挑戦や競争に強い。スポーツ・営業・起業などに多い。",
     color: {
-      primary: "var(--color-yellow-400)",
-      secondary: "var(--color-yellow-50)",
+      main: COLORS.yellow,
+      mainLight: LIGHT_COLORS.yellow,
+      sub: COLORS.red,
+      accent: COLORS.green,
+      assort: COLORS.blue,
     },
   },
   Calm: {
@@ -43,8 +75,11 @@ const PERSONALITY_TYPE_INFO: Readonly<
     description:
       "人に寄り添い、穏やかな関係を築くタイプ。思慮深く、落ち着いた性格で、教育・医療・心理などに適性がある。",
     color: {
-      primary: "var(--color-green-400)",
-      secondary: "var(--color-green-50)",
+      main: COLORS.green,
+      mainLight: LIGHT_COLORS.green,
+      sub: COLORS.blue,
+      accent: COLORS.yellow,
+      assort: COLORS.purple,
     },
   },
   Thinker: {
@@ -53,8 +88,11 @@ const PERSONALITY_TYPE_INFO: Readonly<
     description:
       "分析と探究を好む冷静な思考家タイプ。物事を体系的に理解し、研究・開発・プログラミングなどに向いている。",
     color: {
-      primary: "var(--color-blue-400)",
-      secondary: "var(--color-blue-50)",
+      main: COLORS.blue,
+      mainLight: LIGHT_COLORS.blue,
+      sub: COLORS.purple,
+      accent: COLORS.green,
+      assort: COLORS.yellow,
     },
   },
 };

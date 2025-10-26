@@ -19,7 +19,7 @@ function PersonalityLink({ personalityCode }: PersonalityLinkProps) {
       href={personality.link.info}
       className="rounded-md px-1 underline"
       style={{
-        color: personality.type.color.primary,
+        color: personality.type.color.main,
       }}
     >
       {personality.name}
