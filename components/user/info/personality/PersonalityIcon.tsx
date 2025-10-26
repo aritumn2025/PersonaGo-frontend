@@ -1,6 +1,8 @@
 import Image from "next/image";
 import Link from "next/link";
 
+import type { PersonalityId } from "@/types/common";
+
 import {
   PERSONALITY_CODE_TO_ID_MAP,
   PERSONALITY_INFO,
@@ -9,14 +11,15 @@ import {
 
 interface PersonalityIconProps {
   personalityCode: PersonalityCode;
+  link: keyof (typeof PERSONALITY_INFO)[PersonalityId]["link"];
 }
 
-function PersonalityIcon({ personalityCode }: PersonalityIconProps) {
+function PersonalityIcon({ personalityCode, link }: PersonalityIconProps) {
   const personality =
     PERSONALITY_INFO[PERSONALITY_CODE_TO_ID_MAP[personalityCode]];
   return (
     <Link
-      href={personality.link.info}
+      href={personality.link[link]}
       className="flex flex-col items-center gap-1"
     >
       <div
