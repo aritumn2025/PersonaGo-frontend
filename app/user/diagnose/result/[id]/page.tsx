@@ -3,7 +3,7 @@ import { notFound } from "next/navigation";
 import type { PersonalityCode } from "@/constants/personality";
 import { PERSONALITY_ARTICLE_INFO } from "@/constants/personality_article";
 
-import { ResultContainer } from "@/components/diagnose/result/ResltContainer";
+import { ResultContainer } from "@/components/diagnose/result/ResultContainer";
 
 interface PageProps {
   params: { id: PersonalityCode } | Promise<{ id: PersonalityCode }>;

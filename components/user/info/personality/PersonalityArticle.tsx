@@ -25,7 +25,7 @@ const PERSONALITY_BORDER_MAP: Record<
 
 interface PersonalityArticleProps {
   personalityCode: PersonalityCode;
-  result: boolean;
+  result?: boolean;
 }
 
 function PersonalityArticle({
