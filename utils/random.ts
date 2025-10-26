@@ -29,9 +29,22 @@ function randFloat(min: number, max: number): number {
  * @returns An array of randomly selected items.
  */
 function randomChoice<T>(items: T[], count: number): T[] {
-  if (items.length === 0) return [];
-  const shuffled = items.sort(() => 0.5 - Math.random());
-  return shuffled.slice(0, count);
+  // items の検証
+  if (!Array.isArray(items) || items.length === 0) return [];
+
+  // count の検証と正規化
+  if (!Number.isFinite(count)) return [];
+  const n = Math.floor(count);
+  if (n <= 0) return [];
+  const take = Math.min(items.length, n);
+
+  // Fisher-Yates shuffle アルゴリズムでランダムに選択
+  const shuffled = [...items];
+  for (let i = shuffled.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
+  }
+  return shuffled.slice(0, take);
 }
 
 export { randInt, randFloat, randomChoice };
