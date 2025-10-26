@@ -25,8 +25,8 @@ function PersonalityIcon({ personalityCode }: PersonalityIconProps) {
         <Image
           src={personality.image}
           alt={personality.name}
-          width={48}
-          height={48}
+          width={70}
+          height={70}
         />
       </div>
       <p className="text-sm" style={{ color: personality.type.color.primary }}>
