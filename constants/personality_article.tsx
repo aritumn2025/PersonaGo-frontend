@@ -32,7 +32,7 @@ const SECTION_03_TITLE = "相性と関係性";
 
 // 各性格の記事データマップ
 // TODO: 全部の性格を埋める
-const PERSONALITY_ARTICLE_INFO_MAP: Readonly<
+const PERSONALITY_ARTICLE_INFO: Readonly<
   Record<PersonalityCode, PersonalityArticleInfoEntry>
 > = {
   EFSA: {
@@ -264,4 +264,4 @@ const PERSONALITY_ARTICLE_INFO_MAP: Readonly<
   },
 };
 
-export { PERSONALITY_ARTICLE_INFO_MAP };
+export { PERSONALITY_ARTICLE_INFO };
