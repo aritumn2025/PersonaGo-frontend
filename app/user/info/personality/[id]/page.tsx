@@ -19,9 +19,9 @@ export default async function Page({ params }: PageProps) {
   }
 
   return (
-    <>
-      <PersonalityArticle personalityCode={id} />
+    <main className="pb-24">
+      <PersonalityArticle personalityCode={id} result={false} />
       <BottomNavigation currentPage="info" />
-    </>
+    </main>
   );
 }
