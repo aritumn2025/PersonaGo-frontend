@@ -129,7 +129,6 @@ class Diagnose<K extends string> {
     if (qIndex < 0 || this._questions.length <= qIndex) {
       throw new Error("Question index out of range");
     }
-    const question = this._questions[qIndex];
 
     // 以前に回答をしていた場合、スコアを引く
     if (this._answer[qIndex] !== null) {

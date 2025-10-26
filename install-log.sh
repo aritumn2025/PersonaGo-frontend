@@ -16,3 +16,4 @@ npm install motion
 npm install swiper
 npm install js-cookie
 npm install --save-dev @types/js-cookie
+npx shadcn@latest add alert-dialog
