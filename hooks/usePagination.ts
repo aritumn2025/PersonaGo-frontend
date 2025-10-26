@@ -1,6 +1,6 @@
 import { useCallback, useMemo, useState } from "react";
 
-import { PaginationManager } from "@/utils/pagenation_manager";
+import { PaginationManager } from "@/utils/pagination_manager";
 
 /**
  * usePagination フック
