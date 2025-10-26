@@ -5,11 +5,11 @@ import {
   BorderLiner02,
   BorderRoundedWave01,
 } from "@/components/common/Borders";
+import { EmphasizeButton } from "@/components/common/EmphasizeButton";
 import { Marker } from "@/components/common/Marker";
 
 import { FadeIn } from "./FadeIn";
 import { Footer } from "./Footer";
-import { StartButton } from "./StartButton";
 import { Step } from "./Step";
 
 const markerColor = "var(--color-pink-300)";
@@ -134,7 +134,12 @@ function TitleContainer() {
               さあ、文化祭を楽しもう！
             </h2>
           </FadeIn>
-          <StartButton href="/user/start">始める</StartButton>
+          <EmphasizeButton
+            href="/user/start"
+            className="h-12 w-40 rounded-2xl bg-white px-10 py-2 text-2xl font-semibold text-green-500 shadow-xl"
+          >
+            始める
+          </EmphasizeButton>
         </section>
       </main>
       <BorderLiner02
