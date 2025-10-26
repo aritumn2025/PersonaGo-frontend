@@ -14,10 +14,10 @@ import { UserNameInput } from "./UserNameInput";
 function StartContainer() {
   const router = useRouter();
   const { getUserId, setUserName: setUserNameCookie } = useCookie();
-  const [userName, setUserName] = useState<string | null>(null); // ユーザー名
+  const [userName, setUserName] = useState<string>(""); // ユーザー名
   const [loggedIn, setLoggedIn] = useState<boolean>(false); // ログイン状態
 
-  const isUserNameInput = userName && userName.trim() !== ""; // ユーザー名が入力されているか
+  const isUserNameInput = userName.trim() !== ""; // ユーザー名が入力されているか
 
   // ログイン済み or 未ログインでユーザー名入力済みの場合に診断開始
   const handleStart = () => {
@@ -27,8 +27,6 @@ function StartContainer() {
       if (isUserNameInput) {
         setUserNameCookie(userName.trim());
         router.push("/user/diagnose/question");
-      } else {
-        // pass
       }
     }
   };
@@ -36,7 +34,6 @@ function StartContainer() {
   useEffect(() => {
     const userId = getUserId();
     setLoggedIn(userId !== null);
-    // setLoggedIn(true); // TODO: 一時的に常にログイン状態にする
   }, [getUserId]);
 
   return (
@@ -46,7 +43,7 @@ function StartContainer() {
         <p>あなたの性格タイプを見つけてみよう！</p>
       </div>
       {!loggedIn && (
-        <UserNameInput userName={userName || ""} setUserName={setUserName} />
+        <UserNameInput userName={userName} setUserName={setUserName} />
       )}
       <Button
         onClick={handleStart}
