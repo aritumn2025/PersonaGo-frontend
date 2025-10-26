@@ -6,7 +6,7 @@ import {
   type PersonalityCode,
   type PersonalityTypeId,
 } from "@/constants/personality";
-import { PERSONALITY_ARTICLE_INFO_MAP } from "@/constants/personality_article";
+import { PERSONALITY_ARTICLE_INFO } from "@/constants/personality_article";
 
 import { BackButton } from "@/components/common/BackButton";
 import * as border from "@/components/common/Borders";
@@ -30,7 +30,7 @@ interface PersonalityArticleProps {
 function PersonalityArticle({ personalityCode }: PersonalityArticleProps) {
   const personality =
     PERSONALITY_INFO[PERSONALITY_CODE_TO_ID_MAP[personalityCode]];
-  const details = PERSONALITY_ARTICLE_INFO_MAP[personalityCode];
+  const details = PERSONALITY_ARTICLE_INFO[personalityCode];
   const BorderComponent = PERSONALITY_BORDER_MAP[personality.type.id];
   return (
     <article className="mb-24 w-full">
@@ -38,7 +38,7 @@ function PersonalityArticle({ personalityCode }: PersonalityArticleProps) {
         <BackButton href="/user/info" />
       </div>
       <div
-        className="flex flex-col items-center p-4 pt-16 text-center"
+        className="flex flex-col items-center px-4 pt-16 pb-1 text-center"
         style={{
           backgroundColor: personality.type.color.primary,
         }}
@@ -46,7 +46,7 @@ function PersonalityArticle({ personalityCode }: PersonalityArticleProps) {
         <h1 className="mb-4 text-4xl font-extrabold text-white">
           {personality.name}
         </h1>
-        <p className="text-md mb-18 font-bold text-white">
+        <p className="text-md mb-1 font-bold text-white">
           {personality.description}
         </p>
         <Image
