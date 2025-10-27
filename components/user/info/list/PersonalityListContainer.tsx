@@ -14,10 +14,7 @@ import { Marker } from "@/components/common/Marker";
 import { PersonalityIcon } from "../personality/PersonalityIcon";
 
 function PersonalityListContainer() {
-  const groupByType: Record<PersonalityTypeId, PersonalityId[]> = {} as Record<
-    PersonalityTypeId,
-    PersonalityId[]
-  >;
+  const groupByType = {} as Record<PersonalityTypeId, PersonalityId[]>;
 
   PERSONALITY_IDS.forEach((id) => {
     const type = PERSONALITY_INFO[id].type.id;

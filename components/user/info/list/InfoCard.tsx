@@ -29,13 +29,11 @@ function infoCard({
       <Card className="w-full max-w-md py-3">
         <CardContent className="flex flex-row items-center gap-2">
           <Image src={imageSrc} alt={imageAlt} width={80} height={80} />
-          <div>
-            <CardHeader className="pl-1">
+          <div className="pl-1">
+            <CardHeader className="pl-0">
               <CardTitle className="text-lg text-gray-600">{title}</CardTitle>
             </CardHeader>
-            <CardDescription className="text-center">
-              {description}
-            </CardDescription>
+            <CardDescription>{description}</CardDescription>
           </div>
         </CardContent>
       </Card>
