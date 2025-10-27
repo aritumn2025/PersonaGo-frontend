@@ -41,7 +41,7 @@ function PersonalityArticle({
       {/* 戻るボタン -> infoページのみ */}
       {!result && (
         <div className="fixed top-4 left-4 z-1000">
-          <BackButton href="/user/info" />
+          <BackButton href="/user/info/personality" />
         </div>
       )}
       <div
