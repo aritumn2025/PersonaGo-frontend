@@ -39,7 +39,7 @@ const ATTRACTION_IDS_WITHOUT_MBTI: Readonly<AttractionId[]> = [
 // アトラクションの基本情報
 const ATTRACTIONS_INFO: Readonly<Record<AttractionId, AttractionInfoEntry>> = {
   mbti: {
-    name: "MBTI診断",
+    name: "性格診断",
     description: "まだ知らないあなた自身、のぞいてみませんか？",
     place: "スマホ",
     link: "/user/info/attraction/mbti",
@@ -53,7 +53,7 @@ const ATTRACTIONS_INFO: Readonly<Record<AttractionId, AttractionInfoEntry>> = {
     icon: FaSearch,
   },
   picture: {
-    name: "AI似顔絵プリクラ",
+    name: "似顔絵メーカー",
     description: "キミだけの特性プリクラをゲットしよう！",
     place: "3I教室",
     link: "/user/info/attraction/picture",
@@ -72,9 +72,9 @@ const ATTRACTIONS_INFO: Readonly<Record<AttractionId, AttractionInfoEntry>> = {
     link: "/user/info/attraction/games",
     image: "/attraction/games_01.png",
     color: {
-      // 緑系統
-      primary: "#68CC3D",
-      secondary: "#D3F0C6",
+      // 青系統
+      primary: "#7F83FF",
+      secondary: "#E0E1FF",
     },
     icon: IoGameController,
   },
@@ -85,14 +85,14 @@ const ATTRACTIONS_INFO: Readonly<Record<AttractionId, AttractionInfoEntry>> = {
     link: "/user/info/attraction/battle",
     image: "/attraction/battle_01.png",
     color: {
-      // 青系統
-      primary: "#7F83FF",
-      secondary: "#E0E1FF",
+      // 緑系統
+      primary: "#68CC3D",
+      secondary: "#D3F0C6",
     },
     icon: FaGun,
   },
   prize: {
-    name: "景品受取",
+    name: "景品",
     description: "3つのアトラクションを体験して、素敵な景品をゲットしよう！",
     place: "情報棟入口",
     link: "/user/info/attraction/prize",

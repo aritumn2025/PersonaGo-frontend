@@ -47,7 +47,7 @@ const PERSONALITY_TYPE_INFO: Readonly<
     id: "Passionate",
     name: "情熱タイプ",
     description:
-      "人とのつながりや共感にエネルギーを感じるタイプ。感受性が強く、明るく社交的。イベント企画や表現活動などに向く。",
+      "人とのつながりや共感にエネルギーを感じるタイプ。自分の気持ちを素直に表現し、周囲に前向きな影響を与えることが多い。",
     color: {
       main: COLORS.red,
       mainLight: LIGHT_COLORS.red,
@@ -60,7 +60,7 @@ const PERSONALITY_TYPE_INFO: Readonly<
     id: "Active",
     name: "行動タイプ",
     description:
-      "考えるよりまず行動するタイプ。リーダーシップがあり、挑戦や競争に強い。スポーツ・営業・起業などに多い。",
+      "考えるよりまず行動するタイプ。新しいことへの挑戦を楽しみ、周囲を引っ張っていくエネルギーにあふれている。",
     color: {
       main: COLORS.yellow,
       mainLight: LIGHT_COLORS.yellow,
@@ -73,7 +73,7 @@ const PERSONALITY_TYPE_INFO: Readonly<
     id: "Calm",
     name: "穏やかタイプ",
     description:
-      "人に寄り添い、穏やかな関係を築くタイプ。思慮深く、落ち着いた性格で、教育・医療・心理などに適性がある。",
+      "人に寄り添い、穏やかな関係を築くタイプ。落ち着いた雰囲気で、周囲に安心感を与える存在。",
     color: {
       main: COLORS.green,
       mainLight: LIGHT_COLORS.green,
@@ -86,7 +86,7 @@ const PERSONALITY_TYPE_INFO: Readonly<
     id: "Thinker",
     name: "思索タイプ",
     description:
-      "分析と探究を好む冷静な思考家タイプ。物事を体系的に理解し、研究・開発・プログラミングなどに向いている。",
+      "分析と探究を好む冷静な思考家タイプ。物事を客観的に捉え、深く考えることで新しい発見を導き出す。",
     color: {
       main: COLORS.blue,
       mainLight: LIGHT_COLORS.blue,

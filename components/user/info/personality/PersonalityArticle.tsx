@@ -41,7 +41,7 @@ function PersonalityArticle({
       {/* 戻るボタン -> infoページのみ */}
       {!result && (
         <div className="fixed top-4 left-4 z-1000">
-          <BackButton href="/user/info" />
+          <BackButton href="/user/info/personality" />
         </div>
       )}
       <div
@@ -90,12 +90,12 @@ function PersonalityArticle({
                 }}
               >
                 <h2
-                  className="mx-5 border-x-4 text-center text-2xl font-bold text-gray-800"
+                  className="mx-5 border-x-4 text-center text-2xl font-bold text-gray-600"
                   style={{ borderColor: personality.type.color.main }}
                 >
                   {title}
                 </h2>
-                <p className="p-4 whitespace-pre-wrap text-gray-700">
+                <p className="p-4 whitespace-pre-wrap text-gray-500">
                   <Content link={result ? "result" : "info"} />
                 </p>
               </section>
@@ -112,7 +112,9 @@ function PersonalityArticle({
         })}
         <section>
           {/* ここは文字サイズを少し小さくする */}
-          <h2 className="mb-2 text-center text-xl font-bold">関係のある性格</h2>
+          <h2 className="mb-2 text-center text-xl font-bold text-gray-600">
+            関係のある性格
+          </h2>
           <ul className="grid grid-cols-2 gap-4 p-4">
             {details.relations.map((related, index) => (
               <li key={index}>
