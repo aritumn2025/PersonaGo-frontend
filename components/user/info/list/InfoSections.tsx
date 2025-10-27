@@ -1,10 +1,12 @@
 import type { IconType } from "react-icons";
+import { FaArrowCircleRight } from "react-icons/fa";
 import { IoMap } from "react-icons/io5";
 
 import Link from "next/link";
 
 import { ATTRACTIONS_INFO, ATTRACTION_IDS } from "@/constants/attraction";
 import { EXTERNAL_LINKS } from "@/constants/links";
+import type { NotificationEntry } from "@/constants/notification";
 import { PERSONALITY_IDS, PERSONALITY_INFO } from "@/constants/personality";
 
 import { randomChoice } from "@/utils/random";
@@ -138,4 +140,47 @@ function LinksSection() {
   );
 }
 
-export { MbtiSection, AttractionSection, LinksSection };
+interface NotificationSection {
+  notifications: NotificationEntry[];
+}
+
+function NotificationItem({
+  notification,
+}: {
+  notification: NotificationEntry;
+}) {
+  return (
+    <li className="h-16 border-l-4 border-purple-400 bg-white/50 p-2 pl-4 shadow-sm">
+      <Link
+        href={notification.link}
+        className="flex flex-row items-center justify-between gap-1"
+      >
+        <div className="flex flex-col items-start">
+          <h3 className="text-lg font-semibold text-gray-600">
+            {notification.title}
+          </h3>
+          <p className="text-sm text-gray-500">{notification.description}</p>
+        </div>
+        <FaArrowCircleRight size={30} className="mr-2 text-purple-400" />
+      </Link>
+    </li>
+  );
+}
+
+function NotificationsSection({ notifications }: NotificationSection) {
+  return (
+    <InfoSection title="お知らせ">
+      {notifications.length === 0 ? (
+        <p className="text-center text-gray-500">現在お知らせはありません</p>
+      ) : (
+        <ul className="flex flex-col gap-1 px-2">
+          {notifications.map((notification, index) => (
+            <NotificationItem key={index} notification={notification} />
+          ))}
+        </ul>
+      )}
+    </InfoSection>
+  );
+}
+
+export { MbtiSection, AttractionSection, LinksSection, NotificationsSection };
