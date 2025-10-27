@@ -86,7 +86,7 @@ const DIAGNOSE_CONFIG = createDiagnoseConfig({
     },
     {
       kind: "continuous",
-      text: "話す前に、まず頭の中で考えを整理してから言葉にすることが多い",
+      text: "自分から誘うより、誘われる方が多い",
       options: {
         left: { text: "あてはまる", score: { EI: -1 } },
         right: { text: "あてはまらない", score: { EI: +1 } },
@@ -104,7 +104,7 @@ const DIAGNOSE_CONFIG = createDiagnoseConfig({
     },
     {
       kind: "continuous",
-      text: "友人のや知人の輪を広げるのが好きだ",
+      text: "友人や知人の輪を広げるのが好きだ",
       options: {
         left: { text: "あてはまる", score: { EI: +1 } },
         right: { text: "あてはまらない", score: { EI: -1 } },
@@ -113,7 +113,7 @@ const DIAGNOSE_CONFIG = createDiagnoseConfig({
     },
     {
       kind: "continuous",
-      text: "思いついたらすぐに行動に移すことが多い",
+      text: "初対面の人と話すことに抵抗を感じない",
       options: {
         left: { text: "あてはまる", score: { EI: +1 } },
         right: { text: "あてはまらない", score: { EI: -1 } },
@@ -162,7 +162,7 @@ const DIAGNOSE_CONFIG = createDiagnoseConfig({
     },
     {
       kind: "continuous",
-      text: "議論において相手を気遣うよりも自分の意見をはっきりと主張する方だ",
+      text: "人の気持ちを考えすぎて、自分の意見を言えないことがある",
       options: {
         left: { text: "あてはまる", score: { TF: -1 } },
         right: { text: "あてはまらない", score: { TF: +1 } },
@@ -171,7 +171,7 @@ const DIAGNOSE_CONFIG = createDiagnoseConfig({
     },
     {
       kind: "continuous",
-      text: "友人が悩んでるとき、「まずは落ち着いて整理しよう」と言う方だ",
+      text: "人の気持ちを理解しようとするのが得意だ",
       options: {
         left: { text: "あてはまる", score: { TF: -1 } },
         right: { text: "あてはまらない", score: { TF: +1 } },
@@ -180,7 +180,7 @@ const DIAGNOSE_CONFIG = createDiagnoseConfig({
     },
     {
       kind: "continuous",
-      text: "自分の発言が誰かを傷つけるとしても必要ならば伝える方だ",
+      text: "結論よりも「みんなが納得すること」を大切にしたいと思う",
       options: {
         left: { text: "あてはまる", score: { TF: -1 } },
         right: { text: "あてはまらない", score: { TF: +1 } },
@@ -193,7 +193,7 @@ const DIAGNOSE_CONFIG = createDiagnoseConfig({
     //
     {
       kind: "continuous",
-      text: "物事を考えるときに「事実」や「今ここで分かっている情報」を重視する方だ",
+      text: "予定はしっかり立てて行動する方だ",
       options: {
         left: { text: "あてはまる", score: { SP: +1 } },
         right: { text: "あてはまらない", score: { SP: -1 } },
@@ -202,7 +202,7 @@ const DIAGNOSE_CONFIG = createDiagnoseConfig({
     },
     {
       kind: "continuous",
-      text: "新しいアイデアを聞くと、「それをどう実現するか」よりも「それがもたらす可能性」にワクワクする",
+      text: "ルールや手順に従うことを重んじる方だ",
       options: {
         left: { text: "あてはまる", score: { SP: +1 } },
         right: { text: "あてはまらない", score: { SP: -1 } },
@@ -211,7 +211,7 @@ const DIAGNOSE_CONFIG = createDiagnoseConfig({
     },
     {
       kind: "continuous",
-      text: "過去の経験や実際のデータよりも、ひらめきや直感を頼りに行動することが多い",
+      text: "スケジュール通りに進まないと不安になる",
       options: {
         left: { text: "あてはまる", score: { SP: +1 } },
         right: { text: "あてはまらない", score: { SP: -1 } },
@@ -220,7 +220,7 @@ const DIAGNOSE_CONFIG = createDiagnoseConfig({
     },
     {
       kind: "continuous",
-      text: "現実の細部よりも、全体の可能性や意味に興味を持つ",
+      text: "計画よりもその場の流れを大切にする",
       options: {
         left: { text: "あてはまる", score: { SP: -1 } },
         right: { text: "あてはまらない", score: { SP: +1 } },
@@ -229,7 +229,7 @@ const DIAGNOSE_CONFIG = createDiagnoseConfig({
     },
     {
       kind: "continuous",
-      text: "抽象的な考えや理論を話すのが好きだ",
+      text: "変化に合わせて柔軟に対応する方だ",
       options: {
         left: { text: "あてはまる", score: { SP: -1 } },
         right: { text: "あてはまらない", score: { SP: +1 } },
@@ -238,7 +238,7 @@ const DIAGNOSE_CONFIG = createDiagnoseConfig({
     },
     {
       kind: "continuous",
-      text: "「これからどうなるか」を想像するのが楽しい",
+      text: "思いついたらすぐ行動する方だ",
       options: {
         left: { text: "あてはまる", score: { SP: -1 } },
         right: { text: "あてはまらない", score: { SP: +1 } },
@@ -259,7 +259,7 @@ const DIAGNOSE_CONFIG = createDiagnoseConfig({
     },
     {
       kind: "continuous",
-      text: "美術、音楽、文学などに触れることに関心がある",
+      text: "新しいアイデアを聞くと、「それをどう実現するか」よりも「それがもたらす可能性」にワクワクする",
       options: {
         left: { text: "あてはまる", score: { AM: -1 } },
         right: { text: "あてはまらない", score: { AM: +1 } },
@@ -286,7 +286,7 @@ const DIAGNOSE_CONFIG = createDiagnoseConfig({
     },
     {
       kind: "continuous",
-      text: "空想や、非現実的なことにはあまり興味がない",
+      text: "実際に使えることを重視する",
       options: {
         left: { text: "あてはまる", score: { AM: +1 } },
         right: { text: "あてはまらない", score: { AM: -1 } },
