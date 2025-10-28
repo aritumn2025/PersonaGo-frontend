@@ -60,8 +60,7 @@ const PERSONALITY_ARTICLE_INFO: Readonly<
             キャプテンの強みは、思いやりと気配りのプロフェッショナルであること。
             周囲の気持ちを察して行動でき、チームの空気を整える天才です。
             <br />
-            信頼されやすい一方で、その優しさゆえに抱え込みやすい一面もあります。
-            アドバイスは「無理なときは無理と言う」こと。
+            信頼されやすい一方で、その優しさゆえに抱え込みやすい一面もあります。アドバイスは「無理なときは無理と言う」こと。
             自分を大切にする余裕ができれば、あなたの優しさはもっと温かく伝わります。
           </>
         ),
@@ -74,8 +73,7 @@ const PERSONALITY_ARTICLE_INFO: Readonly<
             <PersonalityLink personalityCode="IFSM" link={link} />、
             <PersonalityLink personalityCode="ITSM" link={link} />、
             <PersonalityLink personalityCode="EFSM" link={link} />
-            と穏やかで安心できる関係を築けます。
-            感情を共有できる相手とは深い信頼関係を結べるでしょう。
+            と穏やかで安心できる関係を築けます。感情を共有できる相手とは深い信頼関係を結べるでしょう。
             <br />
             一方で、自由奔放な
             <PersonalityLink personalityCode="ITPM" link={link} /> や
@@ -101,7 +99,7 @@ const PERSONALITY_ARTICLE_INFO: Readonly<
             場の空気を明るくし、ノリと勢いで周囲を引っ張るタイプです。
             <br />
             楽しいことには全力で取り組みますが、つまらないことにはすぐ興味を失うことも。
-            注目されたい気持ちと、寂しがり屋な一面を併せ持ち、恋も人生もドラマチックに楽しむ人です。
+            注目されたい気持ちと寂しがり屋な一面を併せ持ち、恋も人生もドラマチックに楽しむ人です。
             周囲の笑顔こそが、生きるエネルギーの源です。
           </>
         ),
@@ -113,8 +111,7 @@ const PERSONALITY_ARTICLE_INFO: Readonly<
             インフルエンサーの強みは、どんな場でも笑顔と明るさを生み出す天性の才能。
             人を楽しませる力があり、直感的な判断でチャンスを掴むタイプです。
             <br />
-            勢いが魅力ですが、感情に流されて後悔することもあります。
-            アドバイスは「少しの計画性」を意識すること。
+            勢いが魅力ですが、感情に流されて後悔することもあります。アドバイスは「少しの計画性」を意識すること。
             楽しむ力に冷静さを加えることで、人生も仕事も驚くほど上手く進みます。
           </>
         ),
@@ -127,13 +124,13 @@ const PERSONALITY_ARTICLE_INFO: Readonly<
             <PersonalityLink personalityCode="IFSA" link={link} />、
             <PersonalityLink personalityCode="ETSM" link={link} />、
             <PersonalityLink personalityCode="EFPM" link={link} />
-            と相性抜群で、笑顔の絶えない関係を築けます。
-            一緒にいるとエネルギーが増し、互いを高め合える関係です。
+            と相性抜群で、笑顔の絶えない関係を築けます。一緒にいるとエネルギーが増し、互いを高め合える関係です。
             <br />
             一方で、内向的で慎重な
             <PersonalityLink personalityCode="ITPA" link={link} /> や
             <PersonalityLink personalityCode="IFPA" link={link} />
-            とはテンポが合わないこともありますが、彼らの落ち着きから学べることは多いでしょう。
+            とはテンポが合わないこともありますが、
+            彼らの落ち着きから学べることは多いでしょう。
             <br />
             違いを面白がり、歩み寄ることで、テンションと知性のバランスが取れた関係に成長します。
           </>
@@ -142,6 +139,7 @@ const PERSONALITY_ARTICLE_INFO: Readonly<
     ],
     relations: ["IFSA", "ETSM", "EFPM", "ITPA", "IFPA"],
   },
+
   EFPA: {
     sections: [
       {
@@ -153,7 +151,8 @@ const PERSONALITY_ARTICLE_INFO: Readonly<
             <br />
             優しすぎて損をすることもありますが、なぜか周りはあなたを助けたくなります。
             <br />
-            表向きは完璧でも、内心は不安を抱えていることも。人の期待を背負いがちな一面もありますが、褒められると一気にやる気がブーストされるタイプです。
+            表向きは完璧でも、内心は不安を抱えていることも。人の期待を背負いがちな一面もありますが、
+            褒められると一気にやる気がブーストされるタイプです。
           </>
         ),
       },
@@ -165,10 +164,7 @@ const PERSONALITY_ARTICLE_INFO: Readonly<
             誰かの成長を心から喜べるあなたは、まさにチームの太陽のような存在。
             <br />
             一方で、周りのために全力を尽くすあまり、自分のことを後回しにしてしまうことがあります。
-            <br />
-            アドバイスは「自分のペースも守る」こと。
-            <br />
-            自分を大切にできるリーダーこそ、本当の意味で人を幸せにできるのです。
+            アドバイスは「自分のペースも守る」こと。自分を大切にできるリーダーこそ、本当の意味で人を幸せにできるのです。
           </>
         ),
       },
@@ -185,7 +181,8 @@ const PERSONALITY_ARTICLE_INFO: Readonly<
             一方で、論理重視の
             <PersonalityLink personalityCode="ITSA" link={link} /> や
             <PersonalityLink personalityCode="ITPA" link={link} />
-            とは感情面で衝突することもありますが、その冷静さから学べることも多いでしょう。
+            とは感情面で衝突することもありますが、
+            その冷静さから学べることも多いでしょう。
             <br />
             感情と思考のバランスを意識することで、互いに支え合える最高の関係が築けます。
           </>
@@ -194,6 +191,7 @@ const PERSONALITY_ARTICLE_INFO: Readonly<
     ],
     relations: ["IFPM", "IFSM", "IFPA", "ITSA", "ITPA"],
   },
+
   EFPM: {
     sections: [
       {
@@ -205,8 +203,7 @@ const PERSONALITY_ARTICLE_INFO: Readonly<
             <br />
             周りを笑わせる天才で、自由を奪われるとしおれてしまうタイプ。
             <br />
-            モットーは「なんとかなる！」。
-            怒っている人が苦手で、いつも場の空気を明るくしようとします。
+            モットーは「なんとかなる！」。怒っている人が苦手で、いつも場の空気を明るくしようとします。
             <br />
             笑って泣いて、また笑う――全力で生きるあなたは、まさにドラマの主人公です。
           </>
@@ -219,9 +216,8 @@ const PERSONALITY_ARTICLE_INFO: Readonly<
             ドリーマーの強みは、発想力と人を惹きつけるエネルギー。
             周囲を巻き込んで行動する力は抜群で、情熱があるときの推進力は圧倒的です。
             <br />
-            ただし、飽きやすく、興味が一瞬で冷めてしまうことも。
-            <br />
-            アドバイスは「続ける仕組みを作る」こと。小さなルールで自分を縛ることで、才能を長く輝かせられます。
+            ただし、飽きやすく、興味が一瞬で冷めてしまうことも。アドバイスは「続ける仕組みを作る」こと。
+            小さなルールで自分を縛ることで、才能を長く輝かせられます。
             <br />
             飽きることもあるけれど、それもあなたらしさ。情熱の火を絶やさず、楽しみながら進みましょう。
           </>
@@ -249,6 +245,7 @@ const PERSONALITY_ARTICLE_INFO: Readonly<
     ],
     relations: ["IFPA", "ITPA", "EFPA", "ITSA", "ETSA"],
   },
+
   ETSA: {
     sections: [
       {
@@ -268,14 +265,10 @@ const PERSONALITY_ARTICLE_INFO: Readonly<
         title: SECTION_02_TITLE,
         Content: () => (
           <>
-            リーダーの強みは、安定した判断力と実行力。
-            チームをまとめる確かな指揮力を持っています。
+            リーダーの強みは、安定した判断力と実行力。チームをまとめる確かな指揮力を持っています。
             <br />
             現実的で的確な判断が人々に安心感を与える一方、効率を重視しすぎて感情を見落とすことも。
-            <br />
-            アドバイスは「人の気持ちに寄り添う」こと。
-            <br />
-            温かさを持ってチームを導くことで、あなたのリーダーシップはさらに輝きを増します。
+            アドバイスは「人の気持ちに寄り添う」こと。温かさを持ってチームを導くことで、あなたのリーダーシップはさらに輝きを増します。
           </>
         ),
       },
@@ -292,15 +285,17 @@ const PERSONALITY_ARTICLE_INFO: Readonly<
             のような論理的なタイプは、あなたの行動を戦略面でサポートする最高のパートナーです。
             <br />
             一方で、自由奔放な
-            <PersonalityLink personalityCode="ETPM" link={link} /> や 感情豊かな
+            <PersonalityLink personalityCode="ETPM" link={link} /> や感情豊かな
             <PersonalityLink personalityCode="EFPM" link={link} />
-            とは衝突することもありますが、違いがあなたに柔軟さをもたらしてくれる貴重な刺激となるでしょう。
+            とは衝突することもありますが、
+            違いがあなたに柔軟さをもたらしてくれる貴重な刺激となるでしょう。
           </>
         ),
       },
     ],
     relations: ["IFPA", "ITSA", "ETPM", "EFPM"],
   },
+
   ETSM: {
     sections: [
       {
@@ -310,8 +305,7 @@ const PERSONALITY_ARTICLE_INFO: Readonly<
             チャレンジャーは、「行動派タイプ」の中でも特に瞬発力と適応力に優れた冒険者です。
             変化を恐れず、直感と判断力で新しい道を切り開いていきます。
             <br />
-            困難な状況でも冷静に対応し、チームを前に進める力を持っています。
-            経験から学び、現場で輝くあなたは、まさに頼れるチャレンジャーそのものです。
+            困難な状況でも冷静に対応し、チームを前に進める力を持っています。経験から学び、現場で輝くあなたは、まさに頼れるチャレンジャーそのものです。
           </>
         ),
       },
@@ -321,8 +315,7 @@ const PERSONALITY_ARTICLE_INFO: Readonly<
           <>
             チャレンジャーの強みは、スピード感と柔軟な発想。
             <br />
-            即断即決の行動力が周囲を引っ張る原動力となります。
-            状況に応じて最適な判断ができる一方、計画性を欠くことも。
+            即断即決の行動力が周囲を引っ張る原動力となります。状況に応じて最適な判断ができる一方、計画性を欠くことも。
             <br />
             アドバイスは「長期的な視点を持つ」こと。勢いと冷静さのバランスを意識すれば、より大きな成果を生み出せます。
           </>
@@ -333,7 +326,7 @@ const PERSONALITY_ARTICLE_INFO: Readonly<
         Content: ({ link }) => (
           <>
             チャレンジャーにとって相性が良いのは、落ち着きがあり思いやり深いタイプ。
-            <PersonalityLink personalityCode="IFPA" link={link} />{" "}
+            <PersonalityLink personalityCode="IFPA" link={link} />
             は、あなたの勢いを受け止め、安定感を与えてくれます。
             <br />
             また、論理的な
@@ -341,8 +334,10 @@ const PERSONALITY_ARTICLE_INFO: Readonly<
             は、あなたの行動を整理し現実的に支える存在です。
             <br />
             一方で、慎重な
-            <PersonalityLink personalityCode="ETSA" link={link} /> や 理想家の
-            <PersonalityLink personalityCode="IFPM" link={link} />
+            <PersonalityLink
+              personalityCode="ETSA"
+              link={link}
+            /> や理想家の <PersonalityLink personalityCode="IFPM" link={link} />
             とは意見がぶつかることもありますが、そこから新たな視点を学べます。
             <br />
             違いを尊重し合うことで、互いを高め合う関係が築けるでしょう。
@@ -352,6 +347,7 @@ const PERSONALITY_ARTICLE_INFO: Readonly<
     ],
     relations: ["IFPA", "ITSA", "ETSA", "IFPM"],
   },
+
   ETPA: {
     sections: [
       {
@@ -372,12 +368,9 @@ const PERSONALITY_ARTICLE_INFO: Readonly<
           <>
             ハンターの強みは、計画力と決断力。
             <br />
-            戦略的に目標へ進む姿勢がチームの士気を高めます。
-            一方で、完璧を求めすぎて周囲にプレッシャーを与えることもあります。
+            戦略的に目標へ進む姿勢がチームの士気を高めます。一方で、完璧を求めすぎて周囲にプレッシャーを与えることもあります。
             <br />
-            アドバイスは「他人の意見や感情に耳を傾ける」こと。
-            <br />
-            厳しさの中に思いやりを持つことで、あなたのリーダーシップはより温かく、信頼されるものになります。
+            アドバイスは「他人の意見や感情に耳を傾ける」こと。厳しさの中に思いやりを持つことで、あなたのリーダーシップはより温かく、信頼されるものになります。
           </>
         ),
       },
@@ -386,7 +379,7 @@ const PERSONALITY_ARTICLE_INFO: Readonly<
         Content: ({ link }) => (
           <>
             ハンターにとって相性が良いのは、穏やかで誠実なタイプ。
-            <PersonalityLink personalityCode="IFPA" link={link} />{" "}
+            <PersonalityLink personalityCode="IFPA" link={link} />
             は、あなたのビジョンを現実的に支え、チームに安定をもたらしてくれます。
             <br />
             また、
@@ -394,9 +387,10 @@ const PERSONALITY_ARTICLE_INFO: Readonly<
             のような論理的で戦略的なタイプは、あなたの長期的な計画を的確に補強してくれる最高のパートナーです。
             <br />
             一方で、自由奔放な
-            <PersonalityLink personalityCode="ETSM" link={link} /> や 感性豊かな
+            <PersonalityLink personalityCode="ETSM" link={link} /> や感性豊かな
             <PersonalityLink personalityCode="EFPM" link={link} />
-            とは意見が衝突することもありますが、その刺激があなたに柔軟さと人間味を思い出させてくれます。
+            とは意見が衝突することもありますが、
+            その刺激があなたに柔軟さと人間味を思い出させてくれます。
             <br />
             違いを認め合うことで、共に成長できる理想的な関係が築けるでしょう。
           </>
@@ -448,10 +442,8 @@ const PERSONALITY_ARTICLE_INFO: Readonly<
             <PersonalityLink personalityCode="ETPA" link={link} />
             のような論理的で挑戦的なタイプとは、知的な刺激を与え合える関係になれます。
             <br />
-            <br />
             一方で、
-            <PersonalityLink personalityCode="IFSA" link={link} />
-            や
+            <PersonalityLink personalityCode="IFSA" link={link} /> や
             <PersonalityLink personalityCode="ITSA" link={link} />
             のような保守的で安定志向のタイプとは、価値観の違いから衝突することもあります。
             しかし、彼らの堅実さは、あなたに「継続」と「信頼」の重要性を教えてくれる貴重な存在です。
@@ -461,6 +453,7 @@ const PERSONALITY_ARTICLE_INFO: Readonly<
     ],
     relations: ["ETSM", "ETPA", "IFSA", "ITSA"],
   },
+
   IFSA: {
     sections: [
       {
@@ -470,8 +463,7 @@ const PERSONALITY_ARTICLE_INFO: Readonly<
             サポーターは、誠実で協調性に富み、人を支えることに喜びを感じる献身的なタイプです。
             周囲の人々を温かく見守り、細やかな気配りで安心感をもたらします。
             <br />
-            現実的で実務的な性格を持ち、ルールや伝統を大切にする傾向があります。
-            控えめで自己主張は強くありませんが、内には強い責任感と忠誠心を秘めています。
+            現実的で実務的な性格を持ち、ルールや伝統を大切にする傾向があります。控えめで自己主張は強くありませんが、内には強い責任感と忠誠心を秘めています。
           </>
         ),
       },
@@ -485,8 +477,7 @@ const PERSONALITY_ARTICLE_INFO: Readonly<
             しかし、自分の感情を後回しにして他人を優先しすぎると、ストレスを溜めてしまうことがあります。
             また、変化や対立を避けるあまり、成長のチャンスを逃すことも。
             <br />
-            時には自分の気持ちを表に出し、自分を大切にする勇気を持ちましょう。
-            変化を受け入れる柔軟さが加わることで、より豊かで安定した人間関係を築けるようになります。
+            時には自分の気持ちを表に出し、自分を大切にする勇気を持ちましょう。変化を受け入れる柔軟さが加わることで、より豊かで安定した人間関係を築けるようになります。
           </>
         ),
       },
@@ -503,7 +494,6 @@ const PERSONALITY_ARTICLE_INFO: Readonly<
             <PersonalityLink personalityCode="EFSM" link={link} />
             のような明るく社交的なタイプは、あなたに活力を与えてくれるでしょう。
             <br />
-            <br />
             一方で、
             <PersonalityLink personalityCode="ETPM" link={link} />
             のような自由奔放で議論を好むタイプとは、ペースの違いで疲れてしまうことも。
@@ -514,6 +504,7 @@ const PERSONALITY_ARTICLE_INFO: Readonly<
     ],
     relations: ["ETPA", "ITSA", "EFSM", "ETPM"],
   },
+
   IFSM: {
     sections: [
       {
@@ -531,14 +522,11 @@ const PERSONALITY_ARTICLE_INFO: Readonly<
         title: SECTION_02_TITLE,
         Content: () => (
           <>
-            ナレーターの強みは、美的感覚と共感力です。
-            芸術・デザイン・音楽など、感性を活かす分野で才能を発揮できます。
+            ナレーターの強みは、美的感覚と共感力です。芸術・デザイン・音楽など、感性を活かす分野で才能を発揮できます。
             <br />
-            一方で、計画性や持続力が求められる場面では苦手意識を感じることがあります。
-            感情を言葉で伝えるのが得意ではなく、優柔不断に見られることも。
+            一方で、計画性や持続力が求められる場面では苦手意識を感じることがあります。感情を言葉で伝えるのが得意ではなく、優柔不断に見られることも。
             <br />
-            行動の前に一呼吸おき、自分の思いや考えを整理する習慣を持つと、より充実した日々を送れるでしょう。
-            自分の意見を伝える勇気を持つことで、あなたの魅力はより多くの人に伝わります。
+            行動の前に一呼吸おき、自分の思いや考えを整理する習慣を持つと、より充実した日々を送れるでしょう。自分の意見を伝える勇気を持つことで、あなたの魅力はより多くの人に伝わります。
           </>
         ),
       },
@@ -553,19 +541,18 @@ const PERSONALITY_ARTICLE_INFO: Readonly<
             <PersonalityLink personalityCode="ITPA" link={link} />
             のように実現力のあるタイプとは、互いに刺激し合える関係を築けます。
             <br />
-            <br />
             一方で、
-            <PersonalityLink personalityCode="ETSA" link={link} />
-            や
+            <PersonalityLink personalityCode="ETSA" link={link} /> や
             <PersonalityLink personalityCode="ETPA" link={link} />
-            のように効率やルールを重視するタイプとは、自由を制限されて窮屈に感じることもあります。
-            それでも、彼らの現実的な視点はあなたに「形にする力」を与え、良い影響をもたらします。
+            のように効率やルールを重視するタイプとは、
+            自由を制限されて窮屈に感じることもあります。それでも、彼らの現実的な視点はあなたに「形にする力」を与え、良い影響をもたらします。
           </>
         ),
       },
     ],
     relations: ["ETPM", "ITPA", "ETSA", "ETPA"],
   },
+
   IFPA: {
     sections: [
       {
@@ -582,14 +569,11 @@ const PERSONALITY_ARTICLE_INFO: Readonly<
         title: SECTION_02_TITLE,
         Content: () => (
           <>
-            ヒーラーの強みは、共感力と洞察力です。
-            他人の感情を深く理解し、思いやりを持って接する姿勢は、多くの人に信頼をもたらします。
+            ヒーラーの強みは、共感力と洞察力です。他人の感情を深く理解し、思いやりを持って接する姿勢は、多くの人に信頼をもたらします。
             <br />
-            しかし、他者を優先しすぎて自分を犠牲にしてしまうことがあります。
-            理想を追い求めるあまり、現実を見失うこともあるでしょう。
+            しかし、他者を優先しすぎて自分を犠牲にしてしまうことがあります。理想を追い求めるあまり、現実を見失うこともあるでしょう。
             <br />
-            ときには距離を取り、自分自身の心を癒す時間を大切にしてください。
-            自分に優しくあることが、結果的に他人への思いやりにもつながります。
+            ときには距離を取り、自分自身の心を癒す時間を大切にしてください。自分に優しくあることが、結果的に他人への思いやりにもつながります。
           </>
         ),
       },
@@ -604,7 +588,6 @@ const PERSONALITY_ARTICLE_INFO: Readonly<
             <PersonalityLink personalityCode="EFPM" link={link} />
             のように感受性が豊かで情熱的なタイプとは、深い共感を通じて強い絆を築けるでしょう。
             <br />
-            <br />
             一方で、
             <PersonalityLink personalityCode="ITSA" link={link} />
             のような現実主義のタイプとは、最初は価値観の違いを感じるかもしれません。
@@ -615,6 +598,7 @@ const PERSONALITY_ARTICLE_INFO: Readonly<
     ],
     relations: ["ETPA", "EFPM", "ITSA"],
   },
+
   IFPM: {
     sections: [
       {
@@ -622,8 +606,7 @@ const PERSONALITY_ARTICLE_INFO: Readonly<
         Content: () => (
           <>
             ミュージシャンは、想像力と優しさに満ちた「夢想家タイプ」です。
-            自分の中に広がる理想の世界を大切にし、純粋な心で生きる人。
-            誰かを救いたいという想いが原動力で、現実の中にも希望を見つけ出す才能を持ちます。
+            自分の中に広がる理想の世界を大切にし、純粋な心で生きる人。誰かを救いたいという想いが原動力で、現実の中にも希望を見つけ出す才能を持ちます。
             <br />
             繊細で感受性が高く、人の気持ちを深く理解できるあなたは、まるで世界に温もりを届ける小さな灯火のような存在です。
           </>
@@ -633,11 +616,9 @@ const PERSONALITY_ARTICLE_INFO: Readonly<
         title: SECTION_02_TITLE,
         Content: () => (
           <>
-            ミュージシャンの強みは、思いやりと創造性。
-            人を傷つけることを嫌い、常に優しさを選べる心を持っています。
+            ミュージシャンの強みは、思いやりと創造性。人を傷つけることを嫌い、常に優しさを選べる心を持っています。
             <br />
-            ただし、理想が高すぎて現実とのギャップに悩むこともあります。
-            すべてを完璧にしようとせず、「小さな一歩」から始めることを意識しましょう。
+            ただし、理想が高すぎて現実とのギャップに悩むこともあります。すべてを完璧にしようとせず、「小さな一歩」から始めることを意識しましょう。
             <br />
             現実と向き合う勇気を持つことで、あなたの優しさはより多くの人を救う力へと変わります。
           </>
@@ -648,16 +629,13 @@ const PERSONALITY_ARTICLE_INFO: Readonly<
         Content: ({ link }) => (
           <>
             ミュージシャンにとって相性が良いのは、行動的でエネルギッシュなタイプです。
-            たとえば
-            <PersonalityLink personalityCode="ETSM" link={link} />
+            たとえば <PersonalityLink personalityCode="ETSM" link={link} />
             は、あなたの理想を現実に導く力強いパートナー。 また、
             <PersonalityLink personalityCode="EFPM" link={link} />
             のような共感性の高いタイプとは、感情を共有しながら夢を語り合える関係です。
             <br />
-            <br />
             一方で、論理的な
-            <PersonalityLink personalityCode="ITPA" link={link} />
-            や
+            <PersonalityLink personalityCode="ITPA" link={link} /> や
             <PersonalityLink personalityCode="ITSA" link={link} />
             とは考え方が異なるかもしれません。
             しかし、互いを理解し合えたとき、現実と理想のバランスが取れた強い絆が生まれるでしょう。
@@ -667,17 +645,16 @@ const PERSONALITY_ARTICLE_INFO: Readonly<
     ],
     relations: ["ETSM", "EFPM", "ITPA", "ITSA"],
   },
+
   ITSA: {
     sections: [
       {
         title: SECTION_01_TITLE,
         Content: () => (
           <>
-            エンジニアは、誠実で信頼される「実務家タイプ」です。
-            責任感が強く、どんな状況でも冷静に行動できるあなたは、まさに組織の柱。
+            エンジニアは、誠実で信頼される「実務家タイプ」です。責任感が強く、どんな状況でも冷静に行動できるあなたは、まさに組織の柱。
             <br />
-            ルールを守り、計画を立て、確実に成果を出すことを重んじる堅実な性格です。
-            派手さはないものの、地道な努力で信頼を築く姿勢は多くの人に安心感を与えます。
+            ルールを守り、計画を立て、確実に成果を出すことを重んじる堅実な性格です。派手さはないものの、地道な努力で信頼を築く姿勢は多くの人に安心感を与えます。
             <br />
             誠実さこそが、あなたの最大の魅力です。
           </>
@@ -687,11 +664,9 @@ const PERSONALITY_ARTICLE_INFO: Readonly<
         title: SECTION_02_TITLE,
         Content: () => (
           <>
-            エンジニアの強みは、安定感と実行力。
-            努力を惜しまず、与えられた責任を最後まで果たす姿は模範的です。
+            エンジニアの強みは、安定感と実行力。努力を惜しまず、与えられた責任を最後まで果たす姿は模範的です。
             <br />
-            ただし、完璧を求めすぎて柔軟性を欠くこともあります。
-            ときには他人に任せたり、新しい考え方に触れる余裕を持ちましょう。
+            ただし、完璧を求めすぎて柔軟性を欠くこともあります。ときには他人に任せたり、新しい考え方に触れる余裕を持ちましょう。
             <br />
             感情を抑えすぎず、自分の気持ちを言葉にすることで、人間関係もよりスムーズになります。
           </>
@@ -702,24 +677,23 @@ const PERSONALITY_ARTICLE_INFO: Readonly<
         Content: ({ link }) => (
           <>
             エンジニアにとって相性が良いのは、思いやりのあるタイプです。
-            たとえば
-            <PersonalityLink personalityCode="EFSA" link={link} />
+            たとえば <PersonalityLink personalityCode="EFSA" link={link} />
             は、あなたの堅実さを温かく支える理想的なパートナー。 また、
             <PersonalityLink personalityCode="IFSM" link={link} />
             のような穏やかな感性タイプとも、静かな信頼関係を築けます。
             <br />
-            <br />
             一方で、理想主義の
-            <PersonalityLink personalityCode="IFPM" link={link} />
-            や自由奔放な
+            <PersonalityLink personalityCode="IFPM" link={link} /> や自由奔放な
             <PersonalityLink personalityCode="ETPM" link={link} />
-            とは衝突することもありますが、互いを理解し尊重できれば、弱点を補い合う関係へと発展します。
+            とは衝突することもありますが、
+            互いを理解し尊重できれば、弱点を補い合う関係へと発展します。
           </>
         ),
       },
     ],
     relations: ["EFSA", "IFSM", "IFPM", "ETPM"],
   },
+
   ITSM: {
     sections: [
       {
@@ -737,8 +711,7 @@ const PERSONALITY_ARTICLE_INFO: Readonly<
         title: SECTION_02_TITLE,
         Content: () => (
           <>
-            完璧を求めすぎると、周囲がついてこられないことがあります。
-            理想を形にする過程で、人との調整を恐れず行うことが鍵です。
+            完璧を求めすぎると、周囲がついてこられないことがあります。理想を形にする過程で、人との調整を恐れず行うことが鍵です。
             <br />
             意見の違いを「新しい視点」と捉えると、計画がより柔軟で現実的になります。
           </>
@@ -750,12 +723,12 @@ const PERSONALITY_ARTICLE_INFO: Readonly<
           <>
             プランナーは、
             <PersonalityLink personalityCode="ITSA" link={link} />
-            と相互補完の関係にあります。構想と実行のバランスが取れ、堅実な成果を出せるコンビです。
+            と相互補完の関係にあります。
+            構想と実行のバランスが取れ、堅実な成果を出せるコンビです。
             <br />
             また、
             <PersonalityLink personalityCode="ITPA" link={link} />
             のような論理的なタイプとは、理論的に刺激し合える良き仲間となるでしょう。
-            <br />
             <br />
             感情重視のタイプとは距離を感じやすいかもしれませんが、視野を広げ、相互理解を深めることで強い信頼関係が築けます。
           </>
@@ -764,6 +737,7 @@ const PERSONALITY_ARTICLE_INFO: Readonly<
     ],
     relations: ["ITSA", "ITPA"],
   },
+
   ITPA: {
     sections: [
       {
@@ -781,11 +755,9 @@ const PERSONALITY_ARTICLE_INFO: Readonly<
         title: SECTION_02_TITLE,
         Content: () => (
           <>
-            情報を整理し、筋道を立てて答えを導くのが得意です。
-            ただし、分析に時間をかけすぎて動きが遅くなることもあります。
+            情報を整理し、筋道を立てて答えを導くのが得意です。ただし、分析に時間をかけすぎて動きが遅くなることもあります。
             <br />
-            完璧を求めすぎず、まず一歩行動してみる姿勢が大切。
-            小さな実践を重ねることで信頼と成果を築けます。
+            完璧を求めすぎず、まず一歩行動してみる姿勢が大切。小さな実践を重ねることで信頼と成果を築けます。
           </>
         ),
       },
@@ -801,9 +773,7 @@ const PERSONALITY_ARTICLE_INFO: Readonly<
             <PersonalityLink personalityCode="ITSM" link={link} />
             とは、互いの論理性を認め合える関係になります。
             <br />
-            <br />
-            感情重視の
-            <PersonalityLink personalityCode="IFPM" link={link} />
+            感情重視の <PersonalityLink personalityCode="IFPM" link={link} />
             とは距離を感じやすいですが、誠実に向き合うことで安定した信頼が生まれるでしょう。
           </>
         ),
@@ -811,27 +781,26 @@ const PERSONALITY_ARTICLE_INFO: Readonly<
     ],
     relations: ["ITSA", "ITSM", "IFPM"],
   },
+
   ITPM: {
     sections: [
       {
-        title: "どんな人？",
+        title: SECTION_01_TITLE,
         Content: () => (
           <>
-            自由な発想力と理論構築力を併せ持つ創造的な思想家。
-            抽象的な概念を扱うのが得意で、独自の理屈から新しい仕組みを生み出します。
+            自由な発想力と理論構築力を併せ持つ創造的な思想家。抽象的な概念を扱うのが得意で、独自の理屈から新しい仕組みを生み出します。
             <br />
             固定観念にとらわれず、アイデアで世界を変えるタイプです。
           </>
         ),
       },
-      // TODO : 各セクションの内容を追加
       {
-        title: "長所・短所とアドバイス",
-        Content: () => <> イノベーターの長所と短所</>,
+        title: SECTION_02_TITLE,
+        Content: () => <>イノベーターの長所と短所</>, // TODO: 追記
       },
       {
-        title: "相性と関係性",
-        Content: ({ link }) => <> イノベーターの相性の良い性格</>,
+        title: SECTION_03_TITLE,
+        Content: ({ link }) => <>イノベーターの相性の良い性格</>, // TODO: 追記
       },
     ],
     relations: [],
