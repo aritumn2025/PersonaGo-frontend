@@ -19,3 +19,4 @@ npm install --save-dev @types/js-cookie
 npx shadcn@latest add alert-dialog
 npx shadcn@latest add accordion
 npx shadcn@latest add scroll-area
+npx shadcn@latest add chart
