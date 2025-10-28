@@ -1,7 +1,7 @@
 import random
 from typing import List, Optional
 
-SwapMap= List[tuple[int, int]]
+SwapMap = List[tuple[int, int]]
 
 def main():
     size = 16  # 配列の要素数
@@ -42,6 +42,9 @@ def generate_swap_map(
 def convert_swap_map_for_ts(swap_map: SwapMap) -> str:
     """Convert to TypeScript format and print
     Args:
+        swap_map (List[tuple[int, int]]): List of (i, j) pairs representing swaps.
+    Returns:
+        str: A string representing the swap map in TypeScript array format.
     """
     formatted = "[" + ", ".join(f"[{i},{j}]" for i, j in swap_map) + "]"
     return formatted
