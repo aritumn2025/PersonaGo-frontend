@@ -34,7 +34,7 @@ const navs: readonly NavItem[] = [
     isCenter: false,
   },
   {
-    href: "/user/diagnosis?tutorial=none",
+    href: "/user/diagnose",
     icon: <FaSearch className="text-2xl" />,
     label: "診断",
     pageKey: "diagnosis",
@@ -66,8 +66,8 @@ interface NavLinkProps {
 
 function NavLink({ href, icon, label, isActive, isCenter }: NavLinkProps) {
   const baseClass = isCenter
-    ? "-mt-5 flex h-16 w-16 flex-col items-center justify-center gap-1 rounded-full bg-blue-500 text-white shadow-lg transition-all duration-200"
-    : `flex w-12 flex-col items-center justify-center gap-1 ${isActive ? "text-blue-500" : "text-gray-500"}`;
+    ? "-mt-5 flex h-16 w-16 flex-col items-center justify-center gap-1 rounded-full bg-purple-500 text-white shadow-lg transition-all duration-200"
+    : `flex w-12 flex-col items-center justify-center gap-1 ${isActive ? "text-purple-500" : "text-gray-500"}`;
 
   return (
     <Link href={href} className={baseClass}>
