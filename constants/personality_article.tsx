@@ -72,7 +72,6 @@ const PERSONALITY_ARTICLE_INFO: Readonly<
             思いやりと調和を大切にするあなたは、
             <PersonalityLink personalityCode="IFSM" link={link} />、
             <PersonalityLink personalityCode="ITSM" link={link} />、
-            <PersonalityLink personalityCode="EFSM" link={link} />
             と穏やかで安心できる関係を築けます。感情を共有できる相手とは深い信頼関係を結べるでしょう。
             <br />
             一方で、自由奔放な
@@ -86,7 +85,7 @@ const PERSONALITY_ARTICLE_INFO: Readonly<
         ),
       },
     ],
-    relations: ["IFSM", "ITSM", "EFSM", "ITPM", "ETPM"],
+    relations: ["IFSM", "EFSM", "ITPM", "ETPM"],
   },
 
   EFSM: {
@@ -122,7 +121,6 @@ const PERSONALITY_ARTICLE_INFO: Readonly<
           <>
             明るく社交的なあなたは、
             <PersonalityLink personalityCode="IFSA" link={link} />、
-            <PersonalityLink personalityCode="ETSM" link={link} />、
             <PersonalityLink personalityCode="EFPM" link={link} />
             と相性抜群で、笑顔の絶えない関係を築けます。一緒にいるとエネルギーが増し、互いを高め合える関係です。
             <br />
@@ -137,7 +135,7 @@ const PERSONALITY_ARTICLE_INFO: Readonly<
         ),
       },
     ],
-    relations: ["IFSA", "ETSM", "EFPM", "ITPA", "IFPA"],
+    relations: ["IFSA", "EFPM", "ITPA", "IFPA"],
   },
 
   EFPA: {
@@ -175,7 +173,6 @@ const PERSONALITY_ARTICLE_INFO: Readonly<
             人のために全力を尽くすあなたは、感受性豊かな
             <PersonalityLink personalityCode="IFPM" link={link} />、
             <PersonalityLink personalityCode="IFSM" link={link} />、
-            <PersonalityLink personalityCode="IFPA" link={link} />
             と相性が良く、思いやりに満ちた温かい関係を築けます。
             <br />
             一方で、論理重視の
@@ -189,7 +186,7 @@ const PERSONALITY_ARTICLE_INFO: Readonly<
         ),
       },
     ],
-    relations: ["IFPM", "IFSM", "IFPA", "ITSA", "ITPA"],
+    relations: ["IFPM", "IFSM", "ITSA", "ITPA"],
   },
 
   EFPM: {
@@ -229,7 +226,6 @@ const PERSONALITY_ARTICLE_INFO: Readonly<
           <>
             情熱と自由を愛するあなたは、夢を理解してくれる
             <PersonalityLink personalityCode="IFPA" link={link} />、
-            <PersonalityLink personalityCode="ITPA" link={link} />、
             <PersonalityLink personalityCode="EFPA" link={link} />
             と相性抜群。お互いに刺激し合いながら新しい世界を広げられます。
             <br />
@@ -243,7 +239,7 @@ const PERSONALITY_ARTICLE_INFO: Readonly<
         ),
       },
     ],
-    relations: ["IFPA", "ITPA", "EFPA", "ITSA", "ETSA"],
+    relations: ["IFPA", "EFPA", "ITSA", "ETSA"],
   },
 
   ETSA: {
@@ -701,9 +697,12 @@ const PERSONALITY_ARTICLE_INFO: Readonly<
         Content: () => (
           <>
             プランナーは、戦略的で計画性に富み、未来を見据えて行動する構想家タイプです。
-            理論的に物事を分析し、全体像を描いてから動きます。
+            理論的に物事を分析し、全体像を描いてから動くことを好みます。
             <br />
-            理想を現実に落とし込む力があり、先を読む洞察力と粘り強い集中力が特徴です。
+            一見冷静で控えめに見えますが、内には強い理想とビジョンを秘めています。
+            現実と理想のバランスをとる力に優れ、チームの中では「戦略を描く司令塔」として信頼される存在です。
+            <br />
+            慎重で論理的な判断を下せるため、長期的なプロジェクトや研究開発、マネジメント業務などで力を発揮します。
           </>
         ),
       },
@@ -711,9 +710,14 @@ const PERSONALITY_ARTICLE_INFO: Readonly<
         title: SECTION_02_TITLE,
         Content: () => (
           <>
-            完璧を求めすぎると、周囲がついてこられないことがあります。理想を形にする過程で、人との調整を恐れず行うことが鍵です。
+            プランナーの長所は、洞察力・計画性・問題解決能力の高さにあります。
+            周囲の状況を冷静に分析し、最善の道筋を描けるため、リーダーからの信頼も厚いでしょう。
             <br />
-            意見の違いを「新しい視点」と捉えると、計画がより柔軟で現実的になります。
+            ただし、完璧を求めすぎるあまり、計画に固執したり他者の意見を軽視してしまうこともあります。
+            理想を形にする過程で人との調整を恐れず行い、柔軟さを持つことが成功の鍵です。
+            <br />
+            意見の違いを「新しい視点」と捉えることで、より現実的で多様性のあるプランが生まれます。
+            自分の描いたビジョンを共有し、周囲と協力する姿勢が、より大きな成果につながるでしょう。
           </>
         ),
       },
@@ -728,14 +732,21 @@ const PERSONALITY_ARTICLE_INFO: Readonly<
             <br />
             また、
             <PersonalityLink personalityCode="ITPA" link={link} />
-            のような論理的なタイプとは、理論的に刺激し合える良き仲間となるでしょう。
+            のような分析型タイプとは、理論を磨き合う知的パートナーになれるでしょう。
             <br />
-            感情重視のタイプとは距離を感じやすいかもしれませんが、視野を広げ、相互理解を深めることで強い信頼関係が築けます。
+            一方で、
+            <PersonalityLink personalityCode="EFSM" link={link} />
+            のような感情豊かなタイプとは、最初はペースの違いを感じるかもしれません。
+            しかし、彼らの共感力はあなたの計画に人間的な温かみを与え、より魅力的なビジョンへと導いてくれます。
+            <br />
+            また、
+            <PersonalityLink personalityCode="ETSA" link={link} />
+            のような実行力のあるリーダータイプは、あなたの戦略を現実に動かしてくれる最高のパートナーです。
           </>
         ),
       },
     ],
-    relations: ["ITSA", "ITPA"],
+    relations: ["ITSA", "ITPA", "EFSM", "ETSA"],
   },
 
   ITPA: {
@@ -744,10 +755,11 @@ const PERSONALITY_ARTICLE_INFO: Readonly<
         title: SECTION_01_TITLE,
         Content: () => (
           <>
-            アナリストは、一歩引いた視点で状況を読み解く観察者タイプです。
-            感情よりも事実を重視し、冷静に全体を把握して最善の判断を下します。
+            アナリストは、一歩引いた視点から物事を観察し、冷静に分析する現実的な思考家タイプです。
+            感情よりも事実を重視し、論理的に筋道を立てて判断を下します。
             <br />
-            思考は論理的で整理上手。理想を追うより、現実の中でどう動くかを考える堅実なリアリストです。
+            どんな状況でも焦らず、情報を整理して全体像を把握する能力に長けています。
+            理想よりも「現実でどう動くか」を重視する堅実なリアリストで、確実に結果を積み上げていくタイプです。
           </>
         ),
       },
@@ -755,9 +767,13 @@ const PERSONALITY_ARTICLE_INFO: Readonly<
         title: SECTION_02_TITLE,
         Content: () => (
           <>
-            情報を整理し、筋道を立てて答えを導くのが得意です。ただし、分析に時間をかけすぎて動きが遅くなることもあります。
+            アナリストの強みは、観察力と分析力、そして冷静な判断力です。
+            データや事実をもとに問題の本質を見抜き、的確な解決策を導き出すことができます。
             <br />
-            完璧を求めすぎず、まず一歩行動してみる姿勢が大切。小さな実践を重ねることで信頼と成果を築けます。
+            一方で、慎重すぎるあまり行動が遅くなったり、感情表現を抑えすぎて誤解されることもあります。
+            完璧な分析を求めるよりも、まず一歩踏み出す勇気を持つことが大切です。
+            <br />
+            小さな実践を重ねることで、理論が現実の成果へとつながり、あなたの信頼感がさらに増していくでしょう。
           </>
         ),
       },
@@ -768,18 +784,24 @@ const PERSONALITY_ARTICLE_INFO: Readonly<
             アナリストは、
             <PersonalityLink personalityCode="ITSA" link={link} />
             と価値観が近く、現場志向で協力しやすいタイプです。
+            共に冷静に問題を解決する堅実なパートナーシップを築けます。
             <br />
             また、
             <PersonalityLink personalityCode="ITSM" link={link} />
-            とは、互いの論理性を認め合える関係になります。
+            とは戦略的思考を共有し、互いの論理性を高め合える関係になります。
             <br />
-            感情重視の <PersonalityLink personalityCode="IFPM" link={link} />
-            とは距離を感じやすいですが、誠実に向き合うことで安定した信頼が生まれるでしょう。
+            感情重視の
+            <PersonalityLink personalityCode="IFPM" link={link} />
+            とは、最初は価値観の違いに戸惑うかもしれませんが、彼らの感受性はあなたに人間的な温かさと柔軟性を教えてくれるでしょう。
+            <br />
+            また、
+            <PersonalityLink personalityCode="ETPM" link={link} />
+            のような創造的でエネルギッシュなタイプは、あなたの分析を刺激し、行動に移す勇気を与えてくれます。
           </>
         ),
       },
     ],
-    relations: ["ITSA", "ITSM", "IFPM"],
+    relations: ["ITSA", "ITSM", "IFPM", "ETPM"],
   },
 
   ITPM: {
