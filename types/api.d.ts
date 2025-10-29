@@ -1,6 +1,7 @@
 /* OpenAPIで定義されているJSONスキーマに基づく型定義 */
 import type {
   AttractionId,
+  DateTime,
   GameId,
   GameLobby,
   GamePlayId,
@@ -49,7 +50,7 @@ type DeleteUserResponse = User;
 // GET /api/user/{user_id}/history
 type GetUserHistoryResponse = {
   userId: UserId;
-  history: HistoryEntry;
+  history: HistoryEntry[];
 };
 
 // 入出場管理システム関連API
@@ -111,7 +112,7 @@ type DeleteGamesLobbyResponse = {
 
 // POST /api/games/result/{game_id}
 type PostGamesResultRequest = {
-  startAt: string;
+  startAt: DateTime;
   results: Record<
     GameSlot,
     { id: UserId; name: UserName; score: GameScore } | null

@@ -15,6 +15,20 @@ const notoSans = Noto_Sans_JP({
   display: "swap",
 });
 
+// Mock Server
+if (
+  process.env.NODE_ENV === "development" &&
+  process.env.NEXT_PUBLIC_USE_MOCKS === "true"
+) {
+  if (typeof window === "undefined") {
+    const { server } = require("../mocks/server");
+    server.listen();
+  } else {
+    const { worker } = require("../mocks/browser");
+    worker.start();
+  }
+}
+
 export default function RootLayout({
   children,
 }: Readonly<{
