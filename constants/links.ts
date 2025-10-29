@@ -17,8 +17,6 @@ const EXTERNAL_LINKS = {
   },
   // 投票フォーム
   vote: "https://docs.google.com/forms/d/e/xxxxxxxxxxxxxxxxxx/viewform",
-  // AI似顔絵画像ダウンロードリンク
-  pictureDownload: "https://example.com/download-picture",
 } as const;
 
 export { EXTERNAL_LINKS };
