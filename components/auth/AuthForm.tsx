@@ -36,9 +36,7 @@ export function AuthForm() {
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(body),
       });
-      {
-        JSON.stringify(res);
-      }
+
       const data: AuthResponse = await res.json();
 
       if (res.ok) {
@@ -96,7 +94,7 @@ export function AuthForm() {
             />
           </div>
 
-          <p className="h-8 text-sm text-red-500">{error ?? ""}</p>
+          <p className="h-8 text-sm text-red-500">{error}</p>
 
           <Button type="submit" className="w-full">
             ログイン

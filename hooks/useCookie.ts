@@ -10,6 +10,7 @@ const STAFF_NAME_KEY = "staff_name";
 // cookieの有効期限（日）
 const USER_ID_EXPIRE_DAYS = 100; // イベント期間中は長めでもOK
 const USER_NAME_EXPIRE_DAYS = 2; // ページ遷移用の一時メモリ
+const STAFF_NAME_EXPIRE_DAYS = 100; // スタッフ名は長めでもOK
 
 /**
  * user_id, user_name, staff_name をクッキーで管理するカスタムフック
@@ -29,7 +30,7 @@ function useCookie() {
     Cookies.set(USER_NAME_KEY, name, { expires: USER_NAME_EXPIRE_DAYS });
 
   const setStaffName = (name: string) =>
-    Cookies.set(STAFF_NAME_KEY, name, { expires: USER_NAME_EXPIRE_DAYS });
+    Cookies.set(STAFF_NAME_KEY, name, { expires: STAFF_NAME_EXPIRE_DAYS });
 
   // --- Remover ---
   const removeUserId = () => Cookies.remove(USER_ID_KEY);
