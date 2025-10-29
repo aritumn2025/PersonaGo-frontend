@@ -79,7 +79,7 @@ export const handlers = [
     return HttpResponse.json(response);
   }),
 
-  // PATH /api/user/{user_id}/personality
+  // PACTH /api/user/{user_id}/personality
   http.patch(
     apiEndpoint("/api/user/:id/personality"),
     async ({ params, request }) => {
