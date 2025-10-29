@@ -21,3 +21,4 @@ npx shadcn@latest add accordion
 npx shadcn@latest add scroll-area
 npx shadcn@latest add chart
 npx shadcn@latest add table
+npx msw init public/ --save
