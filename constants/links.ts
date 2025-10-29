@@ -13,7 +13,7 @@ const EXTERNAL_LINKS = {
     // 有明工業高等専門学校公式サイト
     ariake: "https://www.ariake-nct.ac.jp/",
     // 学生会のありたむフェスタ2025公式サイト
-    aritumn: "https://sites.google.com/ga.ariake-nct.ac.jp/7th-aritamu-ippan/",
+    aritumn: "https://sites.google.com/ga.ariake-nct.ac.jp/ariakeautumnfesta",
   },
   // 投票フォーム
   vote: "https://docs.google.com/forms/d/e/xxxxxxxxxxxxxxxxxx/viewform",
