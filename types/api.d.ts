@@ -58,8 +58,8 @@ type GetUserHistoryResponse = {
 type GetEntrySummaryResponse = Record<
   AttractionId | "all",
   {
-    visitors: number;
-    visitorsByPersonality: Record<PersonalityId, number>;
+    visitorsCount: number;
+    visitorsCountByPersonality: Record<PersonalityId, number>;
   }
 >;
 
