@@ -13,11 +13,11 @@ type ContinuousQuestionConfig<K extends string> = {
     count: number;
     left: {
       text: string;
-      score: Partial<Score>;
+      score: Partial<Score<K>>;
     };
     right: {
       text: string;
-      score: Partial<Score>;
+      score: Partial<Score<K>>;
     };
   };
 };
@@ -28,7 +28,7 @@ type DiscreteQuestionConfig<K extends string> = {
   text: string;
   options: {
     text: string;
-    score: Partial<Score>;
+    score: Partial<Score<K>>;
   }[];
 };
 

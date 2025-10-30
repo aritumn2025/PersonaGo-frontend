@@ -7,13 +7,7 @@ import { PERSONALITY_INFO } from "@/constants/personality";
 
 import { Button } from "@/components/ui/button";
 
-export default function Error({
-  error,
-  reset,
-}: {
-  error: Error & { digest?: string };
-  reset: () => void;
-}) {
+export default function Error({ reset }: { reset: () => void }) {
   return (
     <main className="flex min-h-screen flex-col items-center justify-center bg-gray-50 px-4 text-center">
       <Image
