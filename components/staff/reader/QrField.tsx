@@ -7,7 +7,7 @@ import { UserId } from "@/types/common";
 import { QRReader } from "@/components/common/qr_read/QRReader";
 
 interface QrFieldProps {
-  setUserId: (value: UserId) => void;
+  setUserId: (value: UserId | null) => void;
 }
 
 function QrField({ setUserId }: QrFieldProps) {
@@ -15,11 +15,16 @@ function QrField({ setUserId }: QrFieldProps) {
 
   // contentが更新されたらuserIdに反映
   useEffect(() => {
-    if (content) {
-      const newUserId = JSON.parse(content).id as UserId;
-      if (newUserId) {
-        setUserId(newUserId);
+    try {
+      if (content) {
+        const newUserId = JSON.parse(content).id as UserId;
+        if (newUserId) {
+          setUserId(newUserId);
+        }
       }
+    } catch (error) {
+      console.error("Error parsing QR code content:", error);
+      setUserId(null);
     }
   }, [content, setUserId]);
 

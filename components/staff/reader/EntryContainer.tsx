@@ -30,7 +30,7 @@ function EntryContainer({ staffName, attraction }: ReaderContainerProps) {
             attraction,
             staffName,
           );
-          setUser(data ? data.user : null);
+          setUser(data.user);
         } else {
           setUser(null);
         }
@@ -39,7 +39,7 @@ function EntryContainer({ staffName, attraction }: ReaderContainerProps) {
         setUser(null);
       }
     })();
-  }, [userId]);
+  }, [userId, attraction, staffName]);
 
   return (
     <div className="flex flex-col items-center gap-8 px-4">
