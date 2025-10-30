@@ -2,7 +2,7 @@
 
 import { useCookie } from "@/hooks/useCookie";
 
-import { EntryContainer } from "@/components/staff/reader/EntryContainer";
+import { EntryContainer } from "@/components/staff";
 
 export default function Page() {
   const { getStaffName } = useCookie();
