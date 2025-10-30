@@ -33,7 +33,7 @@ function getGamesLobby(gameId: GameId): Promise<GetGamesLobbyResponse> {
 }
 
 /**
- * ゲーム結果を登録する(POST /api/games/lobby/{game_id}
+ * ゲーム待機室情報を登録する(POST /api/games/lobby/{game_id}
  * @param gameId ゲームID
  * @param player 各スロットのユーザーID
  * @returns ゲームの待機室情報
@@ -66,7 +66,7 @@ function postGamesResult(
 }
 
 /**
- * ゲーム結果を削除する(DELETE /api/games/lobby/{game_id}
+ * ゲーム待機室情報を削除する(DELETE /api/games/lobby/{game_id}
  * @param gameId ゲームID
  * @returns 登録されたゲームプレイID
  */
