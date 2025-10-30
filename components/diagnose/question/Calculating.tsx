@@ -155,10 +155,12 @@ function Calculating({ personalityId, trigger, setTrigger }: CalculatingProps) {
       ) : (
         <AlertDialogContent>
           <AlertDialogHeader>
-            <AlertDialogTitle>診断処理の実行中...</AlertDialogTitle>
+            <AlertDialogTitle className="text-gray-600">
+              診断処理の実行中...
+            </AlertDialogTitle>
           </AlertDialogHeader>
           <div className="flex w-full max-w-2xl flex-col items-center gap-2 px-4">
-            <span className="text-sm text-gray-700">{label}</span>
+            <span className="text-sm text-gray-600">{label}</span>
             <Progress value={progress} className="-mt-1 w-full" />
           </div>
         </AlertDialogContent>

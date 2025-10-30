@@ -21,7 +21,7 @@ function UserNameInput({
     >
       <Label
         htmlFor="user-name"
-        className="text-md mb-2 font-medium text-gray-800"
+        className="text-md mb-2 font-medium text-gray-600"
       >
         ニックネームを入力
       </Label>
