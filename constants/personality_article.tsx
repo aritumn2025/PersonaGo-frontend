@@ -539,14 +539,14 @@ const PERSONALITY_ARTICLE_INFO: Readonly<
             <br />
             一方で、
             <PersonalityLink personalityCode="ETSA" link={link} /> や
-            <PersonalityLink personalityCode="ETPA" link={link} />
+            <PersonalityLink personalityCode="ITSA" link={link} />
             のように効率やルールを重視するタイプとは、
             自由を制限されて窮屈に感じることもあります。それでも、彼らの現実的な視点はあなたに「形にする力」を与え、良い影響をもたらします。
           </>
         ),
       },
     ],
-    relations: ["ETPM", "ITPA", "ETSA", "ETPA"],
+    relations: ["ETPM", "ITPA", "ETSA", "ITSA"],
   },
 
   IFPA: {
@@ -584,15 +584,15 @@ const PERSONALITY_ARTICLE_INFO: Readonly<
             <PersonalityLink personalityCode="EFPM" link={link} />
             のように感受性が豊かで情熱的なタイプとは、深い共感を通じて強い絆を築けるでしょう。
             <br />
-            一方で、
-            <PersonalityLink personalityCode="ITSA" link={link} />
+            <PersonalityLink personalityCode="ITSA" link={link} /> や
+            <PersonalityLink personalityCode="ITPA" link={link} />
             のような現実主義のタイプとは、最初は価値観の違いを感じるかもしれません。
             しかし、誠実さを共有できれば、長期的に支え合える関係に発展します。
           </>
         ),
       },
     ],
-    relations: ["ETPA", "EFPM", "ITSA"],
+    relations: ["ETPA", "EFPM", "ITSA", "ITPA"],
   },
 
   IFPM: {
