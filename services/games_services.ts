@@ -130,7 +130,7 @@ function getGamesResultPlaySummary(
   gameId: GameId,
   limit: number,
 ): Promise<GetGamesResultSummaryResponse> {
-  if (0 < limit && limit <= 100) {
+  if (!(0 < limit && limit <= 100)) {
     throw new Error("Invalid limit");
   }
   return fetcher<GetGamesResultSummaryResponse>(
