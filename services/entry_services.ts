@@ -29,7 +29,7 @@ async function getEntryAttraction(
   attraction: AttractionId,
   limit: number,
 ): Promise<GetEntryAttractionResponse> {
-  if (0 < limit && limit <= 100) {
+  if (!(0 < limit && limit <= 100)) {
     throw new Error("Invalid limit");
   }
   return fetcher<GetEntryAttractionResponse>(

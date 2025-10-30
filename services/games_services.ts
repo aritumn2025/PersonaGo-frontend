@@ -38,7 +38,7 @@ function getGamesLobby(gameId: GameId): Promise<GetGamesLobbyResponse> {
  * @param player 各スロットのユーザーID
  * @returns ゲームの待機室情報
  */
-function postGamesResult(
+function postGamesLobby(
   gameId: GameId,
   player: {
     p1: UserId | null;
@@ -86,7 +86,7 @@ function deleteGamesLobby(gameId: GameId): Promise<DeleteGamesLobbyResponse> {
  * @param results プレイ結果
  * @returns 登録されたゲームプレイID
  */
-function PostGamesResult(
+function postGamesResult(
   gameId: GameId,
   startTime: string,
   results: Record<
@@ -130,7 +130,7 @@ function getGamesResultPlaySummary(
   gameId: GameId,
   limit: number,
 ): Promise<GetGamesResultSummaryResponse> {
-  if (0 < limit && limit <= 100) {
+  if (!(0 < limit && limit <= 100)) {
     throw new Error("Invalid limit");
   }
   return fetcher<GetGamesResultSummaryResponse>(
@@ -143,9 +143,9 @@ function getGamesResultPlaySummary(
 
 export {
   getGamesLobby,
-  postGamesResult,
+  postGamesLobby,
   deleteGamesLobby,
-  PostGamesResult,
+  postGamesResult,
   getGamesResultPlayer,
   getGamesResultPlaySummary,
 };
