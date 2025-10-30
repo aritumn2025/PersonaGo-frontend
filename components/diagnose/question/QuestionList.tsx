@@ -183,7 +183,7 @@ interface QuestionItemProps {
 function QuestionItem({ question, answer, onAnswer }: QuestionItemProps) {
   return (
     <div className="flex w-full max-w-2xl flex-col gap-4 border-b border-gray-400 p-6 last:border-0">
-      <h2 className="text-xl font-semibold text-gray-800">{question.text}</h2>
+      <h2 className="text-xl font-semibold text-gray-600">{question.text}</h2>
       {question.kind === "continuous" ? (
         <ContinuousOptions
           options={question.options}

@@ -2,7 +2,7 @@
 
 import { useCallback } from "react";
 
-import { Scanner } from "@yudiel/react-qr-scanner";
+import { IDetectedBarcode, Scanner } from "@yudiel/react-qr-scanner";
 
 interface QRReaderProps {
   content: string | null;
@@ -12,7 +12,7 @@ interface QRReaderProps {
 function QRReader({ content, setContent }: QRReaderProps) {
   // QRコード検出時の処理
   const handleScan = useCallback(
-    (detectedCodes: any[]) => {
+    (detectedCodes: IDetectedBarcode[]) => {
       // 検出なし
       if (!detectedCodes?.length) return;
 

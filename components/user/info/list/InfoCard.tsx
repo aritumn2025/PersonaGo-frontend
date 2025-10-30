@@ -26,7 +26,7 @@ function infoCard({
 }: InfoCardProps) {
   return (
     <Link href={link}>
-      <Card className="w-full max-w-md py-3">
+      <Card className="mx-auto w-full max-w-md py-3">
         <CardContent className="flex flex-row items-center gap-2">
           <Image src={imageSrc} alt={imageAlt} width={80} height={80} />
           <div className="pl-1">

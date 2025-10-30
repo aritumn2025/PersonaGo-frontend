@@ -56,9 +56,9 @@ function Calculating({ personalityId, trigger, setTrigger }: CalculatingProps) {
     if (userId === null) {
       const userName = getUserName() || "名無しさん";
       try {
-        const res = await createUser(userName, personalityId);
-        console.log("created user:", res);
-        setUserId(res.id);
+        const data = await createUser(userName, personalityId);
+        console.log("created user:", data);
+        setUserId(data.id);
         return true;
       } catch (error) {
         console.error("failed to create user:", error);
@@ -66,8 +66,8 @@ function Calculating({ personalityId, trigger, setTrigger }: CalculatingProps) {
       }
     } else {
       try {
-        const res = await patchUserPersonality(userId, personalityId);
-        console.log("patched user personality:", res);
+        const data = await patchUserPersonality(userId, personalityId);
+        console.log("patched user personality:", data);
         return true;
       } catch (error) {
         console.error("failed to patch user personality:", error);
@@ -155,10 +155,12 @@ function Calculating({ personalityId, trigger, setTrigger }: CalculatingProps) {
       ) : (
         <AlertDialogContent>
           <AlertDialogHeader>
-            <AlertDialogTitle>診断処理の実行中...</AlertDialogTitle>
+            <AlertDialogTitle className="text-gray-600">
+              診断処理の実行中...
+            </AlertDialogTitle>
           </AlertDialogHeader>
           <div className="flex w-full max-w-2xl flex-col items-center gap-2 px-4">
-            <span className="text-sm text-gray-700">{label}</span>
+            <span className="text-sm text-gray-600">{label}</span>
             <Progress value={progress} className="-mt-1 w-full" />
           </div>
         </AlertDialogContent>

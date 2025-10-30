@@ -6,7 +6,8 @@ SwapMap = List[tuple[int, int]]
 def main():
     size = 16  # 配列の要素数
     seed = 42  # シード値
-    swap_map = generate_swap_map(size, seed)
+    swap_count = 80  # スワップ回数（Noneで自動設定）
+    swap_map = generate_swap_map(size, seed, swap_count)
     ts_formatted = convert_swap_map_for_ts(swap_map)
     print(ts_formatted)
 
