@@ -15,7 +15,7 @@ export default function Error({
   reset: () => void;
 }) {
   return (
-    <div className="flex min-h-screen flex-col items-center justify-center bg-gray-50 px-4 text-center">
+    <main className="flex min-h-screen flex-col items-center justify-center bg-gray-50 px-4 text-center">
       <Image
         src={PERSONALITY_INFO["12"].image}
         alt="Error illustration"
@@ -37,6 +37,6 @@ export default function Error({
           <Button variant="secondary">マイページ に戻る</Button>
         </Link>
       </div>
-    </div>
+    </main>
   );
 }
