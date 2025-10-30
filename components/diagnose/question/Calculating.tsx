@@ -56,9 +56,9 @@ function Calculating({ personalityId, trigger, setTrigger }: CalculatingProps) {
     if (userId === null) {
       const userName = getUserName() || "名無しさん";
       try {
-        const res = await createUser(userName, personalityId);
-        console.log("created user:", res);
-        setUserId(res.id);
+        const data = await createUser(userName, personalityId);
+        console.log("created user:", data);
+        setUserId(data.id);
         return true;
       } catch (error) {
         console.error("failed to create user:", error);
@@ -66,8 +66,8 @@ function Calculating({ personalityId, trigger, setTrigger }: CalculatingProps) {
       }
     } else {
       try {
-        const res = await patchUserPersonality(userId, personalityId);
-        console.log("patched user personality:", res);
+        const data = await patchUserPersonality(userId, personalityId);
+        console.log("patched user personality:", data);
         return true;
       } catch (error) {
         console.error("failed to patch user personality:", error);
