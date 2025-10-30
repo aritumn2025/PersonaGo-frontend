@@ -10,7 +10,7 @@ function ComingSoon() {
     <div className="flex min-h-screen flex-col items-center justify-center bg-gray-50 px-4 text-center">
       <Image
         src={PERSONALITY_INFO["13"].image}
-        alt="Error illustration"
+        alt="Coming soon illustration"
         width={240}
         height={240}
         className="mb-6 opacity-30"
