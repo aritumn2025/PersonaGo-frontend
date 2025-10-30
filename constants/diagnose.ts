@@ -337,7 +337,7 @@ const DIAGNOSE_CONFIG = createDiagnoseConfig({
       },
       {
         kind: "continuous",
-        text: "実際に使えることを重視する",
+        text: "芸術や創作活動にはあまり関心がない",
         options: {
           left: { text: "あてはまる", score: { AM: +1 } },
           right: { text: "あてはまらない", score: { AM: -1 } },
