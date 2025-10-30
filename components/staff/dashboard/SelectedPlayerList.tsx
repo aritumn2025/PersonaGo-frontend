@@ -62,7 +62,6 @@ function SelectedPlayerList({
   reset,
 }: SelectedPlayerListProps) {
   const [sending, setSending] = useState<boolean>(false);
-  const [isSuccess, setIsSuccess] = useState<boolean>(false);
 
   const handleSend = async () => {
     if (selections.filter((v) => v !== null).length === 0) return;
@@ -76,12 +75,10 @@ function SelectedPlayerList({
         p4: selections[3] === null ? null : visitors[selections[3]].id,
       });
 
-      setIsSuccess(true);
       reset();
       alert("データの送信に成功しました");
     } catch (error) {
       console.error("Error Sending lobby data:", error);
-      setIsSuccess(false);
       alert("データの送信に失敗しました");
     } finally {
       setSending(false);

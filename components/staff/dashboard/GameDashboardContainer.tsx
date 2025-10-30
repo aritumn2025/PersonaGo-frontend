@@ -53,7 +53,7 @@ function GameDashboardContainer() {
     return () => {
       isMounted = false;
     };
-  });
+  }, []);
 
   return (
     <div className="flex flex-col items-center gap-8 p-6">

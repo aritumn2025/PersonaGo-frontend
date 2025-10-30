@@ -23,5 +23,5 @@ npx shadcn@latest add chart
 npx shadcn@latest add table
 npx msw init public/ --save
 npm install @yudiel/react-qr-scanner
-npm install @tanstack/react-tables
+npm install @tanstack/react-table
 npx shadcn@latest add badge
