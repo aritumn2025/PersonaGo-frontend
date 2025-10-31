@@ -342,8 +342,7 @@ export const handlers = [
         user: {
           id: body.userId,
           name: "ほげたろう",
-          originalPersonality: "1",
-          currentPersonality: "13",
+          personality: "1",
         },
       };
       return HttpResponse.json(response);
