@@ -8,6 +8,7 @@ import type { PersonalityId } from "@/types/common";
 
 import { PERSONALITY_INFO } from "@/constants/personality";
 
+import { postEntryAttractionVisit } from "@/services/entry_services";
 import { createUser, patchUserPersonality } from "@/services/user_service";
 
 import { useCookie } from "@/hooks/useCookie";
@@ -58,6 +59,7 @@ function Calculating({ personalityId, trigger, setTrigger }: CalculatingProps) {
       try {
         const data = await createUser(userName, personalityId);
         console.log("created user:", data);
+        await postEntryAttractionVisit(data.id, "mbti", "mbti_system");
         setUserId(data.id);
         return true;
       } catch (error) {
