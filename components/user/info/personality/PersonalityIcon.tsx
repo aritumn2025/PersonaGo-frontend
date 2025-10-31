@@ -29,7 +29,7 @@ function PersonalityIcon({ personalityCode, link }: PersonalityIconProps) {
         }}
       >
         <Image
-          src={personality.image}
+          src={personality.image.regular}
           alt={personality.name}
           width={70}
           height={70}

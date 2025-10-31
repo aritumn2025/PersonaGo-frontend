@@ -134,7 +134,11 @@ type PersonalityInfoEntry = Readonly<{
     info: string;
     result: string;
   };
-  image: string;
+  image: {
+    regular: string;
+    edged: string;
+    logo: string;
+  };
 }>;
 const PERSONALITY_INFO: Readonly<Record<PersonalityId, PersonalityInfoEntry>> =
   {
@@ -149,7 +153,11 @@ const PERSONALITY_INFO: Readonly<Record<PersonalityId, PersonalityInfoEntry>> =
         info: "/user/info/personality/EFSA",
         result: "/user/diagnose/result/EFSA",
       },
-      image: "/images/personality/EFSA.png",
+      image: {
+        regular: "/images/personality/EFSA.png",
+        edged: "/images/personality_edging/EFSA.svg",
+        logo: "/images/personality_logo/EFSA.png",
+      },
     },
     "1": {
       id: "1",
@@ -161,7 +169,11 @@ const PERSONALITY_INFO: Readonly<Record<PersonalityId, PersonalityInfoEntry>> =
         info: "/user/info/personality/EFSM",
         result: "/user/diagnose/result/EFSM",
       },
-      image: "/images/personality/EFSM.png",
+      image: {
+        regular: "/images/personality/EFSM.png",
+        edged: "/images/personality_edging/EFSM.svg",
+        logo: "/images/personality_logo/EFSM.png",
+      },
     },
     "2": {
       id: "2",
@@ -173,7 +185,11 @@ const PERSONALITY_INFO: Readonly<Record<PersonalityId, PersonalityInfoEntry>> =
         info: "/user/info/personality/EFPA",
         result: "/user/diagnose/result/EFPA",
       },
-      image: "/images/personality/EFPA.png",
+      image: {
+        regular: "/images/personality/EFPA.png",
+        edged: "/images/personality_edging/EFPA.svg",
+        logo: "/images/personality_logo/EFPA.png",
+      },
     },
     "3": {
       id: "3",
@@ -185,7 +201,11 @@ const PERSONALITY_INFO: Readonly<Record<PersonalityId, PersonalityInfoEntry>> =
         info: "/user/info/personality/EFPM",
         result: "/user/diagnose/result/EFPM",
       },
-      image: "/images/personality/EFPM.png",
+      image: {
+        regular: "/images/personality/EFPM.png",
+        edged: "/images/personality_edging/EFPM.svg",
+        logo: "/images/personality_logo/EFPM.png",
+      },
     },
 
     // Active
@@ -199,7 +219,11 @@ const PERSONALITY_INFO: Readonly<Record<PersonalityId, PersonalityInfoEntry>> =
         info: "/user/info/personality/ETSA",
         result: "/user/diagnose/result/ETSA",
       },
-      image: "/images/personality/ETSA.png",
+      image: {
+        regular: "/images/personality/ETSA.png",
+        edged: "/images/personality_edging/ETSA.svg",
+        logo: "/images/personality_logo/ETSA.png",
+      },
     },
     "5": {
       id: "5",
@@ -211,7 +235,11 @@ const PERSONALITY_INFO: Readonly<Record<PersonalityId, PersonalityInfoEntry>> =
         info: "/user/info/personality/ETSM",
         result: "/user/diagnose/result/ETSM",
       },
-      image: "/images/personality/ETSM.png",
+      image: {
+        regular: "/images/personality/ETSM.png",
+        edged: "/images/personality_edging/ETSM.svg",
+        logo: "/images/personality_logo/ETSM.png",
+      },
     },
     "6": {
       id: "6",
@@ -223,7 +251,11 @@ const PERSONALITY_INFO: Readonly<Record<PersonalityId, PersonalityInfoEntry>> =
         info: "/user/info/personality/ETPA",
         result: "/user/diagnose/result/ETPA",
       },
-      image: "/images/personality/ETPA.png",
+      image: {
+        regular: "/images/personality/ETPA.png",
+        edged: "/images/personality_edging/ETPA.svg",
+        logo: "/images/personality_logo/ETPA.png",
+      },
     },
     "7": {
       id: "7",
@@ -235,7 +267,11 @@ const PERSONALITY_INFO: Readonly<Record<PersonalityId, PersonalityInfoEntry>> =
         info: "/user/info/personality/ETPM",
         result: "/user/diagnose/result/ETPM",
       },
-      image: "/images/personality/ETPM.png",
+      image: {
+        regular: "/images/personality/ETPM.png",
+        edged: "/images/personality_edging/ETPM.svg",
+        logo: "/images/personality_logo/ETPM.png",
+      },
     },
 
     // Calm
@@ -249,7 +285,11 @@ const PERSONALITY_INFO: Readonly<Record<PersonalityId, PersonalityInfoEntry>> =
         info: "/user/info/personality/IFSA",
         result: "/user/diagnose/result/IFSA",
       },
-      image: "/images/personality/IFSA.png",
+      image: {
+        regular: "/images/personality/IFSA.png",
+        edged: "/images/personality_edging/IFSA.svg",
+        logo: "/images/personality_logo/IFSA.png",
+      },
     },
     "9": {
       id: "9",
@@ -261,7 +301,11 @@ const PERSONALITY_INFO: Readonly<Record<PersonalityId, PersonalityInfoEntry>> =
         info: "/user/info/personality/IFSM",
         result: "/user/diagnose/result/IFSM",
       },
-      image: "/images/personality/IFSM.png",
+      image: {
+        regular: "/images/personality/IFSM.png",
+        edged: "/images/personality_edging/IFSM.svg",
+        logo: "/images/personality_logo/IFSM.png",
+      },
     },
     "10": {
       id: "10",
@@ -273,7 +317,11 @@ const PERSONALITY_INFO: Readonly<Record<PersonalityId, PersonalityInfoEntry>> =
         info: "/user/info/personality/IFPA",
         result: "/user/diagnose/result/IFPA",
       },
-      image: "/images/personality/IFPA.png",
+      image: {
+        regular: "/images/personality/IFPA.png",
+        edged: "/images/personality_edging/IFPA.svg",
+        logo: "/images/personality_logo/IFPA.png",
+      },
     },
     "11": {
       id: "11",
@@ -285,7 +333,11 @@ const PERSONALITY_INFO: Readonly<Record<PersonalityId, PersonalityInfoEntry>> =
         info: "/user/info/personality/IFPM",
         result: "/user/diagnose/result/IFPM",
       },
-      image: "/images/personality/IFPM.png",
+      image: {
+        regular: "/images/personality/IFPM.png",
+        edged: "/images/personality_edging/IFPM.svg",
+        logo: "/images/personality_logo/IFPM.png",
+      },
     },
 
     // Thinker
@@ -299,7 +351,11 @@ const PERSONALITY_INFO: Readonly<Record<PersonalityId, PersonalityInfoEntry>> =
         info: "/user/info/personality/ITSA",
         result: "/user/diagnose/result/ITSA",
       },
-      image: "/images/personality/ITSA.png",
+      image: {
+        regular: "/images/personality/ITSA.png",
+        edged: "/images/personality_edging/ITSA.svg",
+        logo: "/images/personality_logo/ITSA.png",
+      },
     },
     "13": {
       id: "13",
@@ -311,7 +367,11 @@ const PERSONALITY_INFO: Readonly<Record<PersonalityId, PersonalityInfoEntry>> =
         info: "/user/info/personality/ITSM",
         result: "/user/diagnose/result/ITSM",
       },
-      image: "/images/personality/ITSM.png",
+      image: {
+        regular: "/images/personality/ITSM.png",
+        edged: "/images/personality_edging/ITSM.svg",
+        logo: "/images/personality_logo/ITSM.png",
+      },
     },
     "14": {
       id: "14",
@@ -323,7 +383,11 @@ const PERSONALITY_INFO: Readonly<Record<PersonalityId, PersonalityInfoEntry>> =
         info: "/user/info/personality/ITPA",
         result: "/user/diagnose/result/ITPA",
       },
-      image: "/images/personality/ITPA.png",
+      image: {
+        regular: "/images/personality/ITPA.png",
+        edged: "/images/personality_edging/ITPA.svg",
+        logo: "/images/personality_logo/ITPA.png",
+      },
     },
     "15": {
       id: "15",
@@ -335,7 +399,11 @@ const PERSONALITY_INFO: Readonly<Record<PersonalityId, PersonalityInfoEntry>> =
         info: "/user/info/personality/ITPM",
         result: "/user/diagnose/result/ITPM",
       },
-      image: "/images/personality/ITPM.png",
+      image: {
+        regular: "/images/personality/ITPM.png",
+        edged: "/images/personality_edging/ITPM.svg",
+        logo: "/images/personality_logo/ITPM.png",
+      },
     },
   };
 
