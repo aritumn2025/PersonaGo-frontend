@@ -9,19 +9,22 @@ interface SuggestFieldProps {
   history: HistoryEntry[];
 }
 
-function SuggestField({ history }: SuggestFieldProps) {
+function SuggestField({ history = [] }: SuggestFieldProps) {
   const suggestion = ((): [AttractionId, string] => {
-    let prize = 0;
-    for (const entry of history) {
-      if (entry.attraction === "prize") {
-        prize = 0;
-      } else {
-        prize += 1;
-      }
-    }
-    if (prize >= 3) {
-      return ["prize" as AttractionId, "抽選に参加できます！行ってみよう！"];
-    }
+    // let prize = 0;
+    // if (history.length === 0) {
+    //   return ["battle" as AttractionId, "まずはサバゲーで遊んでみよう！"];
+    // }
+    // for (const entry of history) {
+    //   if (entry.attraction === "prize") {
+    //     prize = 0;
+    //   } else {
+    //     prize += 1;
+    //   }
+    // }
+    // if (prize >= 3) {
+    //   return ["prize" as AttractionId, "抽選に参加できます！行ってみよう！"];
+    // }
 
     return randomChoice<[AttractionId, string]>(
       [
