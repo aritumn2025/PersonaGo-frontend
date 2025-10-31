@@ -34,13 +34,6 @@ function InfoSection({ title, children }: InfoListProps) {
 function MbtiSection() {
   const mbtiList: Parameters<typeof infoCard>[0][] = [
     {
-      title: "使い方",
-      description: "アプリの基本的な使い方を見ることができます",
-      link: "/user/info/usage/",
-      imageSrc: "/images/other/question_mark.png",
-      imageAlt: "Usage Image",
-    },
-    {
       title: "性格タイプ一覧",
       description: "性格の紹介を見ることができます",
       link: "/user/info/personality/",
