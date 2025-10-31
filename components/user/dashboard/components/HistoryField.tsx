@@ -6,10 +6,10 @@ interface HistoryFieldProps {
   history: HistoryEntry[];
 }
 
-function HistoryField({ history }: HistoryFieldProps) {
+function HistoryField({ history = [] }: HistoryFieldProps) {
   return (
     <div className="flex flex-row gap-2">
-      {history.slice(0, Math.min(6, history.length)).map((entry, index) => {
+      {(history || []).map((entry, index) => {
         const attraction = ATTRACTIONS_INFO[entry.attraction];
         const Icon = attraction.icon;
         return (
@@ -22,9 +22,9 @@ function HistoryField({ history }: HistoryFieldProps) {
                 <Icon className="h-8 w-8" />
                 <span className="text-sm font-bold">{attraction.name}</span>
               </div>
-            ) : (
+            ) : index < 6 ? (
               <Icon className="mb-1 h-6 w-6" />
-            )}
+            ) : null}
           </div>
         );
       })}
