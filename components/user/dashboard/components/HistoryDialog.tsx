@@ -81,7 +81,7 @@ function HistoryDialogContent({ history }: HistoryDialogContent) {
     // visitedAtをDate型に変換
     .map((item) => ({
       ...item,
-      visitedAt: new Date(item.visitedAt),
+      visitedAt: new Date(item.VisitedAt),
     }))
     // 日付順に降順ソート(=直近が上に)
     .sort((a, b) => b.visitedAt.getTime() - a.visitedAt.getTime());
