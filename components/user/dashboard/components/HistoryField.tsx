@@ -9,7 +9,7 @@ interface HistoryFieldProps {
 function HistoryField({ history }: HistoryFieldProps) {
   return (
     <div className="flex flex-row gap-2">
-      {history.slice(0, 6).map((entry, index) => {
+      {history.slice(0, Math.min(6, history.length)).map((entry, index) => {
         const attraction = ATTRACTIONS_INFO[entry.attraction];
         const Icon = attraction.icon;
         return (
