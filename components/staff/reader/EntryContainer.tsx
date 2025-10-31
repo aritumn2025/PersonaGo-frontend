@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 
+import type { PostEntryAttractionVisitResponse } from "@/types/api";
 import { AttractionId, User, type UserId } from "@/types/common";
 
 import { ATTRACTIONS_INFO } from "@/constants/attraction";
@@ -18,7 +19,9 @@ interface ReaderContainerProps {
 
 function EntryContainer({ staffName, attraction }: ReaderContainerProps) {
   const [userId, setUserId] = useState<UserId | null>(null);
-  const [user, setUser] = useState<User | null>(null);
+  const [user, setUser] = useState<PostEntryAttractionVisitResponse | null>(
+    null,
+  );
 
   useEffect(() => {
     (async () => {
@@ -30,7 +33,8 @@ function EntryContainer({ staffName, attraction }: ReaderContainerProps) {
             attraction,
             staffName,
           );
-          setUser(data.user);
+          setUser(data);
+          console.log("Attraction visit recorded:", data);
         } else {
           setUser(null);
         }
@@ -47,7 +51,11 @@ function EntryContainer({ staffName, attraction }: ReaderContainerProps) {
         入場管理 - {ATTRACTIONS_INFO[attraction].name}
       </h1>
       <QrField setUserId={setUserId} />
-      <UserInfoField user={user} />
+      <UserInfoField
+        id={user ? user.user.id : null}
+        name={user ? user.user.name : null}
+        personality={user ? user.user.personality : null}
+      />
     </div>
   );
 }
