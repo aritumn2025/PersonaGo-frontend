@@ -3,7 +3,7 @@
  * @param error 判定対象のエラーオブジェクト
  */
 export function hasErrorCode(error: unknown): error is { code: string } {
-  return typeof error === 'object' && error !== null && 'code' in error;
+  return typeof error === "object" && error !== null && "code" in error;
 }
 
 /**
@@ -20,7 +20,7 @@ export function getErrorCode(error: unknown): string | undefined {
  * @param error 判定対象のエラーオブジェクト
  */
 export function hasErrorMessage(error: unknown): error is { message: string } {
-  return typeof error === 'object' && error !== null && 'message' in error;
+  return typeof error === "object" && error !== null && "message" in error;
 }
 
 /**
