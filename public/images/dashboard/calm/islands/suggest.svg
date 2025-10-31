@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="100%" height="100%" viewBox="0 0 832 452" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:1.5;">
+    <g transform="matrix(1,0,0,1,-15608.6,-5091.13)">
+        <g id="island_suggest" transform="matrix(1,0,0,1,10775.1,-55.7577)">
+            <rect x="4833.47" y="5146.89" width="831.298" height="451.514" style="fill:none;"/>
+            <clipPath id="_clip1">
+                <rect x="4833.47" y="5146.89" width="831.298" height="451.514"/>
+            </clipPath>
+            <g clip-path="url(#_clip1)">
+                <g transform="matrix(1.33749,0,0,1.67957,2173.06,1789.53)">
+                    <path d="M2610.65,2210.55L2597.59,2210.55L2597.59,2225.26L2552.68,2225.26L2552.68,2255.1L2316.23,2255.1L2316.23,2267.77L1990.24,2267.77L1990.24,1998.94L2095.23,1998.94L2095.23,2018.14L2148.17,2018.14L2147.33,2087.67L2610.65,2087.67L2610.65,2210.55Z" style="fill:rgb(27,208,69);"/>
+                </g>
+                <g transform="matrix(2.10532,0,0,1.08439,312.176,3071.31)">
+                    <path d="M2148.27,2122.42C2148.27,2110.28 2150.76,2098.64 2155.18,2090.06C2159.6,2081.47 2165.59,2076.65 2171.84,2076.65L2233.12,2076.65C2237.83,2076.65 2242.43,2079.39 2246.33,2084.52C2252.31,2092.38 2261.45,2104.39 2267.43,2112.24C2271.33,2117.37 2275.93,2120.11 2280.64,2120.11C2318.54,2120.11 2492.57,2120.11 2492.57,2120.11L2492.57,2290.3C2492.57,2290.3 2249.52,2290.22 2171.84,2290.19C2158.82,2290.19 2148.27,2269.7 2148.27,2244.43C2148.27,2208.41 2148.27,2158.44 2148.27,2122.42Z" style="fill:none;stroke:black;stroke-width:1.79px;"/>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

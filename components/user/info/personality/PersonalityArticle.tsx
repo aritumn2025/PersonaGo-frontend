@@ -57,7 +57,7 @@ function PersonalityArticle({
           {personality.description}
         </p>
         <Image
-          src={personality.image}
+          src={personality.image.regular}
           alt={personality.name}
           width={200}
           height={200}

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="100%" height="100%" viewBox="0 0 115 115" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;">
+    <g transform="matrix(1,0,0,1,-19959.8,-3879.61)">
+        <g id="button_next" transform="matrix(1,0,0,1,14241.1,-1229.25)">
+            <rect x="5718.68" y="5108.86" width="114.596" height="114.596" style="fill:none;"/>
+            <clipPath id="_clip1">
+                <rect x="5718.68" y="5108.86" width="114.596" height="114.596"/>
+            </clipPath>
+            <g clip-path="url(#_clip1)">
+                <g transform="matrix(1.30769,0,0,1.30769,2781.98,2913.47)">
+                    <circle cx="2292.07" cy="1725.19" r="41.271"/>
+                </g>
+                <g transform="matrix(1.30769,0,0,1.30769,2775.33,2906.81)">
+                    <circle cx="2292.07" cy="1725.19" r="41.271" style="fill:rgb(67,216,52);"/>
+                </g>
+                <g transform="matrix(3.81197,0,0,3.38801,5776.19,5162.82)">
+                    <g transform="matrix(1,0,0,1,-12,-12)">
+                        <g transform="matrix(0.025,0,0,0.025,0,24)">
+                            <path d="M504,-480L320,-664L376,-720L616,-480L376,-240L320,-296L504,-480Z" style="fill-rule:nonzero;"/>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

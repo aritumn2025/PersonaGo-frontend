@@ -17,7 +17,7 @@ export default function Error({
   return (
     <main className="flex min-h-screen flex-col items-center justify-center bg-gray-50 px-4 text-center">
       <Image
-        src={PERSONALITY_INFO["12"].image}
+        src={PERSONALITY_INFO["12"].image.regular}
         alt="Error illustration"
         width={240}
         height={240}

@@ -38,7 +38,8 @@ function MbtiSection() {
       description: "性格の紹介を見ることができます",
       link: "/user/info/personality/",
       imageSrc:
-        PERSONALITY_INFO[randomChoice([...PERSONALITY_IDS], 1)[0]].image,
+        PERSONALITY_INFO[randomChoice([...PERSONALITY_IDS], 1)[0]].image
+          .regular,
       imageAlt: "Personality Image",
     },
   ];
