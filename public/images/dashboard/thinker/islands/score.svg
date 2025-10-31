@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="100%" height="100%" viewBox="0 0 541 263" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;">
+    <g transform="matrix(1,0,0,1,-19733.8,-5663.76)">
+        <g id="island_score" transform="matrix(1,0,0,1,14898.8,31.9379)">
+            <rect x="4834.97" y="5631.82" width="540.553" height="262.947" style="fill:none;"/>
+            <clipPath id="_clip1">
+                <rect x="4834.97" y="5631.82" width="540.553" height="262.947"/>
+            </clipPath>
+            <g clip-path="url(#_clip1)">
+                <g transform="matrix(1.33749,0,0,1.67957,2173.06,2274.46)">
+                    <path d="M2394.39,2098.28L2381.33,2098.28L2381.33,2112.99L2336.41,2112.99L2336.41,2142.83L2099.97,2142.83L2099.97,2155.5L1990.24,2155.5L1990.24,1998.94L2095.23,1998.94L2095.23,2018.14L2148.17,2018.14L2147.33,2087.67L2394.39,2087.67L2394.39,2098.28Z" style="fill:rgb(69,139,232);"/>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

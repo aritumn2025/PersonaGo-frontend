@@ -1,10 +1,10 @@
 import { BottomNavigation } from "@/components/user/BottomNavigation";
-import { ComingSoon } from "@/components/user/ComingSoon";
+import { DashboardContainer } from "@/components/user/dashboard";
 
 export default function Page() {
   return (
-    <main className="bg-purple-50">
-      <ComingSoon />
+    <main className="overflow-hidden">
+      <DashboardContainer />
       <BottomNavigation currentPage="home" />
     </main>
   );
