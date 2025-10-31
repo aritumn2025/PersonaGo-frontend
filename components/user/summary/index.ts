@@ -1,3 +1,3 @@
-import { SummaryContainer } from "./SumaryContainer";
+import { SummaryContainer } from "./SummaryContainer";
 
 export { SummaryContainer };
