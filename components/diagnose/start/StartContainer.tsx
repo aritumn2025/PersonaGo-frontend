@@ -6,6 +6,8 @@ import { useRouter } from "next/navigation";
 
 import { useCookie } from "@/hooks/useCookie";
 
+import { BackButton } from "@/components/common/BackButton";
+import { Marker } from "@/components/common/Marker";
 import { Button } from "@/components/ui/button";
 
 import { PersonalityView } from "./PersonalityView";
@@ -64,10 +66,27 @@ function StartContainer() {
   }, [getUserId]);
 
   return (
-    <div className="flex h-screen w-full flex-col items-center gap-6 bg-purple-50 px-4 py-6 pt-20">
-      <h1 className="text-4xl font-bold text-gray-600">性格診断テスト</h1>
+    <div className="relative flex h-screen w-full flex-col items-center gap-6 bg-purple-50 px-4 py-6 pt-20">
+      {loggedIn && (
+        <div className="fixed top-4 left-4 z-1000">
+          <BackButton href="/user/dashboard" />
+        </div>
+      )}
+      <h1 className="text-3xl font-bold text-gray-600">
+        <Marker color="var(--color-purple-200)">性格診断テスト</Marker>
+      </h1>
       <div className="flex flex-col gap-2 text-center text-lg text-gray-500">
-        <p>あなたの性格タイプを見つけてみよう！</p>
+        <p>
+          {loggedIn ? (
+            <>
+              診断は何度でも受けられます。
+              <br />
+              あなたの性格タイプを再確認してみよう！
+            </>
+          ) : (
+            <>あなたの性格タイプを見つけてみよう！</>
+          )}
+        </p>
       </div>
       {!loggedIn && (
         <UserNameInput userName={userName} setUserName={setUserName} />
