@@ -31,7 +31,7 @@ export default function Page() {
               テーマはジブリ風・ピクサー風・アニメ風など多数。気分に合わせてセレクトOK。
             </li>
             <li>
-              AI変換は数秒で完了。モニターで変化の瞬間を一緒に楽しめます。
+              AI変換は数分で完了。モニターで変化の瞬間を一緒に楽しめます。
             </li>
             <li>高画質プリントは持ち帰り自由。文化祭の記念にもぴったり。</li>
           </ul>
@@ -42,14 +42,12 @@ export default function Page() {
             体験の流れ（とってもシンプル！）
           </h2>
           <ol className="list-decimal space-y-2 pl-5">
-            <li>
-              受付でテーマを決めて写真を撮影。スタッフがベストショットをサポート。
-            </li>
+            <li>写真を撮影。希望のテーマを選択。</li>
             <li>
               AIがその場で画像を変換。大画面に映し出されるので一緒にチェック！
             </li>
             <li>
-              数秒後にプリンターから似顔絵が完成。希望者にはデータ共有も対応。
+              数分後にプリンターから似顔絵が完成。希望者にはデータ共有も対応。
             </li>
           </ol>
           <p className="text-sm text-gray-600">
@@ -64,17 +62,6 @@ export default function Page() {
           <p>
             印刷した似顔絵はフォトスポットに飾ったり、SNSでシェアして文化祭の思い出として残せます。
           </p>
-          <div
-            className="rounded-lg px-3 py-3 text-sm text-gray-700"
-            style={{ backgroundColor: attraction.color.secondary }}
-          >
-            <p className="font-semibold text-gray-900">
-              グループ撮影も大歓迎！
-            </p>
-            <p>
-              友達同士や家族で撮った写真を、ひとつのイラスト作品にまとめることも可能です。スタッフに声をかけてみてくださいね。
-            </p>
-          </div>
         </section>
 
         <section className="space-y-3">
@@ -93,7 +80,7 @@ export default function Page() {
                 <dt className="min-w-max font-semibold text-gray-900">
                   持ち物
                 </dt>
-                <dd>特になし（スマホをお持ちならデータ連携もできます）</dd>
+                <dd>特になし</dd>
               </div>
             </dl>
           </div>
