@@ -44,8 +44,9 @@ const steps: {
     image: undefined,
   },
   {
-    title: "3つ体験したら抽選チャンス！",
-    description: "出し物を3つ以上体験すると、抽選にチャレンジ可能！",
+    title: "体験したら抽選チャンス！",
+    description:
+      "出し物を体験すると、景品ブースで抽選にチャレンジ可能！たくさんの出し物を体験することで、当たる確率がアップします。",
     image: undefined,
   },
 ];
@@ -55,15 +56,15 @@ function TitleContainer() {
     <>
       <main className="flex w-full flex-col items-center text-center">
         {/* ===== タイトルセクション ===== */}
-        <section className="relative w-full bg-gradient-to-br from-pink-400 via-rose-400 to-orange-300 py-16 text-white">
+        <section className="relative w-full bg-gradient-to-br from-purple-700 via-rose-400 to-orange-300 py-16 text-white">
           <FadeIn>
             <h1 className="sr-only">Persona Go（ペルソナ・ゴー）</h1>
-            <div className="mb-8 flex justify-center">
+            <div className="mb-6 flex justify-center">
               <Image
                 src="/images/title/title.png"
                 alt="Persona Go タイトル画像"
-                width={480}
-                height={160}
+                width={500}
+                height={300}
                 priority
               />
             </div>
@@ -91,8 +92,8 @@ function TitleContainer() {
               <Marker color={markerColor}>性格診断</Marker>
               をして、自分だけの体験を楽しもう！
               <br />
-              出し物をまわると記録がたまり、
-              <Marker color={markerColor}>3つ以上の体験で抽選</Marker>
+              出し物をまわると記録がたまり、景品ブースで
+              <Marker color={markerColor}>抽選</Marker>
               にも参加できます。
             </p>
             {/* TODO: ここに一部の性格のイラスト表示。 */}
@@ -122,13 +123,10 @@ function TitleContainer() {
           </div>
         </section>
 
-        <BorderAngularWave02
-          top="var(--color-yellow-400)"
-          bottom="var(--color-green-400)"
-        />
+        <BorderAngularWave02 top="var(--color-yellow-400)" bottom="#1BD045" />
 
         {/* ===== 開始ボタンセクション ===== */}
-        <section className="w-full bg-green-400 px-4 py-16 md:px-8">
+        <section className="w-full bg-[#1BD045] px-4 py-16 md:px-8">
           <FadeIn>
             <h2 className="mb-16 text-2xl font-bold text-white">
               さあ、文化祭を楽しもう！
@@ -136,16 +134,13 @@ function TitleContainer() {
           </FadeIn>
           <EmphasizeButton
             href="/user/start"
-            className="h-12 w-40 rounded-2xl bg-white px-10 py-2 text-2xl font-semibold text-green-500 shadow-xl"
+            className="h-12 w-40 rounded-2xl bg-white px-10 py-2 text-2xl font-semibold text-[#1BD045] shadow-xl"
           >
             始める
           </EmphasizeButton>
         </section>
       </main>
-      <BorderLiner02
-        top="var(--color-green-400)"
-        bottom="var(--color-blue-300)"
-      />
+      <BorderLiner02 top="#1BD045" bottom="var(--color-blue-300)" />
       <Footer />
     </>
   );

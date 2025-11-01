@@ -22,7 +22,7 @@ function Step({ num, title, description, image }: StepProps) {
       <div className="flex items-center">
         <Image src={numImg} alt={`Step ${num}`} width={80} height={80} />
         <h3 className="text-xl font-bold">
-          <Marker color="var(--color-green-400)">{title}</Marker>
+          <Marker color="#1BD045">{title}</Marker>
         </h3>
       </div>
       <p className="text-md mb-10 text-center">{description}</p>
