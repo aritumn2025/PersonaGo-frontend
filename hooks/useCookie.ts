@@ -3,8 +3,8 @@
 import Cookies from "js-cookie";
 
 // cookieキー定義
-const USER_ID_KEY = "user_id";
-const USER_NAME_KEY = "user_name";
+const USER_ID_KEY = "user_id_v2"; // データベースの不具合により新しいキーに変更
+const USER_NAME_KEY = "user_name"; // 一時的な保存場所なので変更なし
 const STAFF_NAME_KEY = "staff_name";
 
 // cookieの有効期限（日）
