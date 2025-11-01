@@ -1,16 +1,19 @@
 "use client";
 
+import { Suspense } from "react";
+
 import { useSearchParams } from "next/navigation";
 
 import { DIAGNOSE_CONFIG } from "@/constants/diagnose";
 
 import { createDiagnoseConfig } from "@/lib/diagnose";
 
+import { SquareSpin2 } from "@/components/common/loader";
 import { QuestionContainer } from "@/components/diagnose/";
 
 const isDevelopment = process.env.NODE_ENV === "development";
 
-export default function Page() {
+function PageInter() {
   const searchParams = useSearchParams();
   const lengthParam = searchParams.get("length");
 
@@ -28,9 +31,19 @@ export default function Page() {
     <main>
       <QuestionContainer
         diagnoseConfig={diagnoseConfig}
-        questionsPerPage={6}
+        questionsPerPage={8}
         debug={isDevelopment}
       />
     </main>
+  );
+}
+
+export default function Page() {
+  return (
+    <Suspense
+      fallback={<SquareSpin2 color="var(--color-gray-500)" size="1.5rem" />}
+    >
+      <PageInter />
+    </Suspense>
   );
 }
