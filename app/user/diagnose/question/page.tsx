@@ -25,7 +25,7 @@ function PageInter() {
       ? Number(lengthParam) || 18
       : 18;
 
-  const diagnoseConfig = createDiagnoseConfig(DIAGNOSE_CONFIG, length);
+  const diagnoseConfig = createDiagnoseConfig(DIAGNOSE_CONFIG, length, true);
 
   return (
     <main>

@@ -1,3 +1,5 @@
+import { randomChoice } from "@/utils/random";
+
 import type { DiagnoseConfig, Question, Result, Score } from "./types";
 
 /**
@@ -21,11 +23,18 @@ function lerp(x0: number, y0: number, x1: number, y1: number, x: number) {
 function createDiagnoseConfig<K extends string>(
   config: DiagnoseConfig<K>,
   questions: number = config.questions.length,
+  shuffle: boolean = false,
 ): DiagnoseConfig<K> {
   if (questions < 1 || config.questions.length < questions) {
     throw new Error("Invalid questions length");
   }
-  config = { ...config, questions: config.questions.slice(0, questions) };
+  config = {
+    ...config,
+    questions: (shuffle
+      ? randomChoice(config.questions, config.questions.length)
+      : config.questions
+    ).slice(0, questions),
+  };
   return config;
 }
 
