@@ -80,7 +80,7 @@ export default function Page() {
                 <dt className="min-w-max font-semibold text-gray-900">
                   持ち物
                 </dt>
-                <dd>特になし（スマホをお持ちならデータ連携もできます）</dd>
+                <dd>特になし</dd>
               </div>
             </dl>
           </div>
