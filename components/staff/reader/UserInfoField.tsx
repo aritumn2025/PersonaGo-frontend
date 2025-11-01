@@ -1,4 +1,5 @@
 import type { User } from "@/types/common";
+import type { PersonalityId, UserId, UserName } from "@/types/common";
 
 import { PERSONALITY_INFO } from "@/constants/personality";
 
@@ -11,29 +12,30 @@ import {
 } from "@/components/ui/card";
 
 interface UserInfoFieldProps {
-  user: User | null;
+  id: UserId | null;
+  name: UserName | null;
+  personality: PersonalityId | null;
 }
 
-function UserInfoField({ user }: UserInfoFieldProps) {
+function UserInfoField({ id, name, personality }: UserInfoFieldProps) {
   return (
     <Card>
       <CardHeader>
         <CardTitle className="text-lg">ユーザー情報</CardTitle>
       </CardHeader>
       <CardContent className="space-y-2">
-        {user ? (
+        {id && name && personality ? (
           <ul>
-            <li>ID: {user.id}</li>
-            <li>ニックネーム: {user.name}</li>
+            <li>ID: {id}</li>
+            <li>ニックネーム: {name}</li>
             <li>
               {"性格タイプ: "}
               <span
                 style={{
-                  color:
-                    PERSONALITY_INFO[user.currentPersonality].type.color.main,
+                  color: PERSONALITY_INFO[personality].type.color.main,
                 }}
               >
-                {`${PERSONALITY_INFO[user.currentPersonality].name}(${PERSONALITY_INFO[user.currentPersonality].code})`}
+                {`${PERSONALITY_INFO[personality].name}(${PERSONALITY_INFO[personality].code})`}
               </span>
             </li>
           </ul>

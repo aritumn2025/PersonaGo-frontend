@@ -9,7 +9,7 @@ function ComingSoon() {
   return (
     <div className="flex min-h-screen flex-col items-center justify-center bg-gray-50 px-4 text-center">
       <Image
-        src={PERSONALITY_INFO["13"].image}
+        src={PERSONALITY_INFO["13"].image.regular}
         alt="Coming soon illustration"
         width={240}
         height={240}

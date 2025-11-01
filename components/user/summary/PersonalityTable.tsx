@@ -34,7 +34,7 @@ function PersonalityIcon({ personalityId }: PersonalityIconProps) {
       }}
     >
       <Image
-        src={personality.image}
+        src={personality.image.regular}
         alt={personality.name}
         width={60}
         height={60}

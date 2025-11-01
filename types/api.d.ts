@@ -81,7 +81,11 @@ type PostEntryAttractionVisitRequest = {
 type PostEntryAttractionVisitResponse = {
   attraction: AttractionId;
   staff: StaffName;
-  user: User;
+  user: {
+    id: UserId;
+    name: UserName;
+    personality: PersonalityId;
+  };
 };
 
 // ゲーム待機室関連API

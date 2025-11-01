@@ -117,37 +117,37 @@ export const handlers = [
           attraction: "mbti",
           personality: "1",
           staff: "スタッフA",
-          visitedAt: "2023-01-01T00:00:00Z",
+          VisitedAt: "2023-01-01T00:00:00Z",
         },
         {
           attraction: "battle",
           personality: "1",
           staff: "スタッフB",
-          visitedAt: "2023-01-02T00:00:00Z",
+          VisitedAt: "2023-01-02T00:00:00Z",
         },
         {
           attraction: "picture",
           personality: "13",
           staff: "スタッフC",
-          visitedAt: "2023-01-03T00:00:00Z",
+          VisitedAt: "2023-01-03T00:00:00Z",
         },
         {
           attraction: "games",
           personality: "7",
           staff: "スタッフD",
-          visitedAt: "2023-01-04T00:00:00Z",
+          VisitedAt: "2023-01-04T00:00:00Z",
         },
         {
           attraction: "prize",
           personality: "13",
           staff: "スタッフE",
-          visitedAt: "2023-01-05T00:00:00Z",
+          VisitedAt: "2023-01-05T00:00:00Z",
         },
         {
           attraction: "games",
           personality: "13",
           staff: "スタッフF",
-          visitedAt: "2023-01-06T00:00:00Z",
+          VisitedAt: "2023-01-06T00:00:00Z",
         },
       ],
     };
@@ -342,8 +342,7 @@ export const handlers = [
         user: {
           id: body.userId,
           name: "ほげたろう",
-          originalPersonality: "1",
-          currentPersonality: "13",
+          personality: "1",
         },
       };
       return HttpResponse.json(response);

@@ -54,7 +54,7 @@ type HistoryEntry = {
   attraction: AttractionId;
   personality: PersonalityId;
   staff: StaffName;
-  visitedAt: DateTime;
+  VisitedAt: DateTime;
 };
 
 // ゲーム待機室情報
