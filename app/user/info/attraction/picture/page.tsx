@@ -42,9 +42,7 @@ export default function Page() {
             体験の流れ（とってもシンプル！）
           </h2>
           <ol className="list-decimal space-y-2 pl-5">
-            <li>
-              写真を撮影。希望のテーマを選択。
-            </li>
+            <li>写真を撮影。希望のテーマを選択。</li>
             <li>
               AIがその場で画像を変換。大画面に映し出されるので一緒にチェック！
             </li>
