@@ -20,7 +20,12 @@ function lerp(x0: number, y0: number, x1: number, y1: number, x: number) {
  */
 function createDiagnoseConfig<K extends string>(
   config: DiagnoseConfig<K>,
+  questions: number = config.questions.length,
 ): DiagnoseConfig<K> {
+  if (questions < 1 || config.questions.length < questions) {
+    throw new Error("Invalid questions length");
+  }
+  config = { ...config, questions: config.questions.slice(0, questions) };
   return config;
 }
 
