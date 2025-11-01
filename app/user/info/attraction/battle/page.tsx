@@ -1,8 +1,9 @@
+import { Bold } from "lucide-react";
+
 import { ATTRACTIONS_INFO } from "@/constants/attraction";
 
 import { BottomNavigation } from "@/components/user/BottomNavigation";
 import { ArticleTemplate } from "@/components/user/info/article/Template";
-import { Bold } from "lucide-react";
 
 export default function Page() {
   const attraction = ATTRACTIONS_INFO["battle"];
@@ -25,8 +26,14 @@ export default function Page() {
             ここがオススメ！
           </h2>
           <ul className="list-disc space-y-2 pl-5">
-            <li>実際の教室に<b>障害</b>を追加！！！！遮蔽物を駆使しながら戦略的に立ち回ろう。</li>
-            <li>NERF を用いた本格的なサバイバルゲーム。安全に撃ち合いを楽しめます。</li>
+            <li>
+              実際の教室に<b>障害</b>
+              を追加！！！！遮蔽物を駆使しながら戦略的に立ち回ろう。
+            </li>
+            <li>
+              NERF
+              を用いた本格的なサバイバルゲーム。安全に撃ち合いを楽しめます。
+            </li>
           </ul>
         </section>
 
@@ -58,9 +65,7 @@ export default function Page() {
             className="rounded-lg px-3 py-3 text-sm text-gray-700"
             style={{ backgroundColor: attraction.color.secondary }}
           >
-            <p className="font-semibold text-gray-900">
-              初心者でも大丈夫？
-            </p>
+            <p className="font-semibold text-gray-900">初心者でも大丈夫？</p>
             <p>
               スタッフが安全対策と操作方法を丁寧にレクチャー。未経験でも安心して参加できます。
             </p>
