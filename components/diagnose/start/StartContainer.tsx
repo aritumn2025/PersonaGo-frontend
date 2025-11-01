@@ -16,17 +16,44 @@ function StartContainer() {
   const { getUserId, setUserName: setUserNameCookie } = useCookie();
   const [userName, setUserName] = useState<string>(""); // ユーザー名
   const [loggedIn, setLoggedIn] = useState<boolean>(false); // ログイン状態
+  type Level = "short" | "middle" | "long";
+  const [level, setLevel] = useState<Level>("middle"); // 診断レベル
 
   const isUserNameInput = userName.trim() !== ""; // ユーザー名が入力されているか
+
+  const levelMap: Record<
+    Level,
+    { title: string; description: string; questions: number }
+  > = {
+    short: {
+      title: "短め",
+      description: "短い質問でサクッと診断",
+      questions: 8,
+    },
+    middle: {
+      title: "標準",
+      description: "標準的な質問でじっくり診断",
+      questions: 16,
+    },
+    long: {
+      title: "長め",
+      description: "時間をかけてじっくり診断",
+      questions: 24,
+    },
+  };
 
   // ログイン済み or 未ログインでユーザー名入力済みの場合に診断開始
   const handleStart = () => {
     if (loggedIn) {
-      router.push("/user/diagnose/question");
+      router.push(
+        `/user/diagnose/question/?length=${levelMap[level].questions}`,
+      );
     } else {
       if (isUserNameInput) {
         setUserNameCookie(userName.trim());
-        router.push("/user/diagnose/question");
+        router.push(
+          `/user/diagnose/question/?length=${levelMap[level].questions}`,
+        );
       }
     }
   };
@@ -45,6 +72,31 @@ function StartContainer() {
       {!loggedIn && (
         <UserNameInput userName={userName} setUserName={setUserName} />
       )}
+
+      <h2 className="text-2xl font-bold text-gray-600">診断レベルを選ぼう！</h2>
+      <div className="flex w-full max-w-2xl flex-col justify-center">
+        {(["short", "middle", "long"] as Level[]).map((lvl, index) => (
+          <button
+            key={lvl}
+            onClick={() => setLevel(lvl)}
+            className={`flex flex-row items-center gap-4 border px-6 py-2 text-center transition-all duration-200 ${
+              level === lvl
+                ? "border-purple-500 bg-purple-100"
+                : "border-gray-300 bg-white hover:border-purple-400"
+            } ${index === 0 ? "rounded-t-xl" : ""} ${index === 2 ? "rounded-b-xl" : ""} `}
+          >
+            <h3 className="mb-2 text-xl font-semibold text-gray-700">
+              {levelMap[lvl].title}
+            </h3>
+            <div className="flex flex-col items-start gap-1">
+              <p className="text-gray-600">{levelMap[lvl].description}</p>
+              <span className="text-xs text-gray-500">
+                問題数: {levelMap[lvl].questions}問
+              </span>
+            </div>
+          </button>
+        ))}
+      </div>
       <Button
         onClick={handleStart}
         disabled={!(loggedIn || isUserNameInput)}
