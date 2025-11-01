@@ -1,10 +1,22 @@
+import Image from "next/image";
+
 import { ATTRACTIONS_INFO } from "@/constants/attraction";
 
+import { Marker } from "@/components/common/Marker";
 import { BottomNavigation } from "@/components/user/BottomNavigation";
 import { ArticleTemplate } from "@/components/user/info/article/Template";
 
 export default function Page() {
   const attraction = ATTRACTIONS_INFO["picture"];
+
+  const exampleImage = [
+    "/images/attraction/picture/example_01.jpg",
+    "/images/attraction/picture/example_02.jpg",
+    "/images/attraction/picture/example_03.jpg",
+    "/images/attraction/picture/example_04.jpg",
+    "/images/attraction/picture/example_05.jpg",
+    "/images/attraction/picture/example_06.jpg",
+  ];
 
   return (
     <main className="bg-purple-50 pb-24">
@@ -18,7 +30,9 @@ export default function Page() {
             「いつもの写真が映画のワンシーンみたいに変わったら？」そのワクワクをAIで叶える新コンテンツが、情報システムコースに登場！
           </p>
           <p>
-            お好きなテーマ（ジブリ風・ピクサー風・アニメ風など）を選ぶだけで、AIがその場で写真を変換。完成した似顔絵はプリンターから受け取れます。
+            <Marker color={attraction.color.secondary}>
+              お好きなテーマ（ジブリ風・ピクサー風・アニメ風など）を選ぶだけで、AIがその場で写真を変換。完成した似顔絵はプリンターから受け取れます。
+            </Marker>
           </p>
         </section>
 
@@ -28,12 +42,19 @@ export default function Page() {
           </h2>
           <ul className="list-disc space-y-2 pl-5">
             <li>
-              テーマはジブリ風・ピクサー風・アニメ風など多数。気分に合わせてセレクトOK。
+              <Marker color={attraction.color.secondary}>
+                テーマはジブリ風・ピクサー風・アニメ風など多数。気分に合わせてセレクトOK。
+              </Marker>
             </li>
             <li>
               AI変換は数分で完了。モニターで変化の瞬間を一緒に楽しめます。
             </li>
-            <li>高画質プリントは持ち帰り自由。文化祭の記念にもぴったり。</li>
+            <li>
+              <Marker color={attraction.color.secondary}>
+                高画質プリントは持ち帰り自由。
+              </Marker>
+              文化祭の記念にもぴったり。
+            </li>
           </ul>
         </section>
 
@@ -53,6 +74,18 @@ export default function Page() {
           <p className="text-sm text-gray-600">
             ※複数人写真をご希望の場合はスタッフまで。
           </p>
+          <div className="grid grid-cols-3 gap-4">
+            {exampleImage.map((src, index) => (
+              <Image
+                key={index}
+                src={src}
+                alt={`Example image ${index + 1}`}
+                width={400}
+                height={400}
+                className="rounded-lg border-4 border-gray-200 object-cover"
+              />
+            ))}
+          </div>
         </section>
 
         <section className="space-y-3">

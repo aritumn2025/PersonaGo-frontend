@@ -1,5 +1,6 @@
 import { ATTRACTIONS_INFO } from "@/constants/attraction";
 
+import { Marker } from "@/components/common/Marker";
 import { BottomNavigation } from "@/components/user/BottomNavigation";
 import { ArticleTemplate } from "@/components/user/info/article/Template";
 
@@ -15,13 +16,15 @@ export default function Page() {
       >
         <section className="space-y-4">
           <p>
-            「私って本当はどんな人？」そんなモヤモヤに答える文化祭限定の性格診断体験が、今年も情報システムコースに登場！
+            「私って本当はどんな人？」そんなモヤモヤに答える文化祭限定の性格診断体験が、情報システムコースに登場！
           </p>
           <p>
-            スマホから数分で答えられる簡単な質問に進むだけで、あなたの性格タイプを診断します。
+            <Marker color={attraction.color.secondary}>
+              スマホから数分で答えられる簡単な質問に進むだけで、あなたの性格タイプを診断します。
+            </Marker>
           </p>
           <p>
-            全部で16種類のキャラクターから、あなたの「推しタイプ」がきっと見つかるはず。
+            全部で16種類のキャラクターから、あなたの「性格タイプ」がきっと見つかるはず。
           </p>
           <p>
             自分自身を見つめ直したい人も、友達の意外な素顔を知りたい人も、ぜひ気軽に遊びに来てください！
@@ -37,10 +40,19 @@ export default function Page() {
               所要時間はわずか数分。待ち時間の合間にもサクッと診断できる手軽さ。
             </li>
             <li>
-              16種類のキャラクター結果は、思わずスクショしたくなるかわいさ＆わかりやすさ。
+              <Marker color={attraction.color.secondary}>
+                16種類のキャラクター結果は、思わずスクショしたくなるかわいさ＆わかりやすさ。
+              </Marker>
             </li>
             <li>
-              診断結果は後日のゲームコーナーでも使えるので、遊びの幅がぐっと広がる！
+              診断後は、自分のQRコードが発行！
+              <Marker color={attraction.color.secondary}>
+                QRコードは情報システムコースの各アトラクションと連携しており、特別な体験が可能に。
+              </Marker>
+            </li>
+            <li>
+              診断結果は別アトラクション「みんなでゲーム」と連携して、自分の能力やスキルに反映！
+              遊びの幅がぐっと広がる！
             </li>
           </ul>
         </section>
@@ -50,9 +62,7 @@ export default function Page() {
             体験の流れ（とってもシンプル！）
           </h2>
           <ol className="list-decimal space-y-2 pl-5">
-            <li>
-              案内ポスターのQRコード、またはこのページのリンクから診断サイトへアクセス。
-            </li>
+            <li>案内ポスターのQRコードから性格診断を行う。</li>
             <li>質問に直感でこたえるだけ。全問回答して診断ボタンをタップ！</li>
             <li>
               すぐに結果が表示されるので、友達と見せ合いっこしたり、スクショして保存しよう。
@@ -117,7 +127,8 @@ export default function Page() {
             好奇心の向くままに、性格診断で新しい自分を発見してみませんか？友達や気になる人のタイプと見比べると、思わぬ共通点や相性が見えてきます。
           </p>
           <p>
-            あなたの「推しタイプ」を見つけて、文化祭の会話をさらに盛り上げよう。スタッフ一同、あなたの参加をお待ちしています！
+            あなたの「性格タイプ」を見つけて、文化祭の会話をさらに盛り上げよう。
+            スタッフ一同、あなたの参加をお待ちしています！
           </p>
         </section>
       </ArticleTemplate>
