@@ -17,7 +17,7 @@ function StartContainer() {
   const [userName, setUserName] = useState<string>(""); // ユーザー名
   const [loggedIn, setLoggedIn] = useState<boolean>(false); // ログイン状態
   type Level = "short" | "middle" | "long";
-  const [level, setLevel] = useState<Level>("middle"); // 診断レベル
+  const [level, setLevel] = useState<Level>("short"); // 診断レベル
 
   const isUserNameInput = userName.trim() !== ""; // ユーザー名が入力されているか
 
@@ -32,7 +32,7 @@ function StartContainer() {
     },
     middle: {
       title: "標準",
-      description: "標準的な質問でじっくり診断",
+      description: "標準的な質問数で診断",
       questions: 16,
     },
     long: {
