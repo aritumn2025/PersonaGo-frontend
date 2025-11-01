@@ -43,7 +43,7 @@ export default function Page() {
           </h2>
           <ol className="list-decimal space-y-2 pl-5">
             <li>
-              受付でテーマを決めて写真を撮影。スタッフがベストショットをサポート。
+              写真を撮影。希望のテーマを選択。
             </li>
             <li>
               AIがその場で画像を変換。大画面に映し出されるので一緒にチェック！
@@ -64,17 +64,6 @@ export default function Page() {
           <p>
             印刷した似顔絵はフォトスポットに飾ったり、SNSでシェアして文化祭の思い出として残せます。
           </p>
-          <div
-            className="rounded-lg px-3 py-3 text-sm text-gray-700"
-            style={{ backgroundColor: attraction.color.secondary }}
-          >
-            <p className="font-semibold text-gray-900">
-              グループ撮影も大歓迎！
-            </p>
-            <p>
-              友達同士や家族で撮った写真を、ひとつのイラスト作品にまとめることも可能です。スタッフに声をかけてみてくださいね。
-            </p>
-          </div>
         </section>
 
         <section className="space-y-3">
