@@ -1,5 +1,6 @@
 import type { UserId } from "@/types/common";
 
+import { CopyButton } from "@/components/common/CopyButton";
 import { QRCodeForJSON } from "@/components/common/qr_gen";
 import {
   Drawer,
@@ -21,7 +22,6 @@ function QRCodeDrawer({ id, children }: QRDrawerProps) {
   const qrContent = {
     id: id,
   };
-
   return (
     <Drawer>
       <DrawerTrigger asChild>{children}</DrawerTrigger>
@@ -35,6 +35,7 @@ function QRCodeDrawer({ id, children }: QRDrawerProps) {
         <div className="flex flex-col items-center justify-center gap-6 p-4">
           <QRCodeForJSON json={qrContent} size={230} />
           <p>ID: {id}</p>
+          <CopyButton text={id} />
         </div>
         <DrawerFooter>
           <DrawerClose>閉じる</DrawerClose>
