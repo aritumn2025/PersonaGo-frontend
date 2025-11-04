@@ -134,7 +134,7 @@ function getGamesResultPlaySummary(
     throw new Error("Invalid limit");
   }
   return fetcher<GetGamesResultSummaryResponse>(
-    apiEndpoint(`/api/games/result/play/summary/${gameId}?limit=${limit}`),
+    apiEndpoint(`/api/games/result/summary/${gameId}?limit=${limit}`),
     {
       method: "GET",
     },
